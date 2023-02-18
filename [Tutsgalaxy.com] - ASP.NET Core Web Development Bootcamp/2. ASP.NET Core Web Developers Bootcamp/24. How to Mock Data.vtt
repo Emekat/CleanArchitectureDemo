@@ -1,0 +1,166 @@
+WEBVTT
+
+00:01.110 --> 00:06.660
+So in this video I want to show you guys how to mock your repository object using a much better method
+
+00:06.660 --> 00:09.390
+than actually stamping out an actual concrete implementation.
+
+00:09.390 --> 00:16.170
+So there's a concrete object that was stamped out from this class and this class may have dependencies
+
+00:16.170 --> 00:17.640
+on other classes.
+
+00:17.640 --> 00:23.730
+Network networks things like that and a lot of the times you need to have this be a marked object because
+
+00:23.730 --> 00:28.490
+it's much too difficult to instantiate it just to test something that uses it.
+
+00:28.500 --> 00:34.800
+So in order to get around that problem we want to use a library called M-O Q which is short for Mark
+
+00:34.810 --> 00:40.560
+I guess it's like a cute way of saying it go to your Newgate package manager manage packages go to our
+
+00:40.560 --> 00:41.270
+browse.
+
+00:41.280 --> 00:46.110
+And here we're going to say ammo Q and M-O Q Here you can go to and download that.
+
+00:46.140 --> 00:50.340
+You can say we want to add it to our unit test project because that's what we're going to be using it.
+
+00:51.090 --> 00:55.720
+And then once this is installed you have to accept we can then go and start using it.
+
+00:55.740 --> 00:58.810
+So this will add a reference to your project.
+
+00:58.830 --> 01:03.040
+So what I can do in order to use this new library is I want to go out and create a mock repository some
+
+01:03.050 --> 01:08.620
+Asay variable mock repository equals new M-O.
+
+01:08.630 --> 01:08.930
+Whew.
+
+01:08.940 --> 01:14.120
+And then inside of here I need to say what it is and I'm trying to mock someone to say I ban repository.
+
+01:14.280 --> 01:16.280
+And I'm gonna instantiate this new object.
+
+01:16.320 --> 01:21.450
+Now you're going to see from here that we have a reference missing so we need to say using M-O Q That's
+
+01:21.450 --> 01:23.440
+going to resolve that problem.
+
+01:23.670 --> 01:29.010
+And now that we have this mock repository object I can actually start setting up what it actually does
+
+01:29.010 --> 01:33.590
+so I can say you know when I when you say get all bands I want you to return some sort of custom things
+
+01:33.640 --> 01:38.590
+like a marker Depository that's set up and it should be.
+
+01:39.330 --> 01:44.220
+And then we're going to do a lambda function and then we're going to say X stock bands.
+
+01:45.930 --> 01:55.490
+And Dot returns and the Sharee capitals and then we're going to say new list.
+
+01:56.110 --> 01:59.230
+A new list.
+
+01:59.580 --> 02:01.600
+I don't know why it keeps doing that.
+
+02:02.990 --> 02:04.230
+Don't do that.
+
+02:04.250 --> 02:04.690
+All right.
+
+02:04.760 --> 02:07.360
+So Nilus you press Escape to make it do that.
+
+02:07.580 --> 02:09.230
+And then from here I'm going to say Benz
+
+02:11.930 --> 02:12.370
+Right.
+
+02:12.410 --> 02:13.110
+And
+
+02:15.740 --> 02:20.060
+because remember this returns a list of bands so what you need to do is in order to use less you have
+
+02:20.060 --> 02:21.810
+to import generics.
+
+02:21.820 --> 02:31.280
+This was going to ask you to do the X-Type get bands and there should be a function and returns new
+
+02:31.280 --> 02:33.330
+list of banned and this needs to be.
+
+02:33.470 --> 02:38.190
+We need to reference our band and using our model as we go.
+
+02:38.750 --> 02:45.380
+So now this new list of bands I can actually go ahead and instead of using them is the concrete repository
+
+02:45.410 --> 02:49.200
+and you can pass in the mock repository.
+
+02:49.520 --> 02:51.950
+And because this is using the mock repository
+
+02:54.490 --> 02:59.710
+Oh and that's another thing to do since it's using the mock object as a mock repository dot object and
+
+02:59.710 --> 03:03.470
+that's going to be the actual marked object that M-O Q made for you.
+
+03:05.690 --> 03:10.250
+I don't know why that's like no semi-colon I mean.
+
+03:11.090 --> 03:11.620
+OK.
+
+03:11.640 --> 03:11.850
+All right.
+
+03:11.870 --> 03:12.260
+There we go.
+
+03:12.260 --> 03:14.340
+So this is returning this new list of bands
+
+03:16.980 --> 03:20.380
+so much like the other way we just ran the tests right now.
+
+03:20.630 --> 03:28.300
+You can see that this will actually pass and it's because the controller is not know now as far as this
+
+03:28.300 --> 03:30.220
+list and this value that's getting returned.
+
+03:30.220 --> 03:35.800
+The reason why this MQ is so important is because you can go ahead and inside of here I can start instantiating
+
+03:35.830 --> 03:40.330
+new band objects and just started saying you know Title equals.
+
+03:40.360 --> 03:46.210
+This is completely marked and your controller and everything is going to work exactly the same way because
+
+03:46.210 --> 03:50.230
+of the the way that the way that we set it up using inversion of control.

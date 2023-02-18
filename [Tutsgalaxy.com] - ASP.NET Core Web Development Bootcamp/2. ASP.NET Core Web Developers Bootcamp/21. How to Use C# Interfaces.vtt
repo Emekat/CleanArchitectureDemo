@@ -1,0 +1,301 @@
+WEBVTT
+
+00:00.420 --> 00:05.250
+All right guys so today our application is actually just we're turning hard coded data that is read
+
+00:05.250 --> 00:09.130
+into the controller and that's not really what you see in a normal application.
+
+00:09.150 --> 00:15.270
+What we have here is the first application is considered a UI project it's a web application and multi-tier
+
+00:15.270 --> 00:17.760
+architecture especially with large development corporations.
+
+00:17.760 --> 00:22.890
+There are different tiers there is like databased here there's different middleware tears and things
+
+00:22.890 --> 00:28.050
+like that and then you have business logic and database logic class libraries and things of that nature.
+
+00:28.050 --> 00:34.470
+So there's usually an abstraction layer that is between the UI and any sort of data that it's retrieving
+
+00:34.470 --> 00:35.650
+and sending to.
+
+00:36.090 --> 00:38.340
+And that's what we're going to look at here.
+
+00:40.060 --> 00:45.610
+So in order to make our application robust we're going to want to go ahead and create a repository project
+
+00:45.610 --> 00:51.070
+inside of here that's going to be the abstraction between the project and our database.
+
+00:51.060 --> 00:55.510
+Now typically this may even be a separate project itself.
+
+00:55.660 --> 00:59.080
+So whether or not you want to do that or not it's up to you but for the sake of this tutorial and to
+
+00:59.080 --> 01:00.370
+try to make it easy.
+
+01:00.550 --> 01:05.620
+Now what I want to do is go and add a new a new item and this is going to be an interface So this first
+
+01:05.790 --> 01:11.080
+seen this but any time you're coding and C-Sharp you want to code to interfaces which really means coding
+
+01:11.080 --> 01:12.410
+to abstractions.
+
+01:12.670 --> 01:17.650
+So you can allow for dependency injection and we'll see in a moment what I'm talking about there.
+
+01:17.680 --> 01:21.940
+Now with C-Sharp you typically want to name your interfaces.
+
+01:21.940 --> 01:25.520
+They start with an eye to differentiate it from the class.
+
+01:25.570 --> 01:27.220
+And in this case we're just going to call this
+
+01:30.470 --> 01:36.880
+I would just call this and we'll just call this band interface
+
+01:39.910 --> 01:42.670
+and really this is a bad name for it so I actually want to rename this.
+
+01:42.670 --> 01:46.540
+We're going to call this band repository.
+
+01:47.380 --> 01:51.160
+And then we're going to do is create a repository class and we're going to rename it.
+
+01:51.160 --> 01:55.990
+Now we're going to create a and we want the interface to be public all interfaces need to be public
+
+01:56.000 --> 01:59.340
+otherwise they won't be able to be implemented from.
+
+01:59.560 --> 02:04.840
+And we're going to create a class that's actually going to use this interface and this this class is
+
+02:04.840 --> 02:09.720
+going to be called just a band repository.
+
+02:10.860 --> 02:16.600
+And now ban repository is going to implement the interface of a band repository and it's going to do
+
+02:16.600 --> 02:17.500
+so that way.
+
+02:17.710 --> 02:26.530
+Now if I ban repository had some methods on it which we don't currently have then you would get an error
+
+02:26.530 --> 02:26.920
+message.
+
+02:26.950 --> 02:31.900
+Let's go and add a few public methods on this band repository that we expect.
+
+02:31.900 --> 02:39.580
+Any object that is going to inherit from band repository to to implement what's going to create the
+
+02:39.580 --> 02:41.710
+first home which is going to return all bands.
+
+02:41.710 --> 02:45.100
+So since this is more of like an API type of thing we want to have.
+
+02:45.760 --> 02:47.230
+We'll just have like a method called
+
+02:50.050 --> 02:55.750
+MOSI get bands I guess and this should probably be capitalized as well so we'll say get bands is the
+
+02:55.750 --> 03:02.260
+name of our of our function and it's going to take no arguments so we just need to open and close parentheses
+
+03:02.290 --> 03:03.460
+after this.
+
+03:03.730 --> 03:09.370
+And then you also need to declare what type of value it's going to return right because it's C Sharp
+
+03:09.520 --> 03:11.380
+and it's statically type nature.
+
+03:11.380 --> 03:18.520
+So we're going to say that this is going to return a list of band objects and now we need to obviously
+
+03:18.880 --> 03:20.880
+reference our models bands.
+
+03:20.890 --> 03:26.300
+And that's why we're going to we're going to do here.
+
+03:26.810 --> 03:28.430
+And then we just need a semicolon here.
+
+03:28.430 --> 03:34.640
+So what we've done now is we've said that any class is going to implement the ban repository has to
+
+03:34.640 --> 03:37.460
+have a public method on it called good bands.
+
+03:37.490 --> 03:41.030
+That's going to return a list of band objects.
+
+03:41.030 --> 03:46.310
+And then while we're at it we're going to also have a band method that's just going to say called it's
+
+03:46.310 --> 03:53.340
+going to say get banned but you're going to pass and ID and it's in a return of band objects so now
+
+03:53.340 --> 03:56.550
+we have these two public methods it's probably a good idea to go out and document them.
+
+03:56.550 --> 04:01.170
+So if you do three forward slashes in a row it's going to automatically give you the summary contacts
+
+04:01.170 --> 04:12.500
+and we could just say here gets all bands and data B's and then it returns a list of bands.
+
+04:12.570 --> 04:15.810
+So that's how you give our documentation I'm not going to do for the other one but I just want to show
+
+04:15.810 --> 04:20.400
+you guys that actually gives you type hinting when you're looking at your code late later on you can
+
+04:20.400 --> 04:22.040
+say all good bands What is this all about.
+
+04:22.050 --> 04:27.000
+And you can see it gets all Banse and the database which is kind of self-explanatory but still certain
+
+04:27.000 --> 04:32.500
+methods are more complicated than others and that documentation becomes a little bit more crucial.
+
+04:32.520 --> 04:35.970
+So after we've done that if we go back over to the band repository you now see that we're getting the
+
+04:35.970 --> 04:40.380
+error message because it's saying you you haven't fulfilled the contract so when we click on it you
+
+04:40.380 --> 04:44.730
+can do this you can say implement interface and it's going to automatically create the methods that
+
+04:44.730 --> 04:46.650
+you need in order to satisfy the contract.
+
+04:46.650 --> 04:53.400
+And here you can see that we're not really doing anything but what I want to do is take the music controller
+
+04:53.400 --> 04:55.020
+information and where we had
+
+04:58.770 --> 05:01.110
+I thought we had a list of bands some of with guns
+
+05:05.500 --> 05:06.380
+you know.
+
+05:06.410 --> 05:08.470
+Anyway so let me go back here.
+
+05:08.470 --> 05:09.120
+I'm just going to say.
+
+05:09.130 --> 05:10.480
+So forget bands.
+
+05:10.510 --> 05:20.170
+I'm going to throw together a new list of bands So let's say our list of bands equals a new list of
+
+05:20.170 --> 05:30.070
+band objects and then we can go out and start instantiating new band objects and hear just nice to say
+
+05:30.710 --> 05:33.550
+new Actually no variable name here.
+
+05:33.550 --> 05:38.080
+Sorry I copied and pasted from the controller so it is a little confusing here.
+
+05:38.080 --> 05:39.420
+No semicolon.
+
+05:39.460 --> 05:43.280
+All right so hopefully that will make sense for you.
+
+05:46.520 --> 05:47.040
+All right.
+
+05:51.990 --> 05:52.430
+OK.
+
+05:52.440 --> 05:57.980
+And now we can just go out and just comma delimited and have a few more band objects inside of here.
+
+06:05.180 --> 06:21.920
+So I just want to have three.
+
+06:22.230 --> 06:28.870
+So those are just three different random things I don't know why I said Now you can see it's complaining.
+
+06:28.870 --> 06:35.140
+It's I oh we haven't return our list of bands that we want to go and just return that.
+
+06:35.270 --> 06:40.430
+And now we've satisfied this particular method of our repository.
+
+06:40.710 --> 06:44.810
+So now what we're going to do is go back over to our music control or if we go to the index method which
+
+06:44.810 --> 06:49.850
+is the main music end point and we go and right click and say go to view you're going to remember that
+
+06:49.850 --> 06:54.650
+we did do a for each in here so we're expecting to get a list of band objects so we can then iterate
+
+06:54.650 --> 06:55.520
+over.
+
+06:55.580 --> 06:59.750
+So what we want to do here is we actually want to call out to our repositories so we can actually go
+
+06:59.750 --> 07:11.120
+ahead and instantiate a repository right now and we'll say repository equals new band repository and
+
+07:11.120 --> 07:13.580
+this will give an error message because we have to actually import it.
+
+07:13.580 --> 07:17.000
+So it should give you the option to go out and import that
+
+07:21.340 --> 07:24.350
+so using first application repository.
+
+07:24.360 --> 07:32.750
+Now we get this message here and we can go out and call it in our view we can say repository got good
+
+07:32.930 --> 07:41.060
+bands and we have to call it as a function and then now let's go ahead and go back to our music page
+
+07:42.350 --> 07:49.520
+and if we remove the details portion and we get the music you can now see that we're getting the values
+
+07:49.520 --> 07:55.820
+back from our list and it's coming from a repository which is a class that implements an interface.
+
+07:56.090 --> 08:00.680
+And in the next video we'll see a little bit more about how to implement dependency injection into our
+
+08:00.680 --> 08:04.940
+controller or actually more like using an version of control.
+
+08:04.940 --> 08:05.560
+All right thanks guys.

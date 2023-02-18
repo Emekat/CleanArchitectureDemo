@@ -1,0 +1,370 @@
+WEBVTT
+
+00:00.630 --> 00:01.350
+Hey guys welcome back.
+
+00:01.350 --> 00:05.780
+So in the previous videos we've been using the static web server to actually handle all of the responses
+
+00:05.790 --> 00:11.040
+but now what we want to do is we want to actually go into getting dot net involved so let's go ahead
+
+00:11.040 --> 00:12.280
+and do that now.
+
+00:12.720 --> 00:16.100
+And what we need to do in order for that to happen is we need to configure our route.
+
+00:16.110 --> 00:23.730
+So what we need to do is add an argument so stop our web server and under the static files and this
+
+00:23.730 --> 00:28.710
+is actually important because we want static files be read you want that to be processed first before
+
+00:28.710 --> 00:32.720
+trying to process any sort of server side route that you might have.
+
+00:32.790 --> 00:34.370
+So that way you're not trying to invoke.
+
+00:34.440 --> 00:38.300
+You're not trying to look on the server for something that doesn't exist or doesn't need to be handled
+
+00:38.960 --> 00:40.670
+is going to take a lambda function.
+
+00:40.680 --> 00:49.880
+And so there's a shorthand function here and inside of here we're going to go in and say stop map route.
+
+00:50.130 --> 00:53.180
+And this is where you actually define the routes re-application.
+
+00:53.270 --> 00:55.080
+So we're going to say the name.
+
+00:55.100 --> 00:56.970
+This is just the default route
+
+00:59.800 --> 01:04.540
+and then we're going to give it a template to use and the template is actually how routes are matched
+
+01:04.540 --> 01:05.590
+up and the application.
+
+01:05.590 --> 01:11.320
+So the template is very important here so this is where you actually spell out OK.
+
+01:11.350 --> 01:18.190
+When you make a request I want the controller to handle that and then I'm going to say the next thing
+
+01:18.190 --> 01:24.790
+is going to be the action and then the last thing is going to be maybe the ID of something or the value
+
+01:24.790 --> 01:25.120
+or something.
+
+01:25.120 --> 01:30.310
+But that's typically the nice shorthand template syntax you normally see.
+
+01:30.310 --> 01:40.650
+Also I have a.
+
+01:40.890 --> 01:41.820
+Goodness gracious.
+
+01:41.970 --> 01:44.370
+So that should have a semicolon on it.
+
+01:45.970 --> 01:52.180
+So anyway what we have going on here is that this expects that okay for every request I'm going to have
+
+01:52.180 --> 01:56.420
+a controller an action and an ID that needs to be passed in.
+
+01:56.470 --> 01:59.520
+Now the reason why this process kind of sucks.
+
+01:59.530 --> 02:03.910
+We'll see in just a moment here is that it does require that an I.D. parameter be passed in in order
+
+02:03.910 --> 02:06.760
+for this route to be matched.
+
+02:06.760 --> 02:10.410
+So one thing I want to touch upon is that Donek for and.
+
+02:10.420 --> 02:12.010
+NET is still using MVC.
+
+02:12.010 --> 02:16.750
+So NBC is the model view controller and I know this isn't actually spelled out in the correct order
+
+02:16.750 --> 02:21.760
+model view controller but this is actually spelled out in the order of the request so when a request
+
+02:21.760 --> 02:24.820
+comes into your application it's going to be handled by the controller.
+
+02:24.820 --> 02:27.090
+The controller is going to be calling out.
+
+02:27.100 --> 02:31.300
+It's going to be able to receive the request and it's going to be able to deliver the response it's
+
+02:31.300 --> 02:35.830
+going to be using the pipeline in the middle where in everything that I described in the previous videos
+
+02:36.370 --> 02:42.550
+it's going to call out two different services it's going to end up building a model that ends up getting
+
+02:42.940 --> 02:49.480
+passed into the view and the view gets returned as a response assuming that there is a template that
+
+02:49.480 --> 02:51.910
+you're trying to return as part of the view.
+
+02:51.910 --> 02:56.740
+Now you could obviously have a controller in point that is just returning data so it can be returning
+
+02:56.740 --> 03:00.570
+like SML or based on data or even just a string.
+
+03:00.790 --> 03:09.040
+But the fact that the MVC pattern is followed and dotnet core Also we do have a bug here.
+
+03:09.040 --> 03:10.000
+This is a typo.
+
+03:10.000 --> 03:13.590
+This you do not need to have that extra curly brace on there.
+
+03:13.580 --> 03:19.730
+I did not mean that so now that we've seen those three conventions with Model View and controller Let's
+
+03:19.730 --> 03:23.830
+go ahead and create those folders in our application because we're going to need them.
+
+03:23.900 --> 03:29.650
+So we're gonna create a folder called controllers and this should be upper case by convention.
+
+03:29.930 --> 03:37.090
+We'll create another folder for our models and then another one for our views
+
+03:43.000 --> 03:46.780
+and inside of our control let's go out and create our first controller so we're going to use the default
+
+03:47.140 --> 03:50.050
+templating here we're going to say NBC controller it's going to be called empty.
+
+03:50.050 --> 03:53.860
+We're going to say and now you might get an error message here and I'm just curious if we do.
+
+03:53.980 --> 03:58.360
+But if all I want to use my I want to have the first controller named home controller and that is typically
+
+03:58.360 --> 04:00.490
+the default first controller.
+
+04:00.500 --> 04:06.180
+Now depending on your setup you may or may not have problems with this scaffolding.
+
+04:06.460 --> 04:07.530
+Hopefully you don't.
+
+04:07.540 --> 04:10.660
+And I was earlier.
+
+04:10.660 --> 04:12.990
+So if I still am We're just going to do it manually.
+
+04:15.630 --> 04:17.350
+But visual studio OK here we go.
+
+04:17.350 --> 04:20.770
+So we do have some decent functionality there that is working.
+
+04:20.770 --> 04:21.110
+That's cool.
+
+04:21.110 --> 04:23.680
+So it created this home controller for us.
+
+04:23.680 --> 04:29.570
+And in addition to that it didn't it doesn't return any sort of actual view here.
+
+04:29.660 --> 04:34.970
+So let's go ahead and let's see if we can actually hit this home controller because I want to show you
+
+04:34.970 --> 04:39.260
+that the way our routes are set up that we're going to end up having an issue.
+
+04:39.260 --> 04:44.300
+So when we run the application you should be greeted with this message and I actually wanted to explain
+
+04:44.300 --> 04:50.540
+this here what this is saying is that it's like hey we have some sort of middleware called use MVC but
+
+04:50.540 --> 04:54.790
+we don't know how to handle this because you never registered this and configure services.
+
+04:55.100 --> 05:02.290
+So any sort of custom middleware any sort of custom request response pipelining code you might have.
+
+05:02.420 --> 05:09.090
+It has to be registered through this configure services and then configure services is actually passed
+
+05:09.090 --> 05:16.280
+in here so it's registered one time and then used every time a request is made.
+
+05:16.280 --> 05:20.170
+So let's go out and look at how we can actually tap into that.
+
+05:20.240 --> 05:25.970
+So when we go let's go into this function here and what we want to go and we want to reference the services
+
+05:25.970 --> 05:35.120
+object and we're going to say services and MVC and you can see there's this NBC option and then we need
+
+05:35.120 --> 05:39.800
+to call it as a function and then we're going to say Let's set our compatibility version.
+
+05:39.950 --> 05:46.940
+And since we're on Morone compatibility version Dadds we're on to one so we're going to say you know
+
+05:47.030 --> 05:50.470
+we need to one in order for this application to work.
+
+05:50.510 --> 05:55.550
+So now that we've registered this ad MVC we can now use MVC in our route.
+
+05:55.550 --> 05:58.340
+So if we if we run the application it shouldn't blow up.
+
+05:58.340 --> 05:59.630
+Now when we run
+
+06:03.160 --> 06:08.680
+now you can see it doesn't blow up which is good if we go to our next HMO that should still be rendered
+
+06:08.680 --> 06:09.370
+just fine.
+
+06:09.370 --> 06:09.730
+There it is.
+
+06:09.730 --> 06:10.960
+Hello from your mom.
+
+06:10.960 --> 06:15.370
+Now if we go to the home controller This is where I want to show you I should be able to go to this
+
+06:15.370 --> 06:22.480
+home controller and just be like you know Home Index by the fall to see if it gets returned but it doesn't.
+
+06:22.480 --> 06:29.740
+So if I go to one though you can see oh I did this now got processed by the server and you could see
+
+06:29.740 --> 06:36.770
+that Microsoft dot net core actually threw a error it says there is no index that matches this parameter.
+
+06:36.760 --> 06:39.880
+Here there's no way that we can serve up a response to this.
+
+06:39.880 --> 06:43.590
+So in order to fix that is because we hardcoded this idea in here.
+
+06:43.630 --> 06:49.210
+So if you wanted to abide by this ID pattern here you need to go to the controller and we would have
+
+06:49.210 --> 06:56.710
+to have a view that takes in a parameter an answer that let me stop my server and we would have to have
+
+06:56.710 --> 06:59.040
+this say and ID.
+
+06:59.080 --> 07:03.040
+OK so then we're in return.
+
+07:03.040 --> 07:08.200
+And then what I want to do here I also want to add our view that needs to be returned so there's a shorthand
+
+07:08.200 --> 07:12.940
+if we right click and say add view we can go over here and we're going to add our view I'm resisting
+
+07:13.010 --> 07:14.970
+to say it's a template without a model.
+
+07:15.070 --> 07:17.560
+We're not going to use a lay out page.
+
+07:17.560 --> 07:24.910
+Let's go out and just say add and this is going to build scaffolding as well and really all it's doing
+
+07:24.910 --> 07:31.120
+is it's just putting the home folder inside of your views and then it puts the index inside here so
+
+07:31.120 --> 07:31.900
+we're going to say
+
+07:34.630 --> 07:38.910
+hello from NBC.
+
+07:39.820 --> 07:46.660
+I said Now if we run the app and we go to this page we should be able to navigate to it.
+
+07:46.740 --> 07:49.650
+We're not doing anything with the parameter that's being passed in.
+
+07:49.870 --> 07:53.350
+But it is a requirement in order for that route to be hit.
+
+07:53.350 --> 07:59.150
+So again let's go to home and then we're just going to say and X and then we'll just have one.
+
+07:59.170 --> 08:01.170
+So there we now get the response.
+
+08:01.190 --> 08:05.720
+Now we don't have one on here you could see that index is not returned.
+
+08:05.780 --> 08:06.960
+So why is that.
+
+08:06.970 --> 08:11.470
+But if you have one is because the route has to match up perfectly in order for this to be rendered
+
+08:11.830 --> 08:17.000
+if we want to fix that functionality we would go back into our startup file and we would say you know
+
+08:17.000 --> 08:22.760
+what the ID parameter is something that I do not want to have.
+
+08:22.990 --> 08:29.040
+I don't want it to be a requirement so I'm just going to say you know what I'm going to make that optionals
+
+08:29.260 --> 08:34.090
+stop the server again and by using the questionmark the idea is now optional so it's not something that
+
+08:34.090 --> 08:39.420
+has to be passed in and let's run the IP again.
+
+08:40.240 --> 08:45.690
+And if we go to Home and X and without the I.D. you can now see that it does get passed.
+
+08:45.690 --> 08:52.600
+And the reason why that works is because the action by default it's going to look for an action with
+
+08:52.600 --> 08:55.000
+the name index and we already have one called.
+
+08:55.000 --> 08:58.050
+And so that's why this is being returned.
+
+08:58.060 --> 09:03.670
+Even when you don't have the optional I.D. and no clearly if you did pass any ID we would do some sort
+
+09:03.670 --> 09:05.940
+of custom functionality inside of here.
+
+09:06.430 --> 09:11.170
+But that is a demonstration on how we can get NBC doesn't get involved in our applications that.

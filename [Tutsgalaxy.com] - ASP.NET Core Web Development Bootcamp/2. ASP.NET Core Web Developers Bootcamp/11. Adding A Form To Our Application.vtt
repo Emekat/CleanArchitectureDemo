@@ -1,0 +1,298 @@
+WEBVTT
+
+00:01.190 --> 00:05.150
+So in this video what I want to do is actually just go out and we're going to create a few classes that
+
+00:05.150 --> 00:06.270
+I want to add.
+
+00:06.290 --> 00:10.580
+I'm going out a new class here that's going to be more in line with what our theme is for this Web site
+
+00:10.580 --> 00:11.800
+which is more of a music website.
+
+00:11.810 --> 00:17.990
+So we're going to have a band that's yes file and bands are also going to have similar to what we had
+
+00:17.990 --> 00:22.160
+in the book we're going to have both of the title
+
+00:27.820 --> 00:32.930
+as well the title and genre
+
+00:39.140 --> 00:47.380
+origin and then we'll just have the biography.
+
+00:47.500 --> 00:52.710
+So just those four key elements on the band.
+
+00:52.770 --> 00:53.030
+All right.
+
+00:53.030 --> 01:00.050
+And and now that we have that let's go to the music controller and the music is instead of returning
+
+01:00.050 --> 01:03.500
+a list of books it's going on return a list of bands.
+
+01:03.770 --> 01:07.490
+And now the band is going to be called Bass.
+
+01:08.060 --> 01:09.630
+This is going to be a new band
+
+01:14.260 --> 01:16.680
+voyage and you lose
+
+01:25.290 --> 01:31.240
+genre.
+
+01:32.550 --> 01:39.360
+And then finally one biography around as well say blah blah blah.
+
+01:39.360 --> 01:40.890
+All right so there we go.
+
+01:40.900 --> 01:45.690
+So we have one band and now it's going to add a few more bands just because we feel like we need to
+
+01:45.690 --> 01:48.990
+have a new band brand new band and
+
+01:52.920 --> 01:55.830
+you can put whatever you want in here obviously.
+
+02:09.390 --> 02:12.250
+At least we have three snow.
+
+02:12.250 --> 02:17.680
+Another thing to is I want to move my list out of this scope from just this and next month that I want
+
+02:17.680 --> 02:22.570
+to have it publicly available and available to the class which means I have to declare what type it
+
+02:22.570 --> 02:22.950
+is.
+
+02:22.960 --> 02:28.920
+It's a list of band and we probably have a better name for that.
+
+02:29.130 --> 02:30.630
+All right so there we go.
+
+02:36.230 --> 02:39.800
+All right and then finally what I want to do is go ahead and add a another page which we're going to
+
+02:39.800 --> 02:45.080
+have actual result and this is going to be called Ad so this is we're going to add a new band to our
+
+02:45.080 --> 02:47.860
+page so we're going to be adding a new band.
+
+02:48.050 --> 02:53.800
+In this case we're not going to be posting anything so we'll see in just a moment.
+
+02:53.810 --> 02:57.560
+This is just going to go ahead and create a new VM model.
+
+02:57.560 --> 03:06.590
+So it is a variable view model equals new band and then we're going to pass that view model down to
+
+03:06.590 --> 03:15.210
+the viewers who will say return this stuff view pass in the band and know the Wiimote on Sir
+
+03:18.490 --> 03:19.500
+why are you doing that to me.
+
+03:19.600 --> 03:20.460
+All right.
+
+03:22.670 --> 03:27.990
+So now this ad is complaining and says doesn't return value because blah blah blah.
+
+03:29.830 --> 03:33.540
+And that's because you're not returning this obviously and they return this view and now it's going
+
+03:33.540 --> 03:34.450
+to stop complaining.
+
+03:34.580 --> 03:35.780
+But there is no views.
+
+03:35.980 --> 03:41.800
+At our view and since we're using a model we're going to be doing a create which means a form and we
+
+03:41.800 --> 03:48.810
+can go out and create a band so we can add the band model and it's going to use the lay out page and
+
+03:48.860 --> 03:55.850
+we're going to add that all right now what we also need to do is we need to update our layout page because
+
+03:55.850 --> 03:57.890
+right now the layout page has way too much stuff in it.
+
+03:57.890 --> 04:04.140
+So if we go over to the layout page you're going to see all this this content up here.
+
+04:04.450 --> 04:06.770
+All these call outs and stuff like that like.
+
+04:06.800 --> 04:12.380
+So basically we probably want the header and most of the pages like this about the services all of us
+
+04:13.270 --> 04:19.370
+all know it all as young as about governing to get rid of all of that right now.
+
+04:19.870 --> 04:25.620
+And we're going to put that inside of the home.
+
+04:25.790 --> 04:32.480
+So instead of this we're going to put this inside of the home and that should be rendered only on the
+
+04:32.480 --> 04:36.760
+home page then and the Shared Page is going to have much less stuff in there.
+
+04:36.770 --> 04:45.620
+But I think this body should still probably be inside of a section and based on the CSSA of this bootstrap
+
+04:45.620 --> 04:47.260
+theme that we're using.
+
+04:47.930 --> 04:53.680
+All right so we have that instead of a section it looks like we have a pretty cleaned up application
+
+04:53.680 --> 04:56.060
+that was getting press play and run this thing
+
+05:01.900 --> 05:08.480
+so we're going navigate over to Home and X. And then you can see that we get the full thing like we
+
+05:08.480 --> 05:16.220
+had with our lab of four that's fine now but if we go to music and we go to the index we're still not
+
+05:16.680 --> 05:19.450
+it's still it's complete you mother.
+
+05:19.610 --> 05:25.070
+That's right because we didn't update the the template so if we go over to the temple we update the
+
+05:25.070 --> 05:33.740
+template for this music index file because if you remember correctly this is a list of bands so we're
+
+05:33.740 --> 05:36.350
+going to say this create new.
+
+05:38.120 --> 05:40.200
+We'll get into that in just a second actually.
+
+05:41.380 --> 05:43.550
+Not going to get into that right this second.
+
+05:43.600 --> 05:47.950
+This is going to say our list of bands.
+
+05:47.980 --> 05:48.710
+Right.
+
+05:48.990 --> 05:54.430
+And then we need to go up and we need to update the model to use band and book since that's what it's
+
+05:54.430 --> 05:59.890
+iterating over and it looks like this is all good and we don't want the author the title we want the
+
+06:01.600 --> 06:03.390
+genre probably next.
+
+06:03.400 --> 06:09.640
+And then since we're in a table we'll just continue that for right now.
+
+06:11.730 --> 06:19.650
+And we have the genre and then the origin and then the biography.
+
+06:19.860 --> 06:24.810
+I suppose that those those four elements of our band and in here obviously we have a problem as well.
+
+06:24.960 --> 06:34.150
+You would just say origin but we also need to shoot we need that to be in order.
+
+06:35.480 --> 06:37.300
+This needs to be a genre
+
+06:41.300 --> 06:43.890
+Hama and this needs to be biography.
+
+06:43.960 --> 06:44.410
+All right.
+
+06:44.440 --> 06:48.350
+So now our headers should match up to our data and we're good.
+
+06:48.430 --> 06:50.220
+All right let's stop this.
+
+06:50.290 --> 06:51.380
+Restart it.
+
+07:01.620 --> 07:06.280
+And if you are over there we now have the layout being found and all that stuff and then inside this
+
+07:06.500 --> 07:09.210
+this data we now have.
+
+07:09.350 --> 07:14.240
+So let's go navigate over to the ad and we can see this.
+
+07:14.330 --> 07:19.790
+They created this form for us in the scaffolding meaning they had gotten an application using Visual
+
+07:19.790 --> 07:20.240
+Studio.
+
+07:20.240 --> 07:25.400
+So what I want to do is replace this section render body right here and I'm gonna replace it with just
+
+07:25.400 --> 07:26.030
+a container.
+
+07:26.030 --> 07:31.310
+So I wanted to bootstrap container to do the render body you shouldn't have to restart the server you
+
+07:31.310 --> 07:37.910
+should be able to just you should just be able to refresh it if you do that you can see that the changes
+
+07:37.910 --> 07:39.920
+take effect right away.
+
+07:39.990 --> 07:43.990
+And here we have some information that is it's really lacking here.
+
+07:44.060 --> 07:48.150
+It's not it's not giving us any hopeful information as to what information we're filling out here it
+
+07:48.150 --> 07:51.680
+does tell us that we're adding a band I guess that's sort of helpful.
+
+07:51.680 --> 07:55.910
+One thing's for sure as well it seems like every page doesn't need this header so let's go ahead and
+
+07:55.910 --> 07:59.420
+fix that as well as the final thing that we're going to do.
+
+07:59.420 --> 08:03.810
+So let's go to the lay out and the lay out.
+
+08:03.820 --> 08:12.440
+I'm going to get rid of this this head piece right here that should probably only be on the in the home
+
+08:12.440 --> 08:14.990
+control or the I'm sorry the home page here.
+
+08:14.990 --> 08:17.640
+So let's go and add this to the top.
+
+08:23.210 --> 08:23.990
+All right there we go.
+
+08:24.000 --> 08:27.150
+And once again you should be able to take effect right away.

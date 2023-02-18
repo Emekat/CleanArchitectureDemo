@@ -1,0 +1,211 @@
+WEBVTT
+
+00:00.670 --> 00:01.320
+Hey guys what's up.
+
+00:01.330 --> 00:06.290
+So in this video we're going to be looking at the overall structure of dot that application forgotten
+
+00:06.300 --> 00:07.480
+at Korea espionage.
+
+00:07.600 --> 00:12.400
+And the first thing is the application actually starts with the program file.
+
+00:12.400 --> 00:17.860
+This is actually the main starting point the main portion of your application and you can see here that
+
+00:17.860 --> 00:22.000
+this is the main function you can pass in some string arguments to your actual web server then it calls
+
+00:22.000 --> 00:28.430
+this actual method that's defined inside of here that implements a web host builder interface.
+
+00:28.450 --> 00:33.400
+And by doing that it has some built in web server defaults this is using something called the cache
+
+00:33.400 --> 00:40.680
+for a web server which is a new Microsoft Project and that comes with this so it's different from I
+
+00:40.690 --> 00:41.030
+guess.
+
+00:41.050 --> 00:49.410
+But it is a cross-platform internet web server that is that is created by Microsoft so come ship it
+
+00:49.410 --> 00:52.100
+ships by default so that's actually what we're using here.
+
+00:52.530 --> 00:59.030
+Since we're we want to use dot net core and from there though this project is also going to have a startup
+
+00:59.040 --> 01:00.330
+file so this startup file.
+
+01:00.330 --> 01:05.400
+Everything that goes through your applications or every request is made to your server is going to go
+
+01:05.400 --> 01:09.930
+through this configure method and it's going to fire one time for every request that comes through.
+
+01:09.930 --> 01:15.900
+So the application by default is actually just responding to every request it's responding back with
+
+01:15.900 --> 01:19.610
+just a standard string response of hello world.
+
+01:19.610 --> 01:25.260
+So if we go and run the application we can go and run our working code by pressing the play button.
+
+01:25.290 --> 01:39.720
+This is going to fire up a local host web server using guess express and then Kestral.
+
+01:40.140 --> 01:45.470
+And really that's confusing as it's nobody's calling cash flow really I mean everybody's called it ice
+
+01:45.560 --> 01:46.060
+express.
+
+01:46.070 --> 01:49.980
+I mean that's what we call the ice web server that's built into Visual Studio and we're debugging and
+
+01:49.980 --> 01:55.530
+everything but I guess eventually we're going to start hauling the casual web server technologies change
+
+01:55.530 --> 01:56.260
+quickly.
+
+01:57.930 --> 02:05.080
+So as you can see this localhost is our it's our local host poured it's you know stands for signifies
+
+02:05.080 --> 02:08.470
+1 2 7 0 0 1 and then the colon.
+
+02:08.470 --> 02:13.000
+And after everything after that is actually the port number that this web server is listening for or
+
+02:13.000 --> 02:19.750
+listening to and all requests to this poor are being returned with a response of Hello World.
+
+02:19.750 --> 02:23.410
+We're going to have to change that functionality obviously to be able to have a much more robust Web
+
+02:23.410 --> 02:25.560
+site and we're going to do that in the following video.
+
+02:25.570 --> 02:30.640
+But what I do want to show you guys real quick is the configurations of where that magic is happening.
+
+02:30.640 --> 02:36.730
+If you went ahead and you looked inside of the if you right click on the actual project itself and click
+
+02:36.730 --> 02:41.350
+on the properties this is going to give you a bunch of properties for your application.
+
+02:41.440 --> 02:47.240
+It tells you everything from how the project is building what sort of dependencies it has you can see
+
+02:47.240 --> 02:50.620
+its target framework has dot net 2.1.
+
+02:50.710 --> 02:55.990
+So if you guys wanted to adjust the putit number that it's listening to you would go under the Properties
+
+02:56.020 --> 03:00.880
+and there's a launch settings that Jaison file and then inside of here you can actually see that the
+
+03:00.880 --> 03:04.880
+actual port number is being set right there so you can change that to whatever you want.
+
+03:05.050 --> 03:07.620
+Here's the main application you are ill.
+
+03:07.840 --> 03:10.450
+And then there's just a bunch of different information in here.
+
+03:10.660 --> 03:15.900
+You can see the actual Dunning-Kruger and we're not going to get into it right now but you can actually
+
+03:15.900 --> 03:19.860
+have some settings on your launch settings for different environments.
+
+03:19.860 --> 03:25.680
+So it makes it easy to kind of say OK if I'm under the Devon environment then use this on launch setting
+
+03:26.010 --> 03:27.510
+iPhone on production.
+
+03:27.510 --> 03:28.450
+I'm going to use this one.
+
+03:28.450 --> 03:32.370
+You know what I mean so you can have a lot of things like your connection string things like that that
+
+03:32.370 --> 03:39.450
+are stored inside of these actual physical files that can be secured away on a server somewhere instead
+
+03:39.450 --> 03:40.870
+of like in a database.
+
+03:41.010 --> 03:48.000
+And then the W.W. root folder that is again these are the static route that we're going to see in a
+
+03:48.000 --> 03:48.840
+future video here.
+
+03:48.840 --> 03:53.130
+But that's where all ever see is in javascript and things like that is going to go.
+
+03:53.340 --> 04:00.000
+If you wanted to adjust the web config or have like system config variables like if you've ever seen
+
+04:00.480 --> 04:04.710
+Django development there's a settings file which is essentially where a lot of the application's main
+
+04:04.710 --> 04:06.190
+settings are stored.
+
+04:06.390 --> 04:10.560
+And that's going to still be under a web config but it's a little confusing because by default this
+
+04:10.560 --> 04:11.590
+isn't shown.
+
+04:11.820 --> 04:17.550
+If you say show all files that still doesn't show up which is interesting but if you right click on
+
+04:17.550 --> 04:22.920
+the actual project you're going to be able to see that you can add it then the sist process file of
+
+04:22.920 --> 04:29.190
+your application niceish Prospal is actually going to be it's going to have all of your dependencies
+
+04:29.190 --> 04:30.720
+inside of here.
+
+04:30.720 --> 04:34.480
+This is just it's just going to the main dependency.
+
+04:34.590 --> 04:40.980
+Right here at the moment but the main dependency has a ton of other sub dependencies.
+
+04:40.980 --> 04:45.150
+But eventually when you start adding new new packages to your application you're going to see all that
+
+04:45.150 --> 04:47.190
+stuff inside of your sig file.
+
+04:48.500 --> 04:54.050
+So that's really the overall structure of the application itself just again the web server spun up here
+
+04:54.050 --> 04:58.700
+when the main application is started it's going to have some built in functionality for you that you're
+
+04:58.700 --> 04:59.210
+going to need.
+
+04:59.210 --> 05:03.410
+It's going to call this startup for every request that's made when the application is run it doesn't
+
+05:03.410 --> 05:08.060
+matter whatever happens you're going to see that this hello world is just simply return.

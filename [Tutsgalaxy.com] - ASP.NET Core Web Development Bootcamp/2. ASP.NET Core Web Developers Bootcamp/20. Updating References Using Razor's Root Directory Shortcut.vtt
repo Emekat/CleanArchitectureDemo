@@ -1,0 +1,52 @@
+WEBVTT
+
+00:00.540 --> 00:04.230
+So what I want to show you in this video is if you notice if we went to our root directory where we
+
+00:04.230 --> 00:07.680
+installed the saw this parallax template everything works right.
+
+00:07.690 --> 00:12.630
+And we have all our CSSA But what happens if we go to the details page and we go to our music details
+
+00:12.630 --> 00:16.480
+page and you look at this and we have no CSSA no images everything's missing.
+
+00:16.590 --> 00:20.400
+Even though it's using the layout page you can see it's using the layout because of the navigation bar
+
+00:20.400 --> 00:21.050
+and everything.
+
+00:21.240 --> 00:25.850
+So why is it if we inspect the console you're going to see anytime you have weirdness like this you
+
+00:25.860 --> 00:28.890
+want to look at the console and see all these four or four is not found.
+
+00:28.890 --> 00:32.770
+So it's not finding materialized or all these external resources.
+
+00:32.790 --> 00:39.870
+And the reason why is because of this exact relative address here so there is a shortcut though that
+
+00:39.870 --> 00:43.380
+we can use to solve this problem.
+
+00:43.620 --> 00:48.190
+And we do that by simply referencing the root directory of the project by using the Tildy character.
+
+00:48.180 --> 00:53.550
+So if you use this tool the character is going to grab the root directory and then the forward slash
+
+00:53.560 --> 00:55.080
+So it's always going to work.
+
+00:55.110 --> 01:00.980
+So go ahead and update all your references so that they have this Tilda's forward slash.
+
+01:01.050 --> 01:07.740
+So if we do that and we now go back over to the music directory or page you can now see that we're getting
+
+01:07.740 --> 01:14.660
+the C S S and everything and we expect our console and we shouldn't be getting any more 404 error messages.

@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2015
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsyncTut", "AsyncTut\AsyncTut.csproj", "{60E67E86-D638-4978-800F-3F7B83C90A36}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{60E67E86-D638-4978-800F-3F7B83C90A36}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60E67E86-D638-4978-800F-3F7B83C90A36}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60E67E86-D638-4978-800F-3F7B83C90A36}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60E67E86-D638-4978-800F-3F7B83C90A36}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {72F3AC3D-A09C-4D30-A064-4FD9B63513EC}
+	EndGlobalSection
+EndGlobal

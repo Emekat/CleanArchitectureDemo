@@ -1,0 +1,145 @@
+WEBVTT
+
+00:00.870 --> 00:06.030
+So there is a difference between C-Sharp classes in javascript objects and unfortunately you can't just
+
+00:06.030 --> 00:10.920
+send down C sharp object across the wire and expect that the browser is going to understand what to
+
+00:10.920 --> 00:11.840
+do with it.
+
+00:12.300 --> 00:16.940
+So they speak the common language they both understand which is the J on data format.
+
+00:17.070 --> 00:18.930
+And there is a project called Jay Sankar.
+
+00:19.050 --> 00:23.230
+So we're going to look at installing a package and what we do is we go to our tools and we're going
+
+00:23.230 --> 00:26.990
+to go into Newgate package manager and then go into the console.
+
+00:27.890 --> 00:31.410
+And we're going to be searching for a project called J.
+
+00:31.730 --> 00:34.270
+And that is actually in fact I didn't really want to.
+
+00:34.300 --> 00:41.560
+So I want to be the manager of the package for the solution and this is where we're going to go.
+
+00:41.560 --> 00:50.760
+I'm going to browse on here and here I can say on dot net and you can see here and there in Safdar Jason.
+
+00:50.790 --> 00:55.730
+So this is actually faster than Microsoft's built in serialization here.
+
+00:55.730 --> 01:00.240
+So what you're going to want to do is you want to just say I want to add it to my first project or my
+
+01:00.240 --> 01:02.980
+first application project and I just simply install.
+
+01:03.000 --> 01:09.810
+So if you guys ever use new warriors like would know this is the same thing get as Microsoft's package
+
+01:09.810 --> 01:10.670
+manager.
+
+01:11.130 --> 01:17.120
+And if you're coming from a Python background then it would be like pip are Sadan that we have that
+
+01:17.120 --> 01:22.310
+included in our project we can go out and close this down and on the band object here what I'm going
+
+01:22.310 --> 01:28.840
+to do is I'm a Serializer to Jason and I'm going to use this library that we just we just installed
+
+01:28.850 --> 01:34.950
+so it's going to say J-Zone convert and then we're going to say serialise
+
+01:39.760 --> 01:47.200
+and then we Serializer band objects so we need to import the raisons say using Noonan's oncogenes on.
+
+01:47.320 --> 01:55.150
+And so it's actually not serialized it's serialized objects and they're going to have to bring this.
+
+01:55.150 --> 01:57.770
+And so anyway there's a lot of different library sets.
+
+01:57.790 --> 02:01.900
+It's difficult to keep up with all of them but if you hover over you can see that the serialise is the
+
+02:01.900 --> 02:06.280
+specified object to use on string.
+
+02:06.290 --> 02:10.280
+So what I want to show you guys if you actually run the server after making a change to the code.
+
+02:10.460 --> 02:14.480
+And if you look at your console one we made the AJAX call you're going to see that we get this error
+
+02:14.480 --> 02:17.960
+message and by clicking on it it's actually going to pull up the error message which you actually want
+
+02:17.960 --> 02:21.860
+to see and hear here you can just see that we're getting the standard that the view is not found.
+
+02:21.950 --> 02:27.470
+And the reason why is if we go back over to the controller you can see that it's expecting an action
+
+02:27.470 --> 02:33.510
+result type to be returned which is a return view but a view is actually returning a bunch of H to him
+
+02:33.510 --> 02:36.950
+all characters and things and we just want to return it on a string.
+
+02:36.950 --> 02:39.160
+So what I can do here is I could change this.
+
+02:39.170 --> 02:44.300
+I could stop the server and I can change this over to a J sound result.
+
+02:45.770 --> 02:49.600
+And then I could say return JS on.
+
+02:49.840 --> 02:54.600
+And then you just simply say you know you see Serializer just like we did before.
+
+02:55.830 --> 03:00.170
+And now by making that change you can see instead of giving the 500 error we're actually returning the
+
+03:00.180 --> 03:02.280
+Jason string that we're looking for.
+
+03:02.280 --> 03:06.570
+So inside of your javascript you can see all these forward slash characters what you would end up doing
+
+03:06.570 --> 03:10.970
+as you would end up then based Jaison parsing it from within your age to him.
+
+03:10.980 --> 03:16.110
+So if we go back over to the aged him here and go into the details page and here where we're Konsole
+
+03:16.110 --> 03:18.570
+logging and you can see we're Jaison string a fine.
+
+03:18.580 --> 03:19.530
+But let's just not do that.
+
+03:19.530 --> 03:23.280
+It's actually because really we don't we want an actual object.
+
+03:23.400 --> 03:28.000
+For the most part that's what we're going to use for any sort of modern you why it's going to take an
+
+03:28.730 --> 03:30.110
+object.
+
+03:30.180 --> 03:34.380
+So if we make that change very refreshed you can see that we're now getting a straight face on data
+
+03:34.380 --> 03:35.120
+object back.

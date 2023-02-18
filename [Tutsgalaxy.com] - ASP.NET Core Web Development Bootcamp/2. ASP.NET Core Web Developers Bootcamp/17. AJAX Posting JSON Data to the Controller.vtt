@@ -1,0 +1,217 @@
+WEBVTT
+
+00:00.410 --> 00:04.380
+All right so what I want to show you guys in this video is in the past video you saw that if we submitted
+
+00:04.380 --> 00:06.630
+the form it's submitted and I form collection.
+
+00:06.630 --> 00:08.480
+And you saw that it posted devalued.
+
+00:08.490 --> 00:15.510
+But what I actually want to do is I want to post a specific band model and I'll call this band I'm for
+
+00:15.520 --> 00:15.710
+now.
+
+00:15.720 --> 00:17.090
+We're not going to do anything with it.
+
+00:17.250 --> 00:18.590
+We can get rid of this comment too.
+
+00:18.580 --> 00:20.120
+I don't need that in there.
+
+00:20.580 --> 00:24.190
+And so we're going to go ahead and post up the band that I want to explain.
+
+00:24.220 --> 00:30.480
+Expedite is actually going to automatically bind data objects that are passed that are posted to the
+
+00:30.480 --> 00:37.170
+server that match up to a view model object so if it has the right properties like name title or origin
+
+00:37.170 --> 00:43.050
+genre by or whatever it is it's going to automatically serialize and bind up those data attributes and
+
+00:43.050 --> 00:47.900
+basically take based on data object and then create a C-sharp object from it.
+
+00:48.420 --> 00:49.720
+If everything goes well.
+
+00:49.770 --> 00:53.860
+If not you'll see like a bunch and all values.
+
+00:53.890 --> 00:56.560
+So in order to post let's go in and change our fetch method here.
+
+00:56.560 --> 01:03.620
+And what I want to do is I'm going to change this over to our create method just as an example.
+
+01:04.620 --> 01:10.950
+And then inside of here what I'm going to do is I'm going to pass an argument which is a dictionary
+
+01:11.610 --> 01:20.640
+argument here and this takes a bunch of key value pairs so we're going to say method equals post and
+
+01:20.640 --> 01:22.760
+then body equals data.
+
+01:23.100 --> 01:27.140
+And what we want to do is go out and define our data object.
+
+01:27.550 --> 01:34.200
+And remember our data object is a banned object so the banned object needs to have all the values that
+
+01:34.200 --> 01:40.320
+a band has which is titled genre origin and biography and so title
+
+01:44.890 --> 01:45.640
+genre
+
+01:48.720 --> 01:49.530
+origin
+
+01:54.480 --> 01:55.380
+and biography
+
+02:01.590 --> 02:02.400
+all right they we go.
+
+02:02.460 --> 02:02.700
+All right.
+
+02:02.700 --> 02:04.640
+So that's our data object.
+
+02:04.640 --> 02:10.200
+I'm going to go and pass that up and we're going to use the fetch method fetch API in order to do so
+
+02:10.200 --> 02:15.640
+I'm going to change this over to make it a little easier to read in my opinion.
+
+02:15.720 --> 02:19.440
+So I'm just going to post and send the body to.
+
+02:19.770 --> 02:24.810
+Also one thing because I'm not going to be Ajax posting validation token I want to go out and remove
+
+02:24.810 --> 02:25.720
+that as well.
+
+02:28.270 --> 02:29.140
+So here you go.
+
+02:29.260 --> 02:33.940
+If we go ahead and we look at this and we refresh the page you can see that we're now Ajax posting the
+
+02:33.940 --> 02:37.490
+values here and like I said if you had a problem with it you're going to end up getting a bunch of null
+
+02:37.510 --> 02:43.440
+values which means the C-sharp couldn't automatically serialize the object that got passed to it.
+
+02:45.460 --> 02:49.690
+And then another thing too is we always want to JS on string a fire object because it's possible to
+
+02:49.690 --> 02:53.120
+pass an actual Jaison data object over the wire.
+
+02:53.110 --> 02:56.730
+So we want to say a string of high end memory and do that with our data.
+
+02:57.250 --> 03:03.370
+And then we also probably as a good example here want to set the headers here so we're going to define
+
+03:03.370 --> 03:08.190
+a header's object and the object here is going to have a few things so it's going to have the exact
+
+03:08.190 --> 03:16.010
+parameter on it and the accent is going to be an application and so on.
+
+03:16.360 --> 03:19.600
+And then we want the content type as well.
+
+03:22.530 --> 03:23.930
+And you know that should probably be.
+
+03:24.000 --> 03:27.670
+We're going to put this out because of the hyphen.
+
+03:27.830 --> 03:28.740
+It'll probably mess it up.
+
+03:28.740 --> 03:35.200
+So we're going to put this right inside of a string as far as the key value pairs obviously is it's
+
+03:35.220 --> 03:36.470
+optional as far as a string.
+
+03:36.480 --> 03:39.630
+But then you can have certain values and everything that don't match up.
+
+03:39.630 --> 03:43.380
+So anyway let's go and post this value of now.
+
+03:43.470 --> 03:46.360
+Now that we have it looking the way we want.
+
+03:46.620 --> 03:51.450
+Now one thing I also want to tell you guys is that the the data objects you can either have this capital
+
+03:51.450 --> 03:56.470
+or non-capital it doesn't actually matter it's not case sensitive so it's still going to bind up in
+
+03:56.470 --> 03:57.650
+serialise just fine.
+
+03:57.660 --> 04:02.910
+But I want to show you why this isn't going to work right now and just because this is going to bite
+
+04:02.910 --> 04:05.690
+you in the future and I know that I know that it will.
+
+04:05.700 --> 04:11.390
+So hopefully you guys can remember now when we go ahead and we request this page and we make sure my
+
+04:11.390 --> 04:13.670
+break points here.
+
+04:13.950 --> 04:16.500
+I want to show you guys what's going on here.
+
+04:17.430 --> 04:19.710
+So if I refresh this page I hit this post.
+
+04:19.710 --> 04:22.800
+You're going to see that our band object is going to have a bunch of values.
+
+04:22.800 --> 04:24.820
+And the reason why you're probably like why is that.
+
+04:25.050 --> 04:30.000
+So in order to fix that we have to actually explicitly tell us that we want to save from buy.
+
+04:30.000 --> 04:34.650
+So we're saying you're going to get your data from the actual body that's passed in and if you could
+
+04:34.650 --> 04:40.250
+see from the actual Ajax requests we're getting you know we're the body value here which is just based
+
+04:40.280 --> 04:43.130
+on sharing of data object.
+
+04:43.470 --> 04:46.700
+So after making that change let's go out and restart the server.
+
+04:47.550 --> 04:50.220
+And now if we are navigate over to the details page
+
+04:53.510 --> 04:56.540
+you're going to see that we now have values that are being passed through.
+
+04:56.540 --> 05:00.890
+So that is how you Ajax posts Jaison data to your HSP dot net control or.

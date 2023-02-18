@@ -1,0 +1,196 @@
+WEBVTT
+
+00:01.250 --> 00:06.980
+So if you guys noticed that sometimes your web server may not take your changes into effect even though
+
+00:06.980 --> 00:08.510
+you clear your cache and things like that.
+
+00:08.510 --> 00:13.970
+So what you may want to do is actually disable any sort of caching from occurring from the actual Kestral
+
+00:13.970 --> 00:20.030
+web server and you can do that by pasting your code inside of this configure method.
+
+00:20.280 --> 00:26.350
+Now you can see when I paste this and what I need to do is import the headers that I'm referencing here.
+
+00:28.310 --> 00:30.860
+So you can see that now every request is made to the server.
+
+00:30.860 --> 00:32.880
+We're not going to cache it anymore.
+
+00:33.080 --> 00:38.840
+So I want to show you guys another trick that we can do that this code here is defining our routes here
+
+00:38.840 --> 00:43.400
+since it's actually using the default template and the default actually says find the home control or
+
+00:43.400 --> 00:48.530
+find the index method and find the ID we can actually replace all of this with just one line of code
+
+00:49.160 --> 00:53.260
+just to make things a little bit more concise and make sure that goes after the static files.
+
+00:53.280 --> 00:57.590
+But that will do the exact same thing that we saw before is just a little bit more shorthand.
+
+00:58.160 --> 01:02.840
+And we'll see later on that when we do want to custom override that behavior we still have the option
+
+01:02.840 --> 01:03.920
+of doing so.
+
+01:04.070 --> 01:07.850
+But if we fire up the app you can see that it still uses the default index page just like we would normally
+
+01:07.850 --> 01:09.690
+expect.
+
+01:09.890 --> 01:15.750
+Well I just want to show you also as well that this is actually just automatically defaulting to the
+
+01:15.750 --> 01:16.110
+index.
+
+01:16.110 --> 01:21.540
+But I do want to show you guys real quickly I did delete the music controller we had from the previous
+
+01:21.540 --> 01:25.350
+video because I want to show you in the previous video we had to go through all that work of setting
+
+01:25.350 --> 01:29.880
+up the route and getting a form and everything already created for us.
+
+01:29.880 --> 01:34.440
+But what I want to show you is that since we have this band object to find which is our model object
+
+01:34.770 --> 01:39.060
+we can go out and create a controller that is based off of that model object that does so much of the
+
+01:39.060 --> 01:41.750
+work that we just saw in the previous video for us.
+
+01:41.970 --> 01:46.530
+And we do that by using the scaffolding that's built in the Visual Studio code or Visual Studio you
+
+01:46.530 --> 01:50.540
+have to make sure it's not running right click on controllers were going to say.
+
+01:50.710 --> 01:55.650
+And then we're going to add a new controller and then from here you're going to want to say MVC controller
+
+01:55.650 --> 02:02.700
+with read write actions and then here we're going to give it the name of our music controller and the
+
+02:02.700 --> 02:07.080
+music controller now has all of this and this information that we need so you have the ability to go
+
+02:07.080 --> 02:12.750
+to the details page and pass and an ID for whatever sort of musician you want to find.
+
+02:12.750 --> 02:14.070
+You can create a new one.
+
+02:14.340 --> 02:19.740
+And the best part about this is that when we go to our music controller and we play it on like discreate
+
+02:19.800 --> 02:23.400
+we could say add view and it automatically knows it's like OK what are you gonna do.
+
+02:23.400 --> 02:24.330
+Grab the create.
+
+02:24.330 --> 02:29.940
+OK that's what we want and then we say you know you're going to be creating a band object so by doing
+
+02:30.000 --> 02:34.530
+all this it's going to go out and just create the views that we need and it's going to just scaffold
+
+02:34.530 --> 02:36.560
+it all out and everything that we need.
+
+02:36.870 --> 02:43.320
+And it has some built in stuff that is pretty helpful but you could see it's putting all the labels
+
+02:43.320 --> 02:44.760
+on us on this for us.
+
+02:44.770 --> 02:48.870
+You can see that it matches up the labels to the inputs and all that.
+
+02:48.870 --> 02:52.660
+So there's all this form code you don't have to actually write yourself.
+
+02:52.880 --> 02:57.030
+Let me go back here so you do have to create the views of the individual pages like here.
+
+02:57.030 --> 02:59.720
+We're going to see you again once again this one.
+
+02:59.730 --> 03:05.250
+You just select that we're getting the details of the model class and the model Fosse's band and just
+
+03:05.250 --> 03:09.800
+click ADD.
+
+03:10.080 --> 03:16.320
+Now most likely the index page is actually going to be the page that lists out all the bands so this
+
+03:16.320 --> 03:20.040
+will most likely be out our list lists page of of all the bands here.
+
+03:20.040 --> 03:21.010
+So let's go into that.
+
+03:21.010 --> 03:34.400
+So we're going to put this as a list and then a list of bands and then we'll use the lay out page.
+
+03:34.430 --> 03:38.300
+So now if we fire up our web server and go to the Create page you can see that our labels still aren't
+
+03:38.300 --> 03:40.280
+actually working properly.
+
+03:40.280 --> 03:43.170
+And I'll show you why in just a moment we'll see that in the next video.
+
+03:43.490 --> 03:48.020
+But I do want to show you that these values are all here and everything for us if we wanted to go into
+
+03:48.020 --> 03:54.230
+the music you would go into detail and we would say musician one but in our case we don't actually have
+
+03:54.230 --> 03:56.840
+that page and it doesn't even know where to find that.
+
+03:56.840 --> 04:03.280
+In fact you don't even say that you just pass in the actual ID of the detail that you're trying to get.
+
+04:03.290 --> 04:03.740
+Sorry.
+
+04:03.900 --> 04:04.870
+The server is not even running.
+
+04:04.870 --> 04:08.810
+So when all else fails look at your controller and look at it as look at what it is you're doing.
+
+04:08.810 --> 04:12.710
+So obviously I can see that it's going to be music details in order to be able to hit that.
+
+04:12.710 --> 04:20.240
+So if I run this music details and then you would pass and whatever sort of idea of the deal you get
+
+04:20.270 --> 04:22.960
+you can see that we don't get any sort of value back here.
+
+04:22.970 --> 04:28.250
+But if you did have a value this is where you'd want to query it and then return the view with the populated
+
+04:28.250 --> 04:29.230
+values.
+
+04:29.360 --> 04:32.120
+We'll also see that in future video as well.

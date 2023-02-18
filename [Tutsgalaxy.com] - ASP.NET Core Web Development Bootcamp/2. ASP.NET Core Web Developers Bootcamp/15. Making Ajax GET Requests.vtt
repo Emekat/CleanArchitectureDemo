@@ -1,0 +1,337 @@
+WEBVTT
+
+00:01.300 --> 00:01.980
+Hey guys.
+
+00:02.060 --> 00:07.770
+So in this video I want to show you guys how to make a GET request in order to using AJAX and a common
+
+00:07.770 --> 00:12.570
+javascript method in order to just get some data and everything that you want to be able to view.
+
+00:12.570 --> 00:17.130
+So on this details here let's go at him for whatever integer you pass and it doesn't really matter.
+
+00:17.130 --> 00:22.500
+We're gonna go out and return a new view of data source and make sure we have our view in here and we're
+
+00:22.500 --> 00:27.240
+going to say that it is with the model and the model is going to be a detailed model and it's going
+
+00:27.240 --> 00:34.860
+to be of a class band and it's going to use the layouts that we're going to go out and add a file with
+
+00:34.860 --> 00:35.780
+the name bita OK.
+
+00:35.790 --> 00:39.120
+So we already have that and then we're going to go and replace it anyway just so we're starting fresh
+
+00:39.120 --> 00:39.540
+here.
+
+00:45.760 --> 00:49.900
+So this should pull it up here and then we go over to music and we look at the details here you can
+
+00:49.900 --> 00:56.500
+see it's just actually iterating over all the values of our data here and displaying the names of the
+
+00:56.500 --> 00:58.230
+data elements here.
+
+01:02.630 --> 01:07.520
+So if you guys are wondering what the display name for the display for is the display 4 is actually
+
+01:07.520 --> 01:13.580
+displaying the data display name for the on on the other end is actually a data attribute that you can
+
+01:13.580 --> 01:20.060
+define on your model class using the display here so this display is actually going to show up in our
+
+01:20.060 --> 01:26.090
+details page just like we saw it with the label for as well that uses the display.
+
+01:26.540 --> 01:31.760
+So now what I'm going to do at the bottom of all this this data display here I'm just going to go ahead
+
+01:31.760 --> 01:35.900
+and add a button and this is going to be rough looking I don't even know what it's going to look like
+
+01:35.930 --> 01:43.430
+but we'll see what it looks like here and we'll just say Ajax test is the name of the button and we'll
+
+01:43.430 --> 01:48.200
+just say Ajax because there's going to be a get request because there is a difference between a game
+
+01:48.260 --> 01:49.520
+and a post.
+
+01:49.520 --> 01:59.500
+And what we want to do is we're going to have a another you know let's put it inside of this entire
+
+01:59.500 --> 02:02.670
+thing is a mass.
+
+02:02.830 --> 02:03.070
+All right.
+
+02:03.070 --> 02:12.970
+Number one this will all go inside of a day of class container and a day of class row.
+
+02:16.360 --> 02:18.130
+And I'm going to drop all that in there.
+
+02:18.130 --> 02:27.260
+And then inside this row I do want this to be a class call home empty of six.
+
+02:27.310 --> 02:27.930
+OK.
+
+02:28.090 --> 02:33.520
+I did not want that closed or doing it right or column B of 6 and get rid of that.
+
+02:33.520 --> 02:38.230
+All right so now we have this M.D of 6 so close that down because right after that empty of six I also
+
+02:38.230 --> 02:44.070
+want to go ahead and do another and we're going to say divide equals data.
+
+02:44.080 --> 02:46.570
+So we'll put our data inside of this device.
+
+02:47.500 --> 02:52.440
+And for now I also want to go out and put my button.
+
+02:52.450 --> 02:55.950
+I want to take that out of this other column that we have.
+
+02:56.200 --> 03:03.740
+And I want to put that down in here and either this day at the bottom is just a simple button.
+
+03:03.980 --> 03:09.080
+And this is where you can see that we probably have to be a little bit more careful with our display
+
+03:09.080 --> 03:15.320
+labels because they can be reused and if you're too specific with words like entered and things like
+
+03:15.320 --> 03:22.570
+that you may not need like even here there should probably just say like it should say something alternate
+
+03:22.580 --> 03:25.940
+to what this is because otherwise it would show up as biography like.
+
+03:26.010 --> 03:29.450
+For instance let's get rid of the biography label here
+
+03:32.820 --> 03:38.700
+and you can see that the effect is the same so it's actually using the name of the actual property by
+
+03:38.700 --> 03:39.230
+default.
+
+03:39.240 --> 03:43.770
+But if you put a display name it's going to use that instead of the actual property.
+
+03:43.770 --> 03:48.480
+Now if we wanted to display the actual value that's again you go back over to the details and that would
+
+03:48.480 --> 03:53.520
+display for is going to be doing right now we don't have any values will Wired's because we're not actually
+
+03:53.520 --> 03:58.500
+populating anything here so this is where we want to go out and create a new band object so we're going
+
+03:58.500 --> 04:06.150
+to say where to start the server and we're going to say a variable that equals new band and then we're
+
+04:06.150 --> 04:11.290
+going to instantiate a few things so I think there's a name or something like that or title.
+
+04:12.270 --> 04:13.080
+Come on
+
+04:16.280 --> 04:18.470
+we want to make sure that these things included So
+
+04:22.430 --> 04:27.650
+sometimes if you're if your intelligence or anything like that starts getting jacked up you need to
+
+04:27.650 --> 04:29.890
+go over to the bill and clean your solution.
+
+04:30.050 --> 04:33.040
+It's actually a common thing unfortunately I don't know why.
+
+04:33.560 --> 04:37.470
+So you can see that you tell us and start working once we clean it and then we click on the label and
+
+04:37.460 --> 04:41.190
+it tells you to go out and bring in your your band model.
+
+04:41.630 --> 04:44.450
+So now we can see if we go and put the title we could say
+
+04:48.950 --> 04:52.050
+biography.
+
+04:52.800 --> 04:58.400
+So normally if you type in you press tab it should just go ahead and start should work should work.
+
+05:00.040 --> 05:06.430
+And genre version includes your mom's house.
+
+05:06.720 --> 05:22.110
+And John writes because she's trying to be all inclusive out there for everybody likes everything.
+
+05:22.200 --> 05:26.940
+So now what we're going to do is in order to get this data we want to go out and return our band objects.
+
+05:29.810 --> 05:32.570
+All right so now we're going to revisit the data page.
+
+05:32.570 --> 05:35.340
+Now we're going to get the static information in return.
+
+05:35.390 --> 05:39.240
+So now you can see when we return back we get the actual label and we'll get the data.
+
+05:40.470 --> 05:44.040
+Now the problem is is that this is obviously static data what you would want to do is you'd want to
+
+05:44.040 --> 05:48.600
+take this value that gets passed ending you this value would be the identifier that you would use to
+
+05:48.600 --> 05:52.860
+look up the band object from your database or wherever you're trying to look it up from.
+
+05:53.070 --> 05:55.820
+And then you would end up returning the data instead of the hard coded data.
+
+05:55.830 --> 06:00.930
+But this is how you would basically set up your template and obviously you would want much more detail
+
+06:00.930 --> 06:02.030
+there.
+
+06:02.190 --> 06:06.300
+So it's good and get back to making our requests someone to go out and I'm going to copy this statement
+
+06:06.300 --> 06:12.600
+right here and I'm actually going to return a different band object so I want to go and just say details
+
+06:12.600 --> 06:20.010
+and we're just going to say tests so it's going to be called actually will be very explicit test ban
+
+06:20.510 --> 06:24.910
+and it doesn't mean anything passed into it it's just simply going to be a request to the point.
+
+06:25.050 --> 06:35.470
+And this is going to be returning new band and this is new a new biography.
+
+06:36.810 --> 06:44.630
+Your mom's house is now new and country songs mostly.
+
+06:44.700 --> 06:45.470
+All right.
+
+06:45.510 --> 06:52.560
+So this is going to go out and return the band not by default because you did not specify a post like
+
+06:52.560 --> 06:57.180
+you did down here it's going to be a get by default so you don't have to worry about doing that when
+
+06:57.180 --> 06:58.630
+you just want a normal get requests.
+
+06:58.650 --> 07:03.660
+What we want our AJAX call to do is from our details page we're going to have a button which we've already
+
+07:03.660 --> 07:12.960
+added and there's 190 Ajax test is going to fire a script and we want a script to be located after all
+
+07:12.960 --> 07:17.160
+of this information because this is a little bit hackish and Normally you'd want this in some sort of
+
+07:17.160 --> 07:21.860
+external file or something like that for the purposes of this example.
+
+07:22.000 --> 07:23.660
+We're not to worry about that.
+
+07:23.700 --> 07:28.170
+So in the script body here what I want you to do is go and paste in this statement and this is using
+
+07:28.170 --> 07:32.940
+new fecche API which is a javascript standard for making AJAX calls and you can see it's heading the
+
+07:32.940 --> 07:39.420
+music user controller test kit van which is our new endpoint and test brand is going to be returning
+
+07:39.420 --> 07:39.870
+some data.
+
+07:39.870 --> 07:44.340
+Now one of the things you might want to notice here is that it's expecting Jaison data to be returned
+
+07:44.730 --> 07:49.020
+and most everybody is actually returning based on data these days so let's go ahead and do the same
+
+07:49.020 --> 07:50.070
+thing.
+
+07:50.070 --> 07:53.940
+So one of the things before I get into the serialization I want to show you is that if we go to our
+
+07:53.940 --> 08:00.480
+page instead of the button you can see that we did not wire the page up to the actual button click.
+
+08:00.480 --> 08:04.870
+So this is just going to fire as soon as the page loads it's going to make the AJAX call someone go
+
+08:04.870 --> 08:10.800
+ahead and put a breakpoint on the new end point that we have this test get just to show you that the
+
+08:10.800 --> 08:18.410
+Ajax is going through via javascript and that the response is coming back so going back to the browser.
+
+08:18.760 --> 08:22.880
+If I reload the page you can see that we hit our application.
+
+08:22.890 --> 08:27.460
+It's returning the band object that the browser is not really going to make any sense of all that data
+
+08:27.460 --> 08:32.420
+because it's actually trying to return an entire agency my web page back via an AJAX response.
+
+08:32.710 --> 08:37.840
+But if we went over to the browser and we inspect and we go to our network and if we want to go ahead
+
+08:37.840 --> 08:43.750
+and you say preserve a log here or just let's Concini continue to let this thing process through it
+
+08:43.750 --> 08:47.920
+actually probably won't capture it but let's go out and refresh your memory time.
+
+08:51.250 --> 08:53.140
+I messed that up and we do this woman time.
+
+08:53.430 --> 08:55.310
+All right so I'm going to clear the log.
+
+08:55.310 --> 09:01.890
+Make sure you have preserve log on refresh and then you can see the response that's coming back here
+
+09:01.890 --> 09:02.830
+see that again.
+
+09:02.880 --> 09:09.210
+And then the response that they got back is right up in here so you can see the entire age male web
+
+09:09.210 --> 09:12.660
+page government responded returns so that's not really what we want.
+
+09:12.660 --> 09:17.340
+So the next video we're going to see how to serialize our data object to Jaison and returns just the
+
+09:17.340 --> 09:18.260
+Jaison data of.

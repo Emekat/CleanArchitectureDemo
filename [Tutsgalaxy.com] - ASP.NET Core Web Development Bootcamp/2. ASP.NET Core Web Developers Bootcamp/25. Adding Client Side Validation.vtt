@@ -1,0 +1,235 @@
+WEBVTT
+
+00:00.620 --> 00:01.080
+Hey guys.
+
+00:01.080 --> 00:01.610
+So welcome back.
+
+00:01.610 --> 00:04.480
+So in this video we want to do is look at validation.
+
+00:04.790 --> 00:10.730
+We had a create form page that was collecting some information for the band and if you remember we put
+
+00:10.730 --> 00:13.420
+in this validation message for and I didn't really cover that too much.
+
+00:13.430 --> 00:15.620
+But in this video that's what I want to cover.
+
+00:16.040 --> 00:20.870
+So the preferred method with dot net core is actually still to use Jake worry and Jake worry for its
+
+00:21.110 --> 00:22.250
+validation.
+
+00:22.580 --> 00:25.870
+And it really does help you a lot and you'll see here in the video.
+
+00:25.890 --> 00:29.000
+But a lot of people are turned off from Jay Querrey and they don't want to use and you don't really
+
+00:29.000 --> 00:32.360
+have to be then you're going to be custom rolling your own validation.
+
+00:32.360 --> 00:34.120
+I'm sure there's validation of libraries out there.
+
+00:34.130 --> 00:40.910
+But let me just show you how easy it is to actually use a query and invalidate the way most most every
+
+00:40.910 --> 00:43.580
+place I've ever seen that uses done that does it.
+
+00:43.580 --> 00:46.250
+So let's use the required attribute.
+
+00:46.280 --> 00:51.500
+And this required actually we can give a custom error message and to it so we can say error message
+
+00:51.530 --> 00:55.570
+equals and we can just say what does this field say.
+
+00:55.610 --> 01:03.660
+John Roberts so say genre is required or something like that.
+
+01:03.710 --> 01:09.200
+So now that we've added this attribute is called a data annotation and automatically because we've set
+
+01:09.200 --> 01:13.640
+up our create page to have this validation message for for the genre.
+
+01:14.030 --> 01:18.590
+If we enable clients validation by including just a couple of scripts so we need to our layout page
+
+01:19.310 --> 01:22.700
+we can go ahead and get clients validation without having to do any work.
+
+01:22.700 --> 01:30.790
+So if you paste then there is a CDN that I want to point to and the client side scripts right here.
+
+01:30.800 --> 01:36.350
+If you just pause a screen or these to validate where you validate libraries that we need.
+
+01:36.650 --> 01:41.330
+So now that we have those client scripts enabled if we go to try to submit our page the client validation
+
+01:41.330 --> 01:43.010
+is automatically going to kick in.
+
+01:43.010 --> 01:47.120
+It's going to look at that required attribute and it's going to see that there's no value in the genre
+
+01:47.120 --> 01:47.850
+field here.
+
+01:47.960 --> 01:53.120
+You can see like I know the you guys all MSW can see we can have a value here and if there's no value
+
+01:53.240 --> 01:55.310
+it's going to go and throw an error message.
+
+01:55.310 --> 01:58.730
+So you can say automatically genre is required it didn't even try to hit the server.
+
+01:58.730 --> 02:00.920
+So all that code is set up for you right there.
+
+02:00.920 --> 02:04.600
+Now normally you would want like you know some sort of style on.
+
+02:04.670 --> 02:11.900
+So like you would end up having like the genre error really you could just have a general error message
+
+02:11.900 --> 02:14.720
+probably error class that you can assign.
+
+02:14.730 --> 02:18.400
+You'll see in a moment I can actually show you how to assign a class to this.
+
+02:19.190 --> 02:24.710
+But if you do this like normally you would want to have like a color red because that's more of a that's
+
+02:24.710 --> 02:26.400
+more in line with an error message.
+
+02:26.540 --> 02:31.370
+But we'll actually see in the future videos actually how we apply custom attributes because that's actually
+
+02:31.370 --> 02:33.740
+a completely separate video.
+
+02:33.740 --> 02:38.140
+Now there's all kinds of other data annotations that we can use for validation.
+
+02:38.570 --> 02:39.340
+Tons of freedom there.
+
+02:39.340 --> 02:41.580
+So let's go out and look at a few of them.
+
+02:42.490 --> 02:45.500
+The regular expression validation is something you're going to see a lot.
+
+02:45.540 --> 02:53.430
+I'm going to do that right now and to do that you just simply say regular expression and then the first
+
+02:53.430 --> 02:56.730
+arguments are what you should do a string escape string.
+
+02:56.730 --> 03:03.240
+So that way it's basically a rostering format and then you're going to use whatever sort of you know
+
+03:04.820 --> 03:07.600
+yeah whatever sort of validation you want.
+
+03:07.600 --> 03:14.110
+So in this case this is a regular expression that says that there must be like some sort of you know
+
+03:14.210 --> 03:19.790
+number what you like it's funny like why is it like Delia what does that stand for.
+
+03:19.800 --> 03:21.620
+But anyway for what I guess it does it or something.
+
+03:21.620 --> 03:24.900
+But anyway I think for whatever reason that is the regular expression for the number.
+
+03:24.900 --> 03:29.250
+So this will say like so basically if there's not a number in the origin and you're going to throw an
+
+03:29.250 --> 03:30.080
+error message.
+
+03:30.210 --> 03:36.620
+And again you have the option of saying what that error message is you can pass it in and say you stupid
+
+03:39.790 --> 03:40.350
+mother.
+
+03:40.360 --> 03:41.530
+I mean just kidding.
+
+03:41.650 --> 03:45.900
+So let's just keep it at that one.
+
+03:46.030 --> 03:49.860
+And when we go ahead and try to validate this let's go and see if it works.
+
+03:49.900 --> 03:54.550
+So once again hopefully you guys have the watch Make sure you guys watch my video about how to set up
+
+03:54.550 --> 03:58.250
+a watch because it's so much easier than having to restart your server all the time.
+
+03:59.180 --> 04:04.670
+So if we go back over to the web page now I'm just going to zoom really far in on the origin and we
+
+04:04.670 --> 04:05.840
+didn't make it required by the way.
+
+04:05.840 --> 04:10.000
+So if you try to go ahead and submit it it's probably only going to fire for the genre obviously because
+
+04:10.000 --> 04:12.310
+I was the only one that we said it was required.
+
+04:12.440 --> 04:17.510
+But once you go it and put something in the origin field list and put it so about I should put some
+
+04:17.510 --> 04:18.440
+CSSA on this.
+
+04:18.440 --> 04:24.340
+But anyway once you put a value in here a regular expression said actually one number.
+
+04:24.350 --> 04:27.410
+So you can't have two because then it's going to fire the validation.
+
+04:27.570 --> 04:34.740
+If you have one number validation goes away that's how you use the regular expression validator regular
+
+04:34.740 --> 04:36.410
+expressions are like there isn't.
+
+04:36.420 --> 04:40.620
+There's entire books written on the subject that is it's something I've been using for like eight years
+
+04:40.650 --> 04:43.110
+but it is very very cryptic.
+
+04:43.200 --> 04:46.400
+You can never really read them like you can write them pretty well but then you never really know how
+
+04:46.400 --> 04:48.570
+to read them if they're really really complex.
+
+04:48.930 --> 04:53.430
+I mean you just kind of have to rely on some but some are like literally like almost like pages long
+
+04:53.430 --> 04:58.350
+and people just assume that they work because nobody has time to actually break down what the hell they're
+
+04:58.350 --> 04:59.370
+actually doing.

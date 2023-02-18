@@ -1,0 +1,8 @@
+version: '3'
+
+services:
+  emekat-azure:
+    image: emekatazure
+    build:
+      context: .
+      dockerfile: Emekat-azure\Dockerfile

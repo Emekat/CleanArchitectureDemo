@@ -1,0 +1,220 @@
+WEBVTT
+
+00:00.570 --> 00:01.370
+Everybody welcome back.
+
+00:01.360 --> 00:05.350
+So in the last video we saw how to create a form using scaffolding material and I want to show you how
+
+00:05.350 --> 00:06.760
+the labels are not showing up here.
+
+00:06.760 --> 00:12.610
+So if you look at the actual HCM Elon's I have a razor Templi you can see that there is a label here
+
+00:12.610 --> 00:16.000
+and it says that there is a label for a title but there is no value in.
+
+00:16.000 --> 00:20.080
+So if you wanted the label you'd have to say you know value our values you'd have to go through and
+
+00:20.080 --> 00:20.650
+add all that.
+
+00:20.650 --> 00:22.790
+Now there's a better way of doing it actually.
+
+00:23.020 --> 00:29.170
+And that is using razors built in syntax razor as the view engine for NBC dot net and all you have to
+
+00:29.170 --> 00:34.990
+do is use the at symbol and then say to him out and then dot and there's going to be all kinds of helpful
+
+00:34.990 --> 00:39.220
+different razor extension methods that are used for this.
+
+00:39.220 --> 00:42.930
+This template exists and that makes your day your job a little bit easier.
+
+00:42.940 --> 00:48.250
+So we're going to look at how to use the label for and it's a lambda expression then you have to then
+
+00:48.280 --> 00:52.870
+pass into this label for and the lambda is just simply going to iterate over the model and it's going
+
+00:52.870 --> 00:56.410
+to return the label for the title and there's no semi-colon needed.
+
+00:56.410 --> 01:01.360
+By the way and Razor So now we have this input here and while we're at it I'm going to go out and do
+
+01:01.360 --> 01:09.590
+the same thing for here are some of H.A. input input.
+
+01:09.740 --> 01:13.490
+So it's actually going to be text box for you.
+
+01:13.640 --> 01:14.650
+So it's a little bit different.
+
+01:14.650 --> 01:18.470
+So like inputs or text boxes for this we're going to say title.
+
+01:18.650 --> 01:21.890
+And then finally there's also built in validation too.
+
+01:21.890 --> 01:23.000
+So we'll see how that works.
+
+01:23.000 --> 01:27.170
+We're going to see a validation message for and again another lambda in here.
+
+01:27.380 --> 01:30.400
+And as you can see it's the same thing every time we go into our model.
+
+01:30.500 --> 01:35.600
+So we have these three values here and now that we have the validation we don't need that.
+
+01:35.600 --> 01:41.050
+So that's like a shorthand way of actually getting your actual inputs to show up.
+
+01:41.060 --> 01:45.240
+Let me show you the reason why this is helpful so if I stopped the server and I restarted.
+
+01:45.710 --> 01:50.750
+So we go back over to this now but you can see is because we're now using this free form shorthand you
+
+01:50.750 --> 01:54.680
+can see that we now have the time on other prettinesses not there because it's not using the bootstrap
+
+01:55.580 --> 01:56.490
+theme anymore.
+
+01:56.510 --> 02:01.450
+So you can see he's not using that style but we'll see how to do that in just a second.
+
+02:01.790 --> 02:07.010
+But as you can see here the the title and everything is created automatically that we get that cleaned
+
+02:07.010 --> 02:08.280
+up a little bit.
+
+02:08.300 --> 02:15.470
+Let's go back over to the Create and for this I want to go in just I want to take all these values and
+
+02:15.470 --> 02:19.590
+I'm going to then paste them into here.
+
+02:19.720 --> 02:22.420
+And obviously we want to change the actual value to our John
+
+02:56.400 --> 02:59.600
+so now that we have all those in here I'm going to show you the data annotation is.
+
+02:59.600 --> 03:04.710
+So if we go over to the band model file and a shorthand way to get there is if you click on the actual
+
+03:04.710 --> 03:08.130
+band portion and press 12 it will automatically navigate to it.
+
+03:08.190 --> 03:10.380
+We can use something called Data annotations.
+
+03:10.380 --> 03:18.390
+Now in order to start basically applying different labels and fields and things like that on our inputs.
+
+03:18.390 --> 03:28.950
+So if I wanted to say display I'm going to say display and then I can give this a like value.
+
+03:28.980 --> 03:35.050
+So in order to do that I'm just going to add a custom attribute on here called display and then display
+
+03:35.050 --> 03:39.660
+you can take a value called name and the name is going to be whatever you want it to show.
+
+03:39.660 --> 03:46.770
+As for the label so in this case I'll say enter a Enter the name of the band or musician
+
+03:49.580 --> 03:52.880
+and then if we do this for all of them we can manage all this.
+
+03:52.880 --> 03:57.510
+All these values all this better data on the actual model itself.
+
+03:59.280 --> 03:59.970
+And
+
+04:03.210 --> 04:06.700
+right now just have you know this is kind of crappy messaging right now.
+
+04:06.700 --> 04:08.440
+We'll just do this.
+
+04:08.530 --> 04:09.150
+Then last
+
+04:17.040 --> 04:17.580
+all right that's great.
+
+04:17.640 --> 04:19.520
+Now if we go and run the out.
+
+04:19.800 --> 04:23.760
+So now when we look at this you can see that the actual values for the labels that I gave under that
+
+04:23.760 --> 04:28.050
+name for the data annotation is actually now showing up for the label and that's what we want.
+
+04:28.050 --> 04:32.280
+One thing is that the biography is probably not suited for an actual text box so we want that to be
+
+04:32.280 --> 04:33.400
+a text area.
+
+04:33.690 --> 04:38.370
+So in order to fix that we would go back over to the template and where it says text box before we would
+
+04:38.370 --> 04:49.340
+say text area 4 and then that will show up as a textarea and we probably also need some sort of B.R.
+
+04:49.350 --> 04:50.510
+after our label
+
+04:55.380 --> 04:58.430
+which is interesting because some of these other ones do not have it.
+
+05:07.500 --> 05:12.480
+So actually the reason why this is occurring is the label is here long enough to actually push the div
+
+05:13.030 --> 05:16.980
+the next two down because you can see how wide the form business is there is not.
+
+05:16.990 --> 05:19.770
+It's in a column for as you can see the label pushes.
+
+05:20.240 --> 05:25.440
+So technically in order to fix something like that you would even want to go back to the razor and after
+
+05:25.440 --> 05:28.620
+every put it you would want some sort of a VR tag.
+
+05:28.620 --> 05:33.180
+Maybe that's one way or even better you'd want some sort of styling in there for a.
+
+05:33.210 --> 05:35.250
+Now for the quick and dirty We're just going to do this
+
+05:42.340 --> 05:42.670
+in
+
+05:49.250 --> 05:53.920
+I don't really know what I'm thinking here it needs to go out to the label on being done.
+
+05:54.190 --> 05:55.240
+And he's got the label
+
+06:10.630 --> 06:14.340
+so now if we go back to you you can see that the label is now pushing down on every single one of these
+
+06:14.340 --> 06:15.950
+so it looks a little bit better.

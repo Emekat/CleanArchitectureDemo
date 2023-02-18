@@ -1,0 +1,163 @@
+WEBVTT
+
+00:00.690 --> 00:01.130
+Hey guys.
+
+00:01.130 --> 00:05.550
+So welcome back so in this video what we want to do is make her app a little bit more practical by tapping
+
+00:05.550 --> 00:10.800
+into this static root folder that we have and the way this works is that the Kestral web server for
+
+00:10.800 --> 00:13.250
+every request that's made it configure.
+
+00:13.620 --> 00:17.220
+So any middleware and everything is all going to the request and response and all that stuff is all
+
+00:17.220 --> 00:19.010
+going to be processed or here.
+
+00:19.080 --> 00:27.720
+And the thing is though is that if if if if the web server counters a request to some sort of content
+
+00:27.720 --> 00:31.240
+that matches the root folder then it's going to serve that up first.
+
+00:31.240 --> 00:35.490
+And if it doesn't find any sort of match then it's going to go ahead and pass that request onto our
+
+00:35.490 --> 00:40.980
+actual server server side code for further handling via dotnet core.
+
+00:40.980 --> 00:45.690
+So obviously there's more processing power and processing overhead and things like that.
+
+00:45.700 --> 00:49.790
+Forgotten that core is specifically as it is on that core.
+
+00:49.800 --> 00:52.400
+The code to process the requests.
+
+00:52.560 --> 00:57.810
+So if the server doesn't need to pass that on you know for something like CSSA file or an image file
+
+00:57.810 --> 00:59.910
+or something like that then it's not going to do that.
+
+00:59.910 --> 01:01.980
+So it makes the server much more efficient.
+
+01:01.980 --> 01:06.900
+Another thing too is static content can actually be delivered in a much more efficient manner as well.
+
+01:07.050 --> 01:08.780
+Especially with HDTV too.
+
+01:08.790 --> 01:14.860
+And some of the other advances that have been made over the past few years.
+
+01:15.030 --> 01:19.330
+So in order to see how this works is what we want to do is get rid of this outdoor run because its always
+
+01:19.330 --> 01:21.850
+just returning the same response to Hello World.
+
+01:21.850 --> 01:28.240
+And what I want to do is say app use something called static file so if we ever wanted to set up things
+
+01:28.240 --> 01:33.400
+like cores headers if you guys are familiar with that then you would end up doing all that here and
+
+01:33.400 --> 01:36.340
+you can actually set up custom functionality for all that stuff.
+
+01:36.340 --> 01:41.920
+And in case you guys know of course header's allows one server to get a request from another server
+
+01:41.920 --> 01:48.810
+which is typically prevented by default for security purposes anyway so let's go move to another we're
+
+01:48.820 --> 01:50.020
+using the static files.
+
+01:50.020 --> 01:53.290
+Basically the server is going to look inside of here for any sort of matches.
+
+01:53.290 --> 01:58.080
+So it's getting a new item and inside of here we're going to create just a standard HCM L5.
+
+01:58.090 --> 02:01.280
+So that's see where is it.
+
+02:01.510 --> 02:07.820
+It is HLM page and we're going to call this index that each team sends out of here going Gordon change
+
+02:07.820 --> 02:15.290
+the message and we'll say hello from your mom.
+
+02:16.060 --> 02:16.600
+OK.
+
+02:16.610 --> 02:22.280
+All right so now that we have that if we go out and run the application because we've enabled the static
+
+02:22.280 --> 02:26.330
+content the web server is now going to look inside of that static folder for any sort of request that
+
+02:26.330 --> 02:27.310
+matches.
+
+02:27.510 --> 02:32.800
+Index studied Chimo clearly matches the web server responds and we get our message.
+
+02:32.840 --> 02:37.250
+Now if we want to get a little bit more robust in here as well it's going out a few more folders.
+
+02:37.250 --> 02:41.520
+We're going to add CSX.
+
+02:42.490 --> 02:44.430
+You know I'm naming it for now.
+
+02:44.510 --> 02:47.270
+Just as well just to give you guys an example.
+
+02:47.270 --> 02:56.200
+So create a new item and inside of here that's going to be a stylesheets around to say Main and CSX.
+
+02:56.210 --> 02:58.280
+All right so here we go there's the body.
+
+02:58.280 --> 03:03.020
+Let's take this out and since we have an H1 we're going to go out at an age one style and will say color
+
+03:03.350 --> 03:05.420
+is red.
+
+03:05.620 --> 03:11.260
+And then inside of our index that HMO if I went ahead and I can just drag this file right into the head
+
+03:11.260 --> 03:14.410
+here and you can see that it's going to link right out to it.
+
+03:14.410 --> 03:17.380
+So that's a very nifty feature I think.
+
+03:17.380 --> 03:22.030
+And let's go and run the application now so we should see that our H-1 is now in red.
+
+03:22.180 --> 03:28.960
+If we go to and start each team now and you can see that it is now in red so we now have styling and
+
+03:28.960 --> 03:29.500
+things like that.
+
+03:29.500 --> 03:36.840
+So both of those requests were actually made and handled via the static server for the building terminal
+
+03:36.850 --> 03:41.920
+static server and none of that request was actually processed via dotnet core.
+
+03:41.920 --> 03:47.400
+So in the next video it's going to talk about how to actually get dot net core involved in the processing.

@@ -1,0 +1,1210 @@
+WEBVTT
+
+00:00.600 --> 00:05.160
+Hey guys what's up with this story of what we're going to be doing is showing you how to get up and
+
+00:05.160 --> 00:12.360
+running with a basic high speed on a Web site as well as using re-act babbling well-packed which is
+
+00:12.360 --> 00:14.520
+really the three tools you're going to use a lot.
+
+00:14.520 --> 00:20.700
+Whenever you're going to be writing Riak code you're going to be able to compile your javascript and
+
+00:20.700 --> 00:23.410
+your notes on the web in order to be able to handle your modules.
+
+00:23.550 --> 00:25.640
+And we'll get into that more as we go into this.
+
+00:25.660 --> 00:30.690
+But it isn't just going to be pretty much a one video demonstration of how you would want to merge it
+
+00:30.690 --> 00:36.280
+really just give a suggestion of how you could set up your project to use both speed and reacting and
+
+00:36.720 --> 00:38.120
+with speed on that.
+
+00:38.340 --> 00:43.620
+We're obviously going to be using C-Sharp which is Microsoft's flagship language it's their most popular
+
+00:44.130 --> 00:50.190
+language by far and I wrote one of his top five languages out right now probably.
+
+00:50.260 --> 00:53.680
+So in order to be able to follow along on this you're going to need to have something to write your
+
+00:53.680 --> 00:54.130
+code in.
+
+00:54.130 --> 00:59.590
+And since we're using XP now you're probably going to want to use Visual Studio and there's a free version
+
+00:59.590 --> 01:02.390
+so you can download that here at this web page.
+
+01:02.410 --> 01:06.070
+You can also get that done at Corbridge ever using actually gotten that 4.5.
+
+01:06.070 --> 01:12.360
+I've not done that core but the it will come with your install so just go out and make sure you have
+
+01:12.370 --> 01:14.110
+Visual Studio installed.
+
+01:14.650 --> 01:18.060
+The next thing you're going to need is you don't need to have no chance install because that's how we're
+
+01:18.070 --> 01:21.050
+going installing tools like battling with pack and react.
+
+01:21.400 --> 01:23.400
+So make sure both of these aren't all of your machine.
+
+01:23.410 --> 01:24.480
+I'm going to be using Windows.
+
+01:24.500 --> 01:30.230
+We can probably follow along just fine on a Mac or Linux machine to.
+
+01:30.270 --> 01:34.050
+So once you have Visual Studio installed and I went ahead and opened it here you would be greeted with
+
+01:34.050 --> 01:42.130
+this start page and it's what we're going to do is just go to file new and create a new project and
+
+01:42.130 --> 01:47.980
+then inside here what I'm going to do is just you can highlight web if you want so you have less options
+
+01:47.980 --> 01:48.670
+to deal with.
+
+01:48.790 --> 01:51.940
+And we're not going to be using Corrigan reviews and gotten that 4.5.
+
+01:51.940 --> 01:54.850
+So that's why I'm selecting this version here.
+
+01:54.940 --> 01:58.420
+You're going to want to go out and create a place to put it here.
+
+01:58.420 --> 02:03.120
+I'm not going to use a repository that's just beyond the scope of this.
+
+02:03.160 --> 02:11.320
+This tutorial here I like to put my projects in a folder on my C drive just so I have a safe place to
+
+02:11.320 --> 02:12.760
+reference them and put them right in here.
+
+02:12.760 --> 02:19.280
+So I have a C-sharp folder already here something I go it and just select the folder and here the name.
+
+02:19.280 --> 02:26.570
+This is the name of the project that you're going to be titling so for your case it's going to be react.
+
+02:27.160 --> 02:29.530
+I don't know I guess I'll just call re-act demo.
+
+02:30.680 --> 02:32.260
+I click OK.
+
+02:32.850 --> 02:35.070
+And now here what we want to do is like to MVC.
+
+02:35.080 --> 02:37.510
+But we're going to do actually running on empty.
+
+02:37.620 --> 02:40.500
+We don't want to have any of the boilerplate or any of the stuff that it comes with.
+
+02:40.600 --> 02:44.020
+So we just get it empty empty website.
+
+02:44.020 --> 02:45.750
+I'm not going to add unit tests.
+
+02:45.810 --> 02:51.620
+That's probably beyond the scope of what I'm trying to demonstrate here so let's just select the empty
+
+02:51.980 --> 02:53.580
+click OK.
+
+02:59.180 --> 03:04.520
+Our answer here didn't set up the project for us there's not much here on the right hand right hand
+
+03:04.520 --> 03:04.910
+side here.
+
+03:04.910 --> 03:09.580
+The solution explores where are your actual contents of your project are located.
+
+03:09.810 --> 03:13.700
+There's a lot of Microsoft specific stuff in here that might be confusing if you've never gotten started
+
+03:13.700 --> 03:15.580
+with has been on that before.
+
+03:15.660 --> 03:19.090
+Like the web config and just.
+
+03:19.250 --> 03:21.240
+Well that's probably because it's empty.
+
+03:21.290 --> 03:22.720
+There's not going be too much confusing stuff.
+
+03:22.730 --> 03:26.870
+But how do we have selected the regular is put on that Web site you can have authentication and everything
+
+03:26.870 --> 03:33.270
+all built in it working for you and that can be sometimes difficult to figure out what's going on there.
+
+03:33.290 --> 03:37.880
+But let's go ahead and create our controller because what we want to do is when the application starts
+
+03:37.880 --> 03:41.250
+we want to just go ahead and have an initial reading page.
+
+03:41.480 --> 03:49.920
+So I'm going to go ahead and write a book on the project and I'll just say and I say nubes scaffold
+
+03:49.920 --> 03:54.810
+that item and we want to grab an NBC control and we're just going to say that it's empty.
+
+03:55.950 --> 03:58.180
+And we'll call it the default control or that's fine.
+
+04:10.810 --> 04:14.860
+So I went ahead and added quite a bit of stuff that our project needs because now that it knows that
+
+04:14.860 --> 04:21.850
+you were to the controller it's like oh we need to add all this other stuff like Route config.
+
+04:22.180 --> 04:26.590
+We'll get into that in just a second but this is actually how your application is able to hit the controllers
+
+04:26.590 --> 04:28.570
+that you add to the project.
+
+04:28.590 --> 04:32.660
+This just explains how the routing is supposed to work because you can customize that quite a bit.
+
+04:32.980 --> 04:37.060
+But we're not going to get into too much of this basic stuff and really it's not basic at all it's just
+
+04:37.060 --> 04:39.790
+it's what every project and aspect on need.
+
+04:39.790 --> 04:45.900
+So at least from VC dot net and just we don't need to dissect all those pieces here.
+
+04:45.910 --> 04:50.850
+We just want to get in and get moving on because this is mostly about how to integrate react with your
+
+04:50.890 --> 04:52.660
+input on a project.
+
+04:53.510 --> 04:59.470
+So let's go ahead and up in the controller's folder there is now the default controller and you can
+
+04:59.470 --> 05:01.400
+see that we're turning this view.
+
+05:01.660 --> 05:08.290
+So we have just one index and in order to return something because right now we're going to return essentially
+
+05:08.290 --> 05:14.280
+nothing because there is no view and the default folder down here in the view.
+
+05:14.290 --> 05:20.440
+So we want to create a shortcut to be able to do that if you have this control or file writing hover
+
+05:20.440 --> 05:26.160
+over view and right click and then just say add a view and then here this is all going to go with the
+
+05:26.170 --> 05:26.710
+default.
+
+05:26.710 --> 05:33.040
+We want to have the index match the the method name which is indexed so make sure that those those because
+
+05:33.040 --> 05:37.100
+it has data has to match up otherwise it's not going to go to find the right template.
+
+05:37.530 --> 05:42.960
+And we also want to have this use a layout page selected So we're going to go ahead and select the layout
+
+05:42.980 --> 05:46.750
+page that supposed to use and that's going to be right here.
+
+05:47.170 --> 05:50.530
+And the reason why we use lay out pages is just for code reuse.
+
+05:50.530 --> 05:54.520
+That way if there's a lot of stuff that all the pages share you can have that sitting in the layout
+
+05:54.550 --> 06:01.570
+and just have the you know the pages that derive from that not use everything or not have to duplicate
+
+06:01.570 --> 06:07.480
+all that stuff it's in the layout because it just uses the layout plus you know the additional code.
+
+06:07.510 --> 06:09.440
+I'll just want that more detail.
+
+06:09.450 --> 06:10.140
+Good point.
+
+06:10.150 --> 06:14.200
+And so this is going to add or review and you can see now under the default folder where used to be
+
+06:14.250 --> 06:17.900
+indicators how an index file and this is going to be.
+
+06:18.030 --> 06:20.800
+What has changed is to react Tauriel
+
+06:25.030 --> 06:30.280
+and inside here this is actually called Razor syntax you know.
+
+06:30.300 --> 06:35.380
+In fact if you've never used the on that you probably want to follow along on a different tutorial before
+
+06:35.380 --> 06:39.840
+you even get to this because this is mostly once again about how to integrate react with
+
+06:43.730 --> 06:49.840
+I able to do those customize this layout folder or the layout file also inside shared the layout.
+
+06:49.940 --> 06:54.090
+We're going to take on some of the stuff that I don't want in the project right now.
+
+06:54.110 --> 06:58.360
+Take out those two lines down here of integrating get rid of this stuff here.
+
+06:58.430 --> 07:00.540
+We do want this render section down here.
+
+07:00.560 --> 07:05.840
+So I do want to keep that in I also want to copy this line and I'm gonna put it at the top of the head
+
+07:05.870 --> 07:06.770
+here.
+
+07:06.910 --> 07:08.660
+We're actually at the bottom of the head.
+
+07:08.810 --> 07:12.200
+And inside we're going to change the name of it.
+
+07:12.430 --> 07:15.820
+And the reason why is because we want to have two sections that we're going to use that we have the
+
+07:15.860 --> 07:21.310
+footer section and the head section and that's all we're going here.
+
+07:21.350 --> 07:25.650
+We got to change your application and so will say retire.
+
+07:26.200 --> 07:28.560
+Obviously it's still to me.
+
+07:28.580 --> 07:28.840
+All right.
+
+07:28.860 --> 07:32.540
+And go out and just click play but before we do that let's
+
+07:38.050 --> 07:39.180
+let's go and click on
+
+08:06.210 --> 08:08.190
+things that kind of slow.
+
+08:08.980 --> 08:16.140
+So what finally actually opens up we don't have this this rube file pointing to our default template
+
+08:16.140 --> 08:20.140
+but if we went ahead and we did a forward slash and just the default for the name of our controller
+
+08:20.140 --> 08:21.150
+that we created.
+
+08:21.150 --> 08:26.520
+Now you're actually going to hit the tutorial that we changed and because we took out all the seats
+
+08:26.700 --> 08:32.310
+and everything like there's no there's no styling here so let's get it fixed that real quick and just
+
+08:32.310 --> 08:36.920
+so we know what's going on inside the layout.
+
+08:36.990 --> 08:43.470
+I'm going to go ahead and go to the contact folder and we want to try again bootstrap and then under
+
+08:43.470 --> 08:45.420
+that we also want a dragon in the site.
+
+08:45.430 --> 08:51.720
+Yes now this was actually happening under the covers but wanted to explain really just I didn't want
+
+08:51.720 --> 08:57.090
+any sort of magic when I just wanted to be very explicit about what files and everything are being loaded
+
+08:57.780 --> 08:59.540
+because we're using bootstrap.
+
+08:59.610 --> 09:06.180
+We also need to actually use both J-20 and whose sharp bootstrap require Shinwari.
+
+09:06.180 --> 09:08.150
+So let's go ahead and bring that in.
+
+09:08.150 --> 09:14.250
+First of all you have to do is just click and hold and it will actually map it for you and everything
+
+09:15.040 --> 09:17.180
+and then drag and bootstrap here.
+
+09:19.210 --> 09:19.380
+All right.
+
+09:19.400 --> 09:26.580
+So we should be able to just close it down so let's just go out and stop it and rerun it so that we
+
+09:26.590 --> 09:28.460
+can open in the browser.
+
+09:34.830 --> 09:38.580
+And you can see that we have a much better styling this time and it's even responsive so that you have
+
+09:38.580 --> 09:41.890
+the responsive navigation which there is no items there.
+
+09:41.910 --> 09:47.040
+But any way that that is working.
+
+09:47.220 --> 09:52.400
+So we want to fix that issue where it's opening up the first page and it's not actually finding it.
+
+09:52.400 --> 09:58.490
+What we do is go into our config which is in the app store folder and we go click on that.
+
+09:58.500 --> 10:01.810
+Inside this is instantiation code right here.
+
+10:01.810 --> 10:06.000
+Well we want to do is adding another argument which is controller and then we're going to with the name
+
+10:06.000 --> 10:10.480
+of the controller that we wanted to default to which was our default controller.
+
+10:11.310 --> 10:14.790
+And then now we go out and start it it's actually once you find that default controller.
+
+10:14.790 --> 10:16.660
+So we want to put that in the user.
+
+10:16.690 --> 10:21.660
+We can just find it for us and go right there from the root directory.
+
+10:21.750 --> 10:22.050
+There
+
+10:25.190 --> 10:26.910
+is another we have that out of the way.
+
+10:26.910 --> 10:32.510
+Let's go into our project folder structure here.
+
+10:32.530 --> 10:36.680
+And what I want to do inside the scripts is actually where I'm going to put our re-asked project.
+
+10:36.700 --> 10:40.370
+I'm going to create a folder inside of here and we're just going to pull it out.
+
+10:40.380 --> 10:41.200
+We have folder
+
+10:43.900 --> 10:46.770
+and let's go to navigate to where that's located.
+
+11:04.360 --> 11:09.080
+So here's the whole reactor in my folder so if I if I go you can send to send some of my projects for
+
+11:09.090 --> 11:09.450
+you right.
+
+11:09.450 --> 11:10.750
+Put this project.
+
+11:11.100 --> 11:19.960
+So if I go inside all of the scripts scripts scripts scripts scripts Well then I'm going to go inside
+
+11:19.970 --> 11:27.780
+it react folder and this address bar type in cmd and it's going to be a shortcut to open up your command
+
+11:27.780 --> 11:30.000
+prompt to that folder.
+
+11:30.000 --> 11:34.510
+Now what I want you to do is if you install the nodes like you like I told her to be getting in the
+
+11:34.510 --> 11:39.820
+video then you can when you type in MPO it should actually pull up information NPM as a package manager
+
+11:40.110 --> 11:45.600
+and it allows us to install things like reacted so that it's going to reach across the web and grab
+
+11:45.600 --> 11:50.400
+the latest we are coding and it handles like dependencies that certain projects need.
+
+11:50.400 --> 11:51.960
+So that's why we needed to install it.
+
+11:51.960 --> 11:54.870
+No because we needed the tool.
+
+11:54.870 --> 12:00.930
+So if you get information like this that means that you've installed PM and node correctly so you can
+
+12:00.930 --> 12:05.950
+continue it 90 degrees and reinstall that so that you can get that working and the first thing we need
+
+12:06.010 --> 12:09.340
+do inside this folder now is we're going to create an initialization file.
+
+12:09.510 --> 12:10.820
+So and then it follow.
+
+12:11.130 --> 12:12.280
+So let's go and do that.
+
+12:12.280 --> 12:15.120
+Now we're going to say NPM and I'll make this a little better.
+
+12:15.120 --> 12:16.200
+So you guys can see
+
+12:22.010 --> 12:28.150
+all right so sit down here the search string is all right there you go.
+
+12:28.260 --> 12:35.400
+So we're going to type them here which is short for initialization which is what we don't want to call
+
+12:35.410 --> 12:38.470
+it re-act actually what just call a tutorial.
+
+12:38.580 --> 12:44.620
+So that's the name of the project that I'm going to reference and what the say version 1.0 that's ok
+
+12:44.880 --> 12:48.130
+I will say it works.
+
+12:49.360 --> 12:50.900
+Yes.
+
+12:55.650 --> 13:00.750
+Now here is the starting point for our STARTING POINT actually yes.
+
+13:00.810 --> 13:05.270
+And don't worry about the test command or the great repository or keywords and I'll put my name in there
+
+13:05.280 --> 13:10.320
+you can put your own name and it will get in my TV license and that's good.
+
+13:10.320 --> 13:14.510
+All right so now that we've done that they created this package that a song folder.
+
+13:14.640 --> 13:20.310
+Now in order to write code you're going to need to get a better editor and Visual Studio.
+
+13:20.310 --> 13:27.160
+So unfortunately the support and Visual Studio at least for 2015 it certainly didn't work.
+
+13:27.810 --> 13:32.000
+Let's go and try visual studio first and see how ugly it is.
+
+13:32.310 --> 13:37.770
+But inside this art project folder inside the reactor you can see that there's nothing that looks like
+
+13:37.770 --> 13:42.450
+there's nothing inside Rockfeller even though we can see that we just created a file called package
+
+13:42.450 --> 13:47.290
+that Jason and and there but it's not showing up in Visual Studio the reason why you need to click this
+
+13:47.290 --> 13:52.800
+little button at the top does it show all files and then you can see it showing you that this package
+
+13:52.920 --> 13:54.660
+is some files in the project.
+
+13:54.870 --> 13:58.470
+But because it's great like that it's not included in the project.
+
+13:58.770 --> 14:01.470
+So in order to do that we want to right click and include in the project.
+
+14:01.470 --> 14:08.130
+And the reason why certain files are included and not included is like you'll see in the second when
+
+14:08.130 --> 14:13.140
+we go and install no that we don't necessarily want everything and all of these folders to be added
+
+14:13.140 --> 14:17.990
+to our project and having you know Visual Studio have to keep track of the files and things like that.
+
+14:18.190 --> 14:21.750
+And I'll explain that more in just a second or you'll see why.
+
+14:21.960 --> 14:26.160
+But inside this package I sounds like this is going to be responsible for keeping track of all your
+
+14:26.160 --> 14:26.820
+dependencies.
+
+14:26.820 --> 14:32.130
+So when we install react react has dependencies on all kinds of other different projects that it's going
+
+14:32.130 --> 14:33.480
+to install for us.
+
+14:33.840 --> 14:38.400
+And that's why it makes that so much easier to get things like re-active working.
+
+14:38.830 --> 14:47.060
+And so we'll see in just a second here that this is this file is going to grow as we install stuff.
+
+14:47.100 --> 14:54.300
+So the first thing is let's go out and install a reactor and we're going to NPM install hyphen hyphen
+
+14:54.300 --> 15:06.190
+where you say save and Aleksei react in space react to.
+
+15:06.300 --> 15:06.520
+All right.
+
+15:06.550 --> 15:10.480
+So once again this is reaching across the web it's going to install in all the different dependencies
+
+15:10.480 --> 15:16.930
+and everything because we did save it's actually going to add those two things that we install to our
+
+15:16.930 --> 15:17.930
+dependencies.
+
+15:18.060 --> 15:20.220
+The location of this config file.
+
+15:20.350 --> 15:24.250
+And that's why I was telling you that it keeps track of the versions that you have because if you have
+
+15:24.250 --> 15:30.520
+Riak sixteen point two you can't have react sixteen point five or fourteen point something or another
+
+15:30.820 --> 15:32.070
+you're going to have all kinds of problems.
+
+15:32.070 --> 15:39.040
+But NPM is actually following the dependency structure pretty well.
+
+15:39.040 --> 15:41.230
+So it handles all that for us.
+
+15:41.620 --> 15:46.870
+Now what I want to show you because I was telling you about the reason why you don't want to have all
+
+15:46.870 --> 15:53.590
+these files included in Visual Studio is now there's no modules folder which all these different things
+
+15:53.590 --> 15:55.120
+got installed into.
+
+15:55.630 --> 16:00.680
+And the reason why was because we install re-occupy re-act has all these weapons.
+
+16:00.700 --> 16:06.920
+So all this stuff has to actually be downloaded as well in order for react to be able to work and react.
+
+16:06.940 --> 16:11.440
+So even though we didn't say to install these things they did anyway because they need to be there in
+
+16:11.440 --> 16:13.300
+order for react to work.
+
+16:13.630 --> 16:19.090
+And if we go back to Visual Studio and we refreshed you can see the modules forward but I'm not going
+
+16:19.090 --> 16:23.440
+to and include that one because there's just too much stuff in there I don't want Visual Studio keeping
+
+16:23.440 --> 16:28.720
+track of Visual Studio is a memory pig so that thing can run out of memory at any random time and just
+
+16:28.720 --> 16:30.400
+like crash happens all the time.
+
+16:30.400 --> 16:32.260
+Ask any Windows developer.
+
+16:33.020 --> 16:37.080
+I see another way that we need to go and install a few other things and these are our development tools
+
+16:37.090 --> 16:41.860
+so instead of actually saying that the way dependencies are actually a development dependency as we're
+
+16:41.860 --> 16:47.010
+working on this project so we're going to say him install and see because it's a development dependency
+
+16:47.100 --> 16:49.870
+and save save instead of just save.
+
+16:50.170 --> 16:56.390
+And now I need to add a battle for another.
+
+16:56.390 --> 17:06.100
+It's confusing is the BS over here but it's core battle loader and they need to have a space between
+
+17:06.100 --> 17:07.370
+all these things.
+
+17:07.760 --> 17:19.380
+But hack for say Fauvel research and B and then Babel three said Riyadh's
+
+17:22.750 --> 17:23.560
+All right that should be everything.
+
+17:23.560 --> 17:28.510
+So we click enter it's going to go on install those as the development dependencies are going to pause
+
+17:28.510 --> 17:33.190
+the video because that's a lot it's going to have to download a lot for that.
+
+17:33.400 --> 17:39.860
+Next thing we need to do now is go ahead and we need to add a new file to the reactor folder called
+
+17:40.490 --> 17:42.560
+our config file.
+
+17:42.740 --> 17:47.170
+We're seeing right on the javascript file.
+
+17:47.170 --> 17:53.560
+So you say well God can.
+
+17:54.570 --> 18:01.930
+God yes so inside of here when to paste this answer just pause the video for Say him in Chicago don't
+
+18:01.930 --> 18:04.870
+copy that she put in just a second copy.
+
+18:05.110 --> 18:09.110
+What we're doing here is we're actually setting up this configuration file with packets going to use
+
+18:09.720 --> 18:12.340
+and let's see
+
+18:17.020 --> 18:21.100
+actually know that all of this should be fine.
+
+18:21.280 --> 18:30.760
+The entry point is going to be our chess story and then we want our output to be.
+
+18:31.210 --> 18:34.270
+And this distributor will keep the output like this.
+
+18:34.270 --> 18:35.670
+Let's go ahead and test this out.
+
+18:35.680 --> 18:42.430
+It was a new dodgiest file to this because that's going to be the starting point says entry point I
+
+18:42.430 --> 18:43.650
+was looking for.
+
+18:48.460 --> 18:53.640
+Actually has final insight here we're just going to use some sort of new standard some syntax.
+
+18:53.650 --> 18:56.130
+This is a new feature
+
+18:59.000 --> 18:59.800
+series.
+
+18:59.880 --> 19:07.140
+So you want to write the latest javascript then you want to use keywords like Konstanz where aero functions
+
+19:07.140 --> 19:08.020
+and things like that.
+
+19:08.070 --> 19:12.990
+Some of the latest version or some of the latest standards are the jobs we're playing with it doesn't
+
+19:13.170 --> 19:14.380
+it doesn't work and all the browser.
+
+19:14.380 --> 19:20.190
+So that's why that was going to allow us to be able to write in the latest form of javascript which
+
+19:20.190 --> 19:22.750
+includes classes and things like that.
+
+19:23.130 --> 19:28.590
+And it's going to compile it or process it down to older javascript that still works in the browser
+
+19:28.620 --> 19:33.750
+but it does it for us so we can still write modern javascript but have it work in older browsers and
+
+19:34.170 --> 19:36.890
+that's why we're actually setting up all these tools.
+
+19:37.110 --> 19:41.190
+You'll see also that it's actually it's pretty imperative that you have these tools in place because
+
+19:41.760 --> 19:46.890
+most of the tutorials in the documentation you're going to see on re-act these days they're using classes
+
+19:46.890 --> 19:49.940
+and things like that which means that you have to have that will.
+
+19:50.160 --> 19:54.720
+And another thing too is when you're writing jazz that's not stuff it's got it's impossible to do any
+
+19:54.720 --> 19:56.080
+of that stuff.
+
+19:57.000 --> 20:00.170
+And just straight javascript I mean you have to be a ninja.
+
+20:00.780 --> 20:03.350
+So we're going to using GSX and you'll see what that is.
+
+20:03.360 --> 20:09.980
+And you know you're going to react and everything but the babble makes all that possible.
+
+20:09.990 --> 20:14.760
+All right so let's go back to our packaged sound file what we need to do onto the scripts we need to
+
+20:14.760 --> 20:21.350
+actually tell it how to execute that because we didn't install impact globally.
+
+20:21.630 --> 20:23.440
+We want to get it here.
+
+20:23.700 --> 20:33.090
+And this basically just tells of NPM hey I'm going to look inside my node modules folder from from the
+
+20:33.090 --> 20:36.030
+same folder of where this config file is located.
+
+20:36.030 --> 20:40.770
+So it just automatically knows to look in node modules for the well-packed that we install and not some
+
+20:40.770 --> 20:42.230
+global version.
+
+20:42.690 --> 20:45.760
+So that's why we're adding it to the script model here.
+
+20:45.830 --> 20:49.590
+And if everything goes well we're going to see this and try to compile this and now we're going to say
+
+20:49.680 --> 20:52.240
+NPRM run pack.
+
+20:53.760 --> 20:55.520
+And it did not.
+
+20:55.530 --> 20:56.540
+All right.
+
+21:01.960 --> 21:04.320
+The reason why it's not working is our config file here.
+
+21:04.340 --> 21:06.660
+I'm sorry I missed the module.
+
+21:06.740 --> 21:15.540
+I was just copying this from the web page and when you say modularize for us I if you can see that Visual
+
+21:15.540 --> 21:20.100
+Studio is even trying to warn me of that that it was complaining because in order for this file to actually
+
+21:20.100 --> 21:24.230
+be usable by one that needs to be exported so it can import it.
+
+21:24.570 --> 21:27.210
+All right let's go back here to try.
+
+21:28.020 --> 21:33.670
+See now you can see that it did and went ahead and compile it put out the bundled Yes.
+
+21:33.750 --> 21:35.680
+So we go inside here.
+
+21:35.700 --> 21:36.720
+Refresh.
+
+21:36.840 --> 21:38.780
+We're now going to have that.
+
+21:38.850 --> 21:40.960
+There's another reason why you don't have to know my father.
+
+21:40.960 --> 21:45.750
+Look at all the stuff that's now and I know there's a time but now you know this disk folder and we
+
+21:45.750 --> 21:51.120
+do want the disks involved in the project something to say are included projects.
+
+21:51.400 --> 21:53.410
+So inside here you can see this is a bundle file.
+
+21:53.430 --> 21:56.620
+This was created for us by web pack.
+
+21:57.030 --> 22:00.960
+And now this was just one pack that did it for us.
+
+22:01.050 --> 22:06.690
+And you can see that it's still using cost and cost doesn't work and all the browsers so we didn't actually
+
+22:06.690 --> 22:15.720
+use babbly Babble's not being used by well-packed So what we need to do now is add that portion to our
+
+22:16.950 --> 22:19.620
+page.
+
+22:19.620 --> 22:25.020
+All right so going to be copying this as well and we're after the output here.
+
+22:25.020 --> 22:31.040
+Put a comma and a minute pases and we're adding this module and this actually tells it to use Babolat
+
+22:31.040 --> 22:38.720
+we want to change a few things because we're not using Balram and I get them removed and we do want
+
+22:38.730 --> 22:39.900
+to say use Battletoads.
+
+22:39.900 --> 22:46.370
+Also this needs to be and this needs to be powerful prisa.
+
+22:46.720 --> 22:50.280
+And if you remember earlier we installed that and we also installed react.
+
+22:50.400 --> 22:58.680
+So we need to save babbel preset react and react uses a syntax called GSX which is like this hybrid
+
+22:58.680 --> 23:01.070
+of HCM and Javascript.
+
+23:01.350 --> 23:06.570
+And the thing is is that it has to be compiled to regular Javascript.
+
+23:06.810 --> 23:14.190
+So Babbo can do that for you but you need to have a preset react and you need to tell them how to use
+
+23:14.190 --> 23:16.740
+that and that's why we're actually setting that up here.
+
+23:16.740 --> 23:20.510
+So this is not going to well should work.
+
+23:20.610 --> 23:23.920
+Let's go ahead and check this out here.
+
+23:25.990 --> 23:29.720
+I want to make sure there's no problems now when we run this with the config.
+
+23:30.040 --> 23:34.870
+I know one thing that you'll notice it's actually annoying that we have to actually run this every time
+
+23:34.870 --> 23:35.800
+we want to build it.
+
+23:35.820 --> 23:40.230
+We'll see in just a moment that we can do something that continually have it watch for any changes that
+
+23:40.260 --> 23:46.120
+we may think that will even do that now.
+
+23:46.160 --> 23:48.710
+So it's hard for the modules as well.
+
+23:48.770 --> 23:52.470
+I say when I say it was an true.
+
+23:53.030 --> 24:00.950
+So now that we've gone out we go ahead and we've run our Instead of just stopping it is now waiting.
+
+24:01.030 --> 24:09.410
+And if we look here let's go going to make a change so that what happens where I can pick up on it.
+
+24:13.720 --> 24:15.240
+So watch on the left hand side.
+
+24:15.240 --> 24:16.750
+So as we make it change here
+
+24:21.070 --> 24:24.260
+I'm going out of control as the saver.
+
+24:24.350 --> 24:30.560
+And you can see that has picked up on it and it really compiled and it now has a new bango file that
+
+24:30.560 --> 24:33.440
+it's created and you can see that this is now out.
+
+24:33.440 --> 24:38.210
+Now another thing you can tell the Babble's now working because it took out the constants keywords and
+
+24:38.210 --> 24:43.670
+it's using the strict mode which this is all older versions of javascript that still work in the browser.
+
+24:43.680 --> 24:45.280
+And that's why Babel.
+
+24:45.290 --> 24:53.030
+You can see this now it's not compiling correctly for us now to see react in an example.
+
+24:53.440 --> 24:57.140
+Let's go ahead and add something here.
+
+25:01.760 --> 25:08.620
+And I'm just going to type and react to Tauriel because this isn't a specific way re-acting tutorials
+
+25:08.780 --> 25:10.910
+set up at least at this point.
+
+25:10.970 --> 25:17.550
+So when I use some of their getting started code to get our feet wet as well.
+
+25:25.580 --> 25:28.430
+Right this is what I was looking for other documentation here.
+
+25:28.460 --> 25:35.080
+What I do is I want to copy this file here or at least that portion and we're going to go to digest
+
+25:35.130 --> 25:36.220
+and get rid of all of that.
+
+25:36.260 --> 25:37.850
+And now we're going to save that.
+
+25:37.850 --> 25:41.960
+Now this is the GSX code that I was telling you about the browser has no idea what the hell this is
+
+25:41.990 --> 25:45.760
+and nor does javascript javascript and can't compile this.
+
+25:46.130 --> 25:52.040
+But what it does is with the reactive development extension for example it's going to take this GSX
+
+25:52.060 --> 25:56.560
+code and turn into regular javascript that's going to compile the javascript to the older javascript
+
+25:56.570 --> 25:59.060
+so it does all that magic for us on the fly.
+
+25:59.060 --> 26:06.200
+So if I go ahead and save it and you look inside the bundle file now you can see that there's quite
+
+26:06.200 --> 26:11.420
+a bit more in here now than what we had before because all this stuff like it just went ahead and said
+
+26:11.450 --> 26:15.200
+oh you're using react and all that stuff said OK now I need to bring in the right project I need to
+
+26:15.200 --> 26:20.240
+bring in the reactor project and just a lot of stuff going on there.
+
+26:20.300 --> 26:26.540
+Now this is an important part now in order for Iraq to actually be rendered what we need to do is we
+
+26:26.540 --> 26:32.570
+need to say OK this document Dockett get element by the route we need to take note of that because what
+
+26:32.570 --> 26:41.750
+we're going to do is add that ID to our Web page so that we can bind this component to the root node
+
+26:42.470 --> 26:44.930
+and it's best to just give a demonstration.
+
+26:44.930 --> 26:50.680
+So inside here is great credit where and we're on all this group and how they reacted.
+
+26:50.690 --> 26:53.960
+Like you said it will render all its code inside this element.
+
+26:53.960 --> 26:56.950
+Now we also need to say is
+
+27:02.640 --> 27:10.520
+we need to add our our bundle file to this index file here in order for it to actually work.
+
+27:10.520 --> 27:18.900
+So let's say as we say at symbol an intersection and if you remember from or lay out a section for the
+
+27:18.900 --> 27:21.780
+footer was called scripts.
+
+27:21.790 --> 27:27.170
+So that's what we're going to be standing here as we're in the safes section
+
+27:30.960 --> 27:32.180
+it just like that.
+
+27:32.290 --> 27:41.970
+And then inside here this is what we're going to do right in our bundle.
+
+27:42.370 --> 27:47.530
+And you want to make sure it's in the script because with this Bondo you want to do it on every all
+
+27:47.530 --> 27:50.040
+the elements everything alone before this file actually.
+
+27:50.080 --> 27:57.880
+That's why we put it here just before the the closing about e-tag.
+
+27:57.900 --> 28:10.780
+All right so now let's go ahead and run the project.
+
+28:10.880 --> 28:11.090
+All right.
+
+28:11.100 --> 28:12.090
+And we have hello world.
+
+28:12.090 --> 28:14.780
+Now this is actually being rendered by reacts.
+
+28:14.820 --> 28:25.450
+If I right click doctors at the bottom here you can see that the root now has this H-1 the hello world
+
+28:25.450 --> 28:26.640
+that we added to it.
+
+28:26.650 --> 28:30.310
+And that is all inside this right here.
+
+28:30.320 --> 28:34.180
+So if we were to change this to something else we could do that.
+
+28:34.180 --> 28:40.240
+In fact what we'll see in future trials I'm going to do on react.
+
+28:40.560 --> 28:44.080
+There's quite a bit to do here now reality is now actually working.
+
+28:44.080 --> 28:50.240
+So this is you know for example really of how you get along with re-act working.
+
+28:50.260 --> 28:57.130
+And once again you guys tune into my story I'm going to go into the building quite a bit of stuff with
+
+28:57.130 --> 29:02.740
+react but this whole initial set up some of the biggest pain I think to getting involved in a lot of
+
+29:02.740 --> 29:07.040
+modern client side development these days the technology changes.
+
+29:07.050 --> 29:10.190
+I've done videos on this subject.
+
+29:10.530 --> 29:15.420
+Not even a year ago and they're already out of date so things just got to be so quick with some of this
+
+29:15.420 --> 29:15.660
+stuff.
+
+29:15.670 --> 29:19.180
+But the initial set up is generally the hardest part.
+
+29:19.180 --> 29:23.470
+And then from there you can really start you know looking at a lot of examples online a lot of tutorials
+
+29:23.470 --> 29:28.370
+like mine like books things like that that will really help you along because a lot of the syntax of
+
+29:28.370 --> 29:32.830
+reactor itself isn't changing but the tools and everything you use for your project do change quite
+
+29:32.830 --> 29:34.880
+a bit.
+
+29:34.930 --> 29:40.410
+Now one thing I will suggest also when you're doing re-act development there is a Chrome extension and
+
+29:40.410 --> 29:43.320
+you should check that out of this re-act developer tools.
+
+29:43.380 --> 29:45.760
+You absolutely need it if you're going to use reductio.
+
+29:45.760 --> 29:47.380
+You have to use that tool as well.
+
+29:47.390 --> 29:52.120
+If you're just going to pull your hair out with some of the debugging things you don't make your life
+
+29:52.120 --> 29:56.440
+any more difficult than it has to be when you're dealing with some of the stuff like that this is going
+
+29:56.440 --> 29:58.710
+to make your life easier.
+
+29:58.760 --> 30:02.090
+Now let's see I could probably close this town
+
+30:19.190 --> 30:25.810
+right now if we right clicking means that we now have this re-act component and you can see re-act tells
+
+30:25.810 --> 30:31.330
+you oh hey I have one component which is just a typical H-1 and you can see it's children on the props
+
+30:31.430 --> 30:37.920
+and it's kind of small but this is going to help you a great deal and you'll see when I started doing
+
+30:37.920 --> 30:44.670
+the reactor Royal all alone as your stuff gets more and more complicated this is an absolute must.
+
+30:44.670 --> 30:46.010
+Seriously guys thanks for watching.
+
+30:46.060 --> 30:48.160
+Subscribe for more of this stuff and have a good day.
+
+30:48.160 --> 30:48.600
+Take care.
+
+30:48.670 --> 30:49.490
+Bye.
+
+30:50.080 --> 30:50.670
+Hey guys.
+
+30:50.710 --> 30:54.680
+So this video was brought to you by the Tech Academy to make sure you guys check them out.
+
+30:54.680 --> 30:59.680
+The link is in the description tab below from the Course list here the computer basics overall software
+
+30:59.680 --> 31:03.460
+development good HMO five CSSA database.
+
+31:03.550 --> 31:07.810
+And there is a lot more courses in writing courses all the time to make sure you guys give them a look
+
+31:07.810 --> 31:10.330
+once again and the link is in the description tab below.
+
+31:10.330 --> 31:10.930
+Thanks guys.
+
+31:10.930 --> 31:12.010
+Have a good day.

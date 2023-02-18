@@ -1,0 +1,109 @@
+WEBVTT
+
+00:00.490 --> 00:01.150
+Hey guys what's up.
+
+00:01.150 --> 00:05.830
+So welcome to this new esprit de corps tutorial series and we're going to be using the latest version
+
+00:05.830 --> 00:09.980
+of dot net core which as of the time in this video is 2.1.
+
+00:10.480 --> 00:14.650
+And in order to be able to proceed with this tutorial you definitely need to make sure that you download
+
+00:14.650 --> 00:16.490
+that and have it installed.
+
+00:16.630 --> 00:20.290
+And if you're on Windows you might as well have the Dot Net framework there as well in case you guys
+
+00:20.290 --> 00:24.690
+decide to not use that code for whatever sort of project you're using.
+
+00:24.880 --> 00:25.860
+The tutorial.
+
+00:26.050 --> 00:31.830
+We're going to be covering here is going to apply to both dot net core as well as the Dot Net Framework.
+
+00:31.830 --> 00:38.110
+The latest version is there are going to be certain features of each one that may not be 100 percent
+
+00:38.110 --> 00:45.520
+compatible but ultimately most of the material that will cover is going to be it's going to work on
+
+00:45.520 --> 00:46.750
+both versions.
+
+00:48.800 --> 00:54.830
+So specifically what we're going to be looking at is the Dot Net runtime is Microsoft's runtime that
+
+00:54.830 --> 01:02.060
+runs on its operating system so the Dot Net Framework runs on a Microsoft operating system not their
+
+01:02.060 --> 01:08.860
+core is a is actually able to be run cross-platform so it's not just for Microsoft operating systems
+
+01:08.870 --> 01:12.410
+it can also be used for Mac and Linux.
+
+01:12.420 --> 01:19.620
+So in addition to that there is a language which is C-Sharp and that's the language we're going to be
+
+01:19.620 --> 01:24.900
+focusing on in this tutorial and that is Microsoft's flagship language that they've used for the last
+
+01:24.900 --> 01:33.360
+probably 15 probably 18 years now I guess and that is a language that was much inspired by the Java
+
+01:33.420 --> 01:37.530
+language it's a fully object oriented language and we're going to be looking at that in this tutorial
+
+01:37.530 --> 01:45.300
+series and then specifically for the C-sharp language there is the airspeeds net web framework which
+
+01:45.300 --> 01:52.670
+is Microsoft's most popular web framework and the latest version is HSP dotnet core.
+
+01:52.950 --> 01:58.500
+So I've been writing C-Sharp and specifically Espina Net Web sites for roughly eight years or so on
+
+01:58.500 --> 01:59.580
+and off.
+
+01:59.730 --> 02:02.420
+I do a lot of javascript in front of you I work.
+
+02:02.580 --> 02:08.970
+But as you'll see and hear HSP dot net consists of a lot of C-Sharp code.
+
+02:08.970 --> 02:14.520
+Now you can use Visual Basic or VB dot net if you wanted to but most people that are doing anything
+
+02:14.520 --> 02:18.250
+with Microsoft these days are going to be using C-Sharp for anything new.
+
+02:18.510 --> 02:24.180
+I mean that's just my recommendation that if you're going to be choosing between you know VB or C-Sharp
+
+02:24.270 --> 02:27.490
+I would definitely choose C-sharp.
+
+02:27.560 --> 02:32.120
+So the final thing that you'll need that I recommend as an editor you need some sort of development
+
+02:32.120 --> 02:32.670
+environment.
+
+02:32.670 --> 02:37.280
+Now you can use visual code Visual Studio code if you want to but this tutorial series is going to be
+
+02:37.280 --> 02:43.100
+using the free version of Visual Studio 20:17 there is a community once that you can see free download
+
+02:43.100 --> 02:47.000
+right there so I'll have both of these links and the description tab.
+
+02:47.000 --> 02:48.940
+So make sure you have both of them installed.

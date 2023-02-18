@@ -1,0 +1,109 @@
+WEBVTT
+
+00:00.690 --> 00:06.120
+So after you have an install go ahead and launch Visual Studio 2017 when you launch the application
+
+00:06.120 --> 00:08.730
+you should be greeted with a screen that looks like this.
+
+00:08.760 --> 00:13.080
+And this can be a very very daunting application if you've never used it before.
+
+00:13.080 --> 00:16.410
+But the good news is it's like Photoshop like it's very complicated.
+
+00:16.410 --> 00:21.840
+It can do amazing things but you're not going to use like half the features for a very long time if
+
+00:21.840 --> 00:22.220
+ever.
+
+00:22.230 --> 00:26.100
+So don't let that get to you but let's just jump right into this.
+
+00:26.100 --> 00:31.580
+We're going to go out and create our new project here so we're going to go to file a new project inside
+
+00:31.590 --> 00:32.640
+of here.
+
+00:32.640 --> 00:37.170
+You should be greeted with something more or less similar to this you may have less depending on your
+
+00:37.170 --> 00:42.300
+install it doesn't really matter but you will have this visual C-Sharp with the web selection.
+
+00:42.300 --> 00:46.110
+So if you have that select you're going to see that you can create two different web sites using a high
+
+00:46.110 --> 00:46.940
+speed net.
+
+00:47.130 --> 00:52.110
+There's the dot net core that I talked about in the previous video and then there's the typical framework
+
+00:52.110 --> 00:54.630
+for Microsoft operating systems.
+
+00:54.630 --> 01:00.430
+This video tutorial is all about dot net core which is cross-platform so that's what we want to use.
+
+01:00.480 --> 01:06.390
+Also I have a tutorials net core folder that I'm going to be putting my application into I'm just going
+
+01:06.390 --> 01:11.590
+to call this first application so that I can easily tell the difference as we go through samples.
+
+01:11.850 --> 01:15.940
+And this first application here is great and we're going to put that into the net core.
+
+01:16.320 --> 01:20.110
+You can have these two options selected if you wanted to.
+
+01:20.580 --> 01:26.760
+But this is all and this is all beyond the scope of this tutorial here as far as you know get repositories
+
+01:26.760 --> 01:27.360
+and things like that.
+
+01:27.360 --> 01:29.800
+So we're not going to worry about that one.
+
+01:29.820 --> 01:32.630
+OK now this is going to go and create a bunch of scaffolding.
+
+01:32.700 --> 01:37.740
+Once we select what type of application we want so we're greeted with all this information here and
+
+01:37.740 --> 01:41.170
+this is a lot of information we're going to start with just an empty.
+
+01:41.260 --> 01:43.300
+But what I want you to pay attention to is this.
+
+01:43.320 --> 01:47.490
+Make sure you have the dotnet core frameworks selected and the latest version so you can see I have
+
+01:47.610 --> 01:50.660
+multiple versions there that I can choose from.
+
+01:50.730 --> 01:54.720
+Don't worry about Doc or we're not going to worry about Doc and he might as well have configure HTP
+
+01:54.720 --> 01:58.760
+us in there in case you do try to go live with your web site and you need encryption.
+
+01:58.890 --> 02:02.220
+And then as far as the authentication we're not going to worry about that right now.
+
+02:02.340 --> 02:04.290
+So just go ahead and click OK.
+
+02:04.370 --> 02:09.840
+This will have a bunch of standard like startup code that Microsoft will give you out of the box that's
+
+02:09.840 --> 02:12.430
+going to run an actual working website.
+
+02:12.900 --> 02:16.730
+And in the next video we will talk about the actual structure of the code.

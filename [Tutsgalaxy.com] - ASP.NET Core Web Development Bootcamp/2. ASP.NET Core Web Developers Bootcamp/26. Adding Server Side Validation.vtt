@@ -1,0 +1,196 @@
+WEBVTT
+
+00:00.990 --> 00:01.950
+Hey guys welcome back.
+
+00:01.950 --> 00:06.080
+And this video we're going to be looking at server side validation so in the last one we looked at client
+
+00:06.090 --> 00:10.490
+side validation and in the same way that these data annotations worked on the client.
+
+00:10.490 --> 00:16.220
+They're going to work the same way on the back end and buy back in I don't mean anything inappropriate
+
+00:16.230 --> 00:17.790
+I'm talking about the back end server.
+
+00:17.790 --> 00:22.860
+So the server side code the C-sharp that's running on the web server or the Kestral web server.
+
+00:22.860 --> 00:26.950
+If you're on one note when X or or Mac.
+
+00:27.210 --> 00:29.130
+But if you're on Windows you could run this on us.
+
+00:29.180 --> 00:34.680
+And that's the default Windows web server that's been around for a very long time but are back in server
+
+00:34.680 --> 00:38.040
+side code can actually validate and a very similar way.
+
+00:38.040 --> 00:43.290
+So let's go ahead and look at our controller for the music controller and we're going to go ahead and
+
+00:43.290 --> 00:46.680
+we're posting the data to the controller.
+
+00:47.130 --> 00:52.110
+So I'm going to go ahead and post to this end point here and you can see that we have this from form
+
+00:52.110 --> 00:53.960
+attribute on there.
+
+00:53.970 --> 00:59.220
+Now this is different from the earlier videos that had the from body and the from body is actually what
+
+00:59.220 --> 01:03.750
+is getting the body content from an AJAX Jaison posts.
+
+01:03.780 --> 01:10.920
+So like you said Jaison dating data on the body it can be SML or something else but either way you need
+
+01:10.920 --> 01:17.670
+to say from form if you're getting it from form elements so will run the app from Visual Studio so that
+
+01:17.690 --> 01:21.950
+we can head to spray point and we'll put the breakpoint right here on the try statement and make sure
+
+01:21.950 --> 01:27.740
+it's on the curly brace so it actually gets hit because if it fails before you obviously won't get that
+
+01:27.740 --> 01:29.010
+return statement.
+
+01:30.320 --> 01:35.720
+So here we have the form I'm going to go out and just post some valid values here so that we can satisfy
+
+01:35.720 --> 01:39.800
+the requirements and we'll post all these values to the form.
+
+01:39.800 --> 01:45.720
+And if everything went well we're not running the I'm sorry.
+
+01:45.980 --> 01:48.620
+You need to make sure you're running the app from Visual Studio.
+
+01:48.620 --> 01:51.500
+That's something you're probably going to do with the watch it's great.
+
+01:51.500 --> 01:56.450
+You can run it from the console but with Visual Studio you get the actual debugging and that's like.
+
+01:56.570 --> 01:59.850
+That's really one of the benefits of using Visual Studio and C-sharp.
+
+01:59.870 --> 02:04.420
+So unfortunately for people on the command line like you don't have that option.
+
+02:04.430 --> 02:06.290
+But anyway let's go ahead and post this.
+
+02:06.410 --> 02:12.050
+Hopefully there is some I'm sure there's some sort of we have to actually Sunday number.
+
+02:12.200 --> 02:16.670
+I'm sure that there is some sort of way of actually getting proper debugging on a command line just
+
+02:16.670 --> 02:21.170
+using Natcore like on Linux or Mac but I'm not actually 100 percent sure.
+
+02:21.170 --> 02:26.000
+So unfortunate I don't know about that but with visual studio we do get this debugging and we can actually
+
+02:26.000 --> 02:30.620
+see the values that are being posted here and what we're going to want to do here is on the server side
+
+02:30.620 --> 02:37.100
+we can actually validate these values because on the client you know obviously the malicious user can
+
+02:37.100 --> 02:43.430
+they can like bypass the javascript is validating your data and they can send bogus say to your server
+
+02:43.430 --> 02:44.840
+and your server wouldn't know any better.
+
+02:44.840 --> 02:49.250
+If it doesn't actually check to make sure that whatever you check on the client side should also be
+
+02:49.250 --> 02:50.420
+checked for on the server side.
+
+02:50.420 --> 02:51.850
+So that's what we're going to do now.
+
+02:53.600 --> 02:58.010
+So in order to validate all we have to do is we can say there is this special keyword or we can say
+
+02:58.010 --> 03:02.230
+if and when we say capital like M for model state.
+
+03:03.400 --> 03:10.890
+Is valid then we can just say we'll just cancel log something Konsole right line
+
+03:20.470 --> 03:25.630
+and really it's not like any sort of special built in method with C-Sharp it's all about static classes
+
+03:25.630 --> 03:27.010
+or abstract classes.
+
+03:27.040 --> 03:32.440
+There's interfaces there's extension methods and knowing all the difference in trying to explain that
+
+03:32.440 --> 03:38.060
+is much too difficult for a beginner who are some like not even I'm just glossing over that.
+
+03:38.080 --> 03:42.730
+So if we fire up the server and we go ahead and we put a breakpoint on here I'm going to go ahead and
+
+03:43.150 --> 03:47.710
+submit the form and I should get this model state is valid and if it's true then it means that everything
+
+03:47.710 --> 03:55.150
+pass server side that you also set for client side validation using the annotations.
+
+03:55.160 --> 04:02.600
+We said Honor band class right here.
+
+04:02.630 --> 04:08.570
+So that means if I post these valid values here I'm going to hit the server and you're going to see
+
+04:08.570 --> 04:11.030
+that I post all those valid values.
+
+04:11.150 --> 04:13.210
+Ed matched all the client site validation.
+
+04:13.210 --> 04:18.350
+That's why it was even allowed to hit the server and when it got here it also did the server side validation
+
+04:18.420 --> 04:22.500
+check for everything and said is if model state is valid and it's true.
+
+04:22.730 --> 04:26.960
+And this is like I said this is a little bit more complex but you can think of this is some way you
+
+04:26.960 --> 04:32.360
+know kind of built in magic but you kind of have to just get used to it and you can learn more about
+
+04:32.360 --> 04:34.090
+how it actually is working under the covers.
+
+04:34.100 --> 04:40.370
+But Moto-ST is valid is attached to the data annotations that are being used on your model class and
+
+04:40.580 --> 04:44.020
+that is being set here so there's a lot of magic under the hood.
+
+04:44.180 --> 04:48.980
+It's very similar to kind of like Ruby on Rails type of thing but you eventually get used to it and
+
+04:48.980 --> 04:53.750
+you just start using the shortcuts and you just realize hey I don't really have to understand all of
+
+04:53.750 --> 04:56.430
+how that all works but I just have to know how to use it.

@@ -1,0 +1,196 @@
+WEBVTT
+
+00:00.510 --> 00:01.230
+Hey guys what's up.
+
+00:01.230 --> 00:01.750
+Welcome back.
+
+00:01.750 --> 00:05.760
+So in this video I want to show you how to post values up from your forum.
+
+00:05.760 --> 00:10.230
+There's also a built in Razor form helper that's going to be able to help you out here because normally
+
+00:10.230 --> 00:13.330
+you have to spell out exactly where you want this thing to post to.
+
+00:13.620 --> 00:17.170
+But what I want to do is go out and just remove this validation from our form.
+
+00:17.190 --> 00:21.060
+Make makes you just pause the video right here and just make sure you have the same thing from the previous
+
+00:21.060 --> 00:21.940
+video.
+
+00:22.110 --> 00:27.180
+And if you don't just make sure you're going to be getting rid of this part but here I want to go and
+
+00:27.180 --> 00:28.240
+use the helper.
+
+00:28.290 --> 00:35.830
+I'm going to say using and then we're going to say age now and then inside of here we're going to say
+
+00:37.350 --> 00:43.950
+I'm sorry we're going to say using and then inside of parentheses aged female Eldad begin form and then
+
+00:43.980 --> 00:49.120
+inside of here the first thing we do is we give it the name of the method that we want to hit or the
+
+00:49.740 --> 00:57.600
+function that is on the controller class and then the second thing is we want to give it the name of
+
+00:57.600 --> 01:00.180
+the controller itself which is music.
+
+01:00.240 --> 01:00.480
+All right.
+
+01:00.480 --> 01:06.300
+So after these two parentheses you want to have the curly braces and you want all the form elements
+
+01:06.780 --> 01:09.690
+to be inside the curly braces.
+
+01:09.690 --> 01:17.530
+And since this is a form helper using razor You don't need the closing form statement what I want to
+
+01:17.530 --> 01:19.830
+do is go over to the music controller.
+
+01:19.830 --> 01:24.160
+I have a couple of break points here I just want to have it on the try and then also on the catch in
+
+01:24.160 --> 01:25.890
+case there is a problem.
+
+01:26.080 --> 01:29.410
+But this was a point that was created for us by default.
+
+01:29.410 --> 01:36.640
+So you're going to notice that we have these HDTV post attributes that's the way the MVC application
+
+01:36.640 --> 01:38.070
+is able to tell the difference between.
+
+01:38.100 --> 01:44.190
+OK you want the pre-formed page or Oh you're posting the values from the create form page.
+
+01:44.190 --> 01:51.200
+So that's why the post is going to signify the difference between the two revalidate and the forgery
+
+01:51.430 --> 01:54.890
+token is actually something that is involved in cross-site scripting.
+
+01:54.890 --> 01:57.690
+It's an actual It's a common hacking attack.
+
+01:58.090 --> 02:02.170
+You guys can look it up it's beyond the scope of this tutorial but it's cross-site scripting.
+
+02:02.170 --> 02:07.330
+But this is to prevent that by default and visi has protections in place to try to protect you from
+
+02:07.330 --> 02:09.010
+making mistakes.
+
+02:09.910 --> 02:14.650
+So it and fire up the application and navigate over to our create page.
+
+02:15.430 --> 02:16.040
+And here we go.
+
+02:16.040 --> 02:25.540
+Let's go ahead and give us some names of some stuff put in Chris Turner country USA and like me I'm
+
+02:25.540 --> 02:28.820
+just kind of this is like so pompous and arrogant.
+
+02:28.840 --> 02:29.950
+I'm actually not like that.
+
+02:30.020 --> 02:32.210
+So biography.
+
+02:32.230 --> 02:38.030
+I'm from Virginia.
+
+02:38.100 --> 02:41.850
+All right so now what we're going to do is we are going to get a problem because what this thing did
+
+02:41.850 --> 02:44.080
+is it redirected to the music site.
+
+02:44.460 --> 02:48.210
+And unfortunately this did not work at all one second so.
+
+02:48.430 --> 02:50.650
+So the code is fine just make sure you restart your server.
+
+02:50.650 --> 02:55.920
+And I'm not really sure if this is something to do with my local setup or not but the caching thing
+
+02:55.920 --> 02:56.610
+really sucks.
+
+02:56.610 --> 03:00.600
+But if you guys want to put some values in here and then we click Create.
+
+03:00.600 --> 03:04.920
+Now this is going to go out and hit the point so if we look over the collection value you can see that
+
+03:04.920 --> 03:11.350
+there are a few keys inside of your that title genre origin and biography things like that.
+
+03:11.910 --> 03:18.000
+And if we wanted to see the actual results of those values we could actually just hover over the collection
+
+03:18.060 --> 03:19.610
+and then go to the results view.
+
+03:19.620 --> 03:26.430
+And then you can see down in here you can see that the title passen is 80 genre's ATF ATF radio for
+
+03:26.430 --> 03:26.810
+all of them.
+
+03:26.830 --> 03:33.870
+But you can see there and then there's also this request verification to concerts this humongous base
+
+03:33.870 --> 03:36.220
+64 encrypted token.
+
+03:36.630 --> 03:40.970
+So you can see why the page actually errs out because it actually hits the redirect to action right
+
+03:40.970 --> 03:45.750
+here and then it just bounces right over to the main page and it tries to for each.
+
+03:45.750 --> 03:51.630
+Over a model of band values that doesn't exist.
+
+03:51.680 --> 03:56.550
+So just for craps and gigs Let's go ahead and just return the view as well.
+
+03:56.550 --> 03:59.590
+From this view as well so that way you know to stop the server.
+
+03:59.600 --> 04:02.790
+But that way it will not air out every time.
+
+04:02.790 --> 04:09.700
+Right now now normally in your tristate here this is where you're going to end up validating server
+
+04:09.700 --> 04:13.180
+side the values that are passed end and we'll see how to do that in a moment.
+
+04:13.210 --> 04:18.700
+And then there's also the fact you this is where you would store you know or call either some sort of
+
+04:18.700 --> 04:24.070
+third party service or something to pass values in or to get values based on the values you have.
+
+04:24.070 --> 04:29.490
+But obviously the sky's limit there and then catches where everything blows up and your servers on fire.

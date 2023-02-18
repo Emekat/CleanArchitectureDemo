@@ -1,0 +1,118 @@
+WEBVTT
+
+00:00.720 --> 00:04.950
+So what I want to show you guys in this module here is that you can actually make your development a
+
+00:04.950 --> 00:10.800
+lot easier with dotnet core and I dot net with this new dot net watch command which is very similar
+
+00:10.800 --> 00:11.520
+to the Web pack.
+
+00:11.520 --> 00:13.430
+Watch if you guys have ever used that before.
+
+00:13.440 --> 00:17.150
+But it listens for any sort of file changes that are being made.
+
+00:17.340 --> 00:21.390
+And that way you can go ahead and you just have to run it one time and as you're making changes to the
+
+00:21.390 --> 00:23.480
+server code you don't want to restart the application.
+
+00:23.480 --> 00:26.530
+It's going to go on restart for you.
+
+00:26.550 --> 00:33.390
+So in order for this to actually work you need to go to your NEW get go to your tools and get a package
+
+00:33.390 --> 00:40.050
+manager go to the managed to get packages and here you can actually just type.
+
+00:40.050 --> 00:42.130
+Watch.
+
+00:42.160 --> 00:45.610
+So it's actually confusing because there's a few of them here in this that the watch is not actually
+
+00:45.610 --> 00:46.280
+what we want.
+
+00:46.280 --> 00:51.070
+So what I want you to do is type in watch your tools and this should actually pull up the one you want
+
+00:51.070 --> 00:55.780
+which is Microsoft on Wotcher tools and we want to go and select we're going to install it to our first
+
+00:55.780 --> 01:00.830
+application and then just go and click click install.
+
+01:01.190 --> 01:03.390
+So basically for the sake of this we'll just make it easy.
+
+01:03.390 --> 01:07.380
+But if you go to the command prompt where the project is located here and all you have to do is say
+
+01:07.380 --> 01:09.830
+Dot Net watch run.
+
+01:10.290 --> 01:13.470
+And then this will go through and it's going to start of the server for you.
+
+01:13.470 --> 01:17.370
+So instead of the browser automatically opening up for you you're going to want to go and just pull
+
+01:17.370 --> 01:18.250
+up a browser.
+
+01:18.420 --> 01:21.300
+You can see it's listening on port 5 0 0 0 0 in there.
+
+01:21.300 --> 01:23.010
+So if we go over to the localhost
+
+01:26.490 --> 01:30.630
+it's still going to run the same exact application we're going go to the local 5000 You can see that
+
+01:30.630 --> 01:31.890
+we get to this new music.
+
+01:32.160 --> 01:40.810
+And if we go over to our music details one here you can see the name of the band we're getting.
+
+01:40.830 --> 01:45.330
+I know it's very hard to read here but you can see we're getting the name Bayside here.
+
+01:45.330 --> 01:51.270
+Now this is coming from the server so normally if I wanted to change that data I'd have to restart the
+
+01:51.270 --> 01:52.160
+server.
+
+01:52.260 --> 01:56.460
+And if we look at the controller where the data is coming from it's hard coded right into the controller
+
+01:56.490 --> 01:57.780
+and passed down to the viewer.
+
+01:57.780 --> 02:03.030
+So if I want to change this again normally we would have to restart the server but all I did was press
+
+02:03.030 --> 02:04.030
+control.
+
+02:06.320 --> 02:11.390
+And if we actually look at the code you can actually see that it didn't watch and it made a change here
+
+02:11.400 --> 02:12.510
+to our application.
+
+02:13.300 --> 02:17.080
+So without having to restart the server if I just refresh the page you're going to see that you have
+
+02:17.170 --> 02:22.960
+the actual changes so it's much easier to go ahead and debug with this tool or just you know develop
+
+02:22.960 --> 02:24.830
+with this tool saves a lot of time.

@@ -1,0 +1,268 @@
+WEBVTT
+
+00:00.750 --> 00:05.270
+All right so I'm tired of the application and looking like an ugly old and outdated thing.
+
+00:05.270 --> 00:08.940
+I want to get you guys excited so let's go ahead and download a bootstrap modern theme.
+
+00:08.940 --> 00:13.710
+And this is a free Web site that you can go to where you can download this free product.
+
+00:13.710 --> 00:14.410
+It's a Web site.
+
+00:14.410 --> 00:15.420
+It's going to be zipped up.
+
+00:15.420 --> 00:22.590
+And what we want to do is we want to extract the contents of the folder to the location of our Web site.
+
+00:22.590 --> 00:28.010
+So let's go over here and you could see all this CSX and vendor stuff and everything we want to go out
+
+00:28.020 --> 00:32.700
+and extract that to wherever our project is.
+
+00:32.730 --> 00:40.680
+In my case I have it under tutorials under net core first application so I have to actually go all the
+
+00:40.680 --> 00:47.400
+way into the application of and find the root directory and I'm going to say OK you'll probably get
+
+00:47.400 --> 00:52.740
+a collision on the C S S directory possibly I guess maybe not.
+
+00:52.740 --> 01:00.410
+And then let's go to an extract also the index aged you know and we're going to extract this as the
+
+01:00.410 --> 01:02.720
+layout page.
+
+01:02.720 --> 01:13.040
+So really let's for right now I'll go ahead and put it inside of I'll put it as near as I can to the
+
+01:13.040 --> 01:14.930
+project because we're going to need it overnight.
+
+01:15.050 --> 01:19.730
+I don't want to just overwrite the I'll just put it in the wrapper right now.
+
+01:19.770 --> 01:20.410
+That's right.
+
+01:21.800 --> 01:26.730
+I replace the existing index.
+
+01:26.730 --> 01:31.470
+All right so now by doing that if we go ahead and we look at this index study Simmo that we overwrote
+
+01:32.100 --> 01:34.460
+you're going to see the new theme and that's really awesome.
+
+01:34.470 --> 01:39.720
+But one thing you might have to do if you don't see it is if you have this inspector window open and
+
+01:39.720 --> 01:44.430
+chrome by right clicking and saying inspect element it open up this inspector panel which you need to
+
+01:44.430 --> 01:46.850
+be very familiar with as a web developer.
+
+01:47.130 --> 01:51.500
+And if you hold down the refresh button you can see an empty cache and hard reload.
+
+01:51.660 --> 01:58.680
+You may have to do that sometimes the Castro web server will actually cache your index or static content
+
+01:58.680 --> 02:04.410
+so that includes any sort of index that HCM files that you might have in there or any CSSA files you
+
+02:04.410 --> 02:05.840
+might be like why isn't this updating.
+
+02:05.840 --> 02:09.630
+So make sure you re refresh refresh the cache a lot.
+
+02:09.630 --> 02:17.800
+Another thing you can do is if you inspect and you go over to the console or you know I'm sorry it's
+
+02:17.830 --> 02:18.660
+not work.
+
+02:18.690 --> 02:24.630
+And then there is a disable cache right here so you can make sure Chrome is not caching anything as
+
+02:24.630 --> 02:30.590
+well but sometimes the actual server will cache stuff and that's why you still have to restart.
+
+02:30.600 --> 02:35.820
+And then also cash reast just delete the cache from your browser
+
+02:39.040 --> 02:43.660
+so while this is really pretty it's not that cool because this is just the static HMO page that never
+
+02:43.660 --> 02:49.030
+changes and that's not really what the web is all about so let's go ahead and add some functionality
+
+02:49.030 --> 02:49.290
+here.
+
+02:49.300 --> 02:55.420
+And what I want to do is take all the contents of this index study each thing and now from the root
+
+02:55.420 --> 02:56.070
+directory.
+
+02:56.080 --> 03:03.230
+I'm going to go into the lay out and I'm going to replace all this stuff right here.
+
+03:03.430 --> 03:06.790
+And then inside of the body somewhere will say
+
+03:10.630 --> 03:16.710
+so I guess somewhere above the floater here just for an example inside of us you know let's not even
+
+03:16.710 --> 03:16.960
+do that.
+
+03:16.980 --> 03:20.290
+We're just going to say render a body.
+
+03:20.370 --> 03:21.580
+All right.
+
+03:21.780 --> 03:25.740
+You don't need a semi call and by the way and razor syntax so we're going to render the body right there
+
+03:25.740 --> 03:28.680
+for right now and then at the top.
+
+03:28.680 --> 03:35.190
+Let's go ahead and add our view back to the title so we can remove the default and make sure it's working
+
+03:35.190 --> 03:46.010
+so well say at symbol view bag dot title the title.
+
+03:46.050 --> 03:54.660
+So this is a good time to probably briefly touch about razor but any anything that is using an at symbol
+
+03:54.660 --> 04:00.570
+that has an at symbol before it is going to be followed by actual C-Sharp code that's going to be executed
+
+04:00.570 --> 04:01.170
+on the server.
+
+04:01.170 --> 04:09.600
+So this is actual C-Sharp basically memory that session memory is available that gets passed down to
+
+04:09.600 --> 04:15.820
+the view and you can actually set the title to whatever you want from the controller.
+
+04:16.280 --> 04:20.890
+And by default it should have the controllers actual name.
+
+04:21.270 --> 04:22.650
+Or maybe no I don't remember.
+
+04:22.650 --> 04:24.400
+But it's not that important.
+
+04:25.580 --> 04:27.140
+So let's make sure all of this is working.
+
+04:27.140 --> 04:32.480
+We're going to stop real quick and I'm going to go in and replay it and instead of going to the index
+
+04:32.600 --> 04:43.070
+each time I want to go to the music dot index and then now you can see that all three were in here but
+
+04:43.080 --> 04:48.850
+what we have is a problem with our static content or static content can no longer be found.
+
+04:49.400 --> 04:55.280
+And we'll have to understand the reason why and the reason why is because the actual links are all messed
+
+04:55.280 --> 05:00.860
+up you can see what it's looking for as it's looking for all these values inside of like music vendor
+
+05:02.030 --> 05:03.330
+fun awesome things like that.
+
+05:03.330 --> 05:07.020
+And there's actually no folder for that.
+
+05:07.030 --> 05:12.640
+So what is the problem the problem is that it's looking at the relative directory and not the root directory
+
+05:12.640 --> 05:14.330
+of the project.
+
+05:15.190 --> 05:19.960
+And once again it's going to be the same thing for the home page as well so you have to go through and
+
+05:19.960 --> 05:25.070
+actually update the links to all the static content in order to fix this.
+
+05:25.630 --> 05:29.800
+And normally what I mean by that is you have to go through this painstaking process of being like you
+
+05:29.800 --> 05:35.350
+know you know SEUS some blah blah blah and it's to it's you know it's going to find it and all that
+
+05:35.350 --> 05:39.300
+stuff instead of looking you can use the Tildy and all that.
+
+05:39.540 --> 05:44.590
+The better thing to do is actually just remember the name of it and use visual studio for its power
+
+05:44.600 --> 05:46.400
+so stylish portfolio men.
+
+05:46.450 --> 05:52.900
+OK so if I go into CSSA stylish porfolio men I just drag it right in there and you can see that it's
+
+05:52.900 --> 05:55.560
+going out for you.
+
+05:56.110 --> 05:59.070
+Know unfortunately I can't like drag and like and replace it.
+
+05:59.080 --> 06:06.310
+But here's some vendor stuff so this vendor stuff is missing so here simple line icons from the vendor.
+
+06:06.390 --> 06:08.310
+Simple line icons.
+
+06:08.480 --> 06:11.160
+I don't remember which one that was.
+
+06:11.260 --> 06:13.530
+So that's where this is this kind of socks.
+
+06:13.540 --> 06:17.960
+You know I said maybe it's even better to just garding use it till the you know and just.
+
+06:18.310 --> 06:18.980
+Just like that.
+
+06:18.980 --> 06:23.800
+That's probably better actually to go through it and try to drag it you can drag or you can just go
+
+06:23.800 --> 06:27.180
+through and manually update all these links.
+
+06:28.790 --> 06:33.020
+So now that I've updated all those links and I go back and I restart the server and I go back to the
+
+06:33.020 --> 06:38.810
+home index page you can see now that we're use that we're actually using MVC with is on that core with
+
+06:38.810 --> 06:43.940
+a modern bootstrap pretty looking theme that we can actually replace some of this content and have a
+
+06:43.940 --> 06:49.190
+very professional web site if you stop the tutorial right now with just what you've learned so far.
+
+06:49.190 --> 06:53.840
+So there's a lot that you can do obviously from here and we're going to get into a much more.

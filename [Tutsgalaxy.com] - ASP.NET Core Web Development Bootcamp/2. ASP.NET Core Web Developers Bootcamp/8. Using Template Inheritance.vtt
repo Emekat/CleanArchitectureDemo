@@ -1,0 +1,94 @@
+WEBVTT
+
+00:00.780 --> 00:01.570
+Hey guys welcome back.
+
+00:01.570 --> 00:07.050
+So in this video what we want to look at is the layout page and the reason on the layout page is beneficials
+
+00:07.050 --> 00:11.130
+because then we can reuse a lot of our code so we don't have to redefine all this code that's in the
+
+00:11.130 --> 00:12.310
+head.
+
+00:12.790 --> 00:18.180
+And you know the closing body aged him and things like that so we're going to do is use a layout page
+
+00:18.240 --> 00:22.620
+and that's going to have all the common code inside of it and then we're going to have pages that will
+
+00:22.620 --> 00:29.440
+derive and use that layout page to just inject you know pieces into certain areas of the layout.
+
+00:29.510 --> 00:31.770
+So let's go out and look into how we're going to do that.
+
+00:33.830 --> 00:38.960
+So by convention there's usually a shared folder inside of the views folder that we're going to go out
+
+00:38.960 --> 00:39.400
+and create.
+
+00:39.400 --> 00:45.590
+Right now we're going to call this shared and then inside of the shared Let's go out and say and new
+
+00:45.590 --> 00:52.390
+item and go to the Web and we're going to select raise or lay out and just go out and have the default
+
+00:52.390 --> 00:55.420
+layout underscore layout that's fine.
+
+00:55.420 --> 01:01.060
+So now that we've added it we have this layout and you can see that there's this rendered body so that's
+
+01:01.070 --> 01:07.100
+how do we go ahead and we get our home page to use that layout page.
+
+01:07.110 --> 01:13.410
+So in order to use the layout page you can see if we go to our normal home index page that the layout
+
+01:13.410 --> 01:18.270
+is no so it's just a string that it's expecting if you hover over it you can see that it's expecting
+
+01:18.270 --> 01:19.410
+a string.
+
+01:19.440 --> 01:24.630
+So we just just had to give it the string which is the location of where it can be found in the project.
+
+01:24.630 --> 01:28.180
+We're going to use the Tildy here so that that is the root directory.
+
+01:28.290 --> 01:30.700
+Look inside the views inside the shed.
+
+01:31.020 --> 01:38.520
+And then the name of our layout file which is layouts DSHEA HTML and that should be that.
+
+01:38.560 --> 01:38.790
+All right.
+
+01:38.800 --> 01:44.500
+So that's our string and now that we're using that if it doesn't find it a visual studio doesn't find
+
+01:44.500 --> 01:50.620
+it you should end up getting an error message there but now that we have this layout page we don't have
+
+01:50.620 --> 01:52.690
+to have all of this.
+
+01:52.840 --> 02:02.770
+Tim L stuff this content right here is going to be injected into the body of the layout page by default
+
+02:02.780 --> 02:03.980
+this rendered body right here.
+
+02:03.980 --> 02:06.750
+So let's go out and run it and take a look.
+
+02:07.570 --> 02:09.630
+So pulling it up in the browser there it is.
+
+02:09.670 --> 02:12.580
+You can see Chris is great and it's the same exact.

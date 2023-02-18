@@ -1,0 +1,223 @@
+WEBVTT
+
+00:00.180 --> 00:03.740
+Guys when you're building a Web site whether it's for yourself or your business or brand.
+
+00:03.750 --> 00:08.010
+One of the hardest things to do is actually find a domain name that is short and relevant and available
+
+00:08.100 --> 00:12.150
+thanks to tech domains finding the perfect domain is actually much easier.
+
+00:12.150 --> 00:16.080
+Programmers tech startups and brands finally have a domain of their own.
+
+00:16.080 --> 00:22.260
+This is why Intel Viacom and even the Consumer Electronics Show are now using techs for their domain.
+
+00:22.320 --> 00:26.260
+So don't wait there's a black friday sale coming up it's the perfect time to secure your domain.
+
+00:26.290 --> 00:31.680
+Ninety five percent off you can pre-register before the 23rd of November to get an additional 10 percent
+
+00:31.680 --> 00:32.850
+off on top of that.
+
+00:32.970 --> 00:34.790
+You just have to go to WWE.
+
+00:34.830 --> 00:37.870
+Go tech forward slash Chris hawks.
+
+00:38.080 --> 00:38.660
+Go.
+
+00:38.800 --> 00:39.990
+Tack forward slash.
+
+00:39.990 --> 00:43.370
+My name Chris hawks and you can pre-register now.
+
+00:43.380 --> 00:44.650
+Hey guys what's up on this video.
+
+00:44.670 --> 00:50.080
+I have a brand new Mac install and I want to show you guys how to get started with Natcore good in.
+
+00:50.160 --> 00:53.160
+Pull up your terminal.
+
+00:53.240 --> 00:56.550
+All right now what I want to do is go to the Web site and there's only one version they are going to
+
+00:56.550 --> 00:57.970
+download the dotnet core.
+
+00:57.980 --> 01:00.650
+2.1 is the latest version so let's go in and grab that
+
+01:18.350 --> 01:18.750
+said.
+
+01:18.780 --> 01:20.090
+We have that install that's good
+
+01:22.930 --> 01:26.630
+and will move that to the trash that's mine.
+
+01:26.640 --> 01:32.010
+So now if you restart the terminal go into these joints and we're going to zoom in so you can actually
+
+01:32.010 --> 01:38.980
+see the and if we type A dot net and we do a hyphen different version and you should get the version
+
+01:38.980 --> 01:42.280
+number of dot net that's running on your Mac machine.
+
+01:42.280 --> 01:42.710
+All right.
+
+01:42.820 --> 01:44.040
+So that's how we install it.
+
+01:44.050 --> 01:49.210
+So the next thing you're going to want to do is go and download a visual studio code which is the best
+
+01:49.420 --> 01:52.960
+cross-platform editor that we can use for running C-Sharp code.
+
+01:55.020 --> 02:00.700
+The visual studio Kotas and Stahl Let's go and open it up and we want to get our extensions here and
+
+02:00.700 --> 02:01.980
+we're gonna look for C-Sharp
+
+02:05.220 --> 02:10.110
+and go and grab this one that's been downloaded nearly 10 million times.
+
+02:17.760 --> 02:22.980
+It's another visual studio code installed along with the extension I'm going to open up to a local folder
+
+02:22.980 --> 02:27.650
+so I have my my dot net core folder inside of here.
+
+02:27.660 --> 02:33.270
+And let's go ahead and I want to right click here and I'm going to say open the terminal and this is
+
+02:33.270 --> 02:36.250
+going to open it up down here I'm receiving it just a little bit there.
+
+02:39.750 --> 02:39.980
+OK.
+
+02:40.100 --> 02:46.830
+So this opens up in the terminals and I have this dot net command I can say dot net new console.
+
+02:46.840 --> 02:50.150
+And this is going to go and create a new console app right inside the folder.
+
+02:50.680 --> 02:57.230
+And once we do that you're going to see that crazy bunch of files here in the fall.
+
+02:57.280 --> 03:02.080
+It has the actual C-Sharp code is inside this program that C-s it's just simply one main function that's
+
+03:02.080 --> 03:04.690
+writing out console Hello world.
+
+03:04.830 --> 03:09.100
+And in order to fire this of what you want to do is go to your little debug menu.
+
+03:09.180 --> 03:13.290
+You're going to do it from the dropdown menu select Add configuration.
+
+03:13.290 --> 03:15.200
+You're going to select dotnet core.
+
+03:15.240 --> 03:19.900
+This is going to create a configuration file for you you don't want to touch any of that right now.
+
+03:19.890 --> 03:22.110
+Go ahead and click your documents again.
+
+03:22.350 --> 03:23.910
+Close this down.
+
+03:23.910 --> 03:27.090
+Double click on your program file.
+
+03:27.240 --> 03:32.920
+Go back to the click on the debugger and then you click and press play.
+
+03:32.940 --> 03:37.860
+This is going to go through and it's going to compile your application to machine code that the Mac
+
+03:37.860 --> 03:43.200
+understands and it's going to then execute on your terminal and you can see the output of the program
+
+03:43.700 --> 03:45.090
+is Hello world.
+
+03:45.090 --> 03:48.440
+So that's how you get set up with dotnet core on a Mac.
+
+03:48.630 --> 03:55.260
+It's going to be a very similar experience for Linux as well so just use Visual Studio code with the
+
+03:55.260 --> 03:59.400
+C-sharp extension the Donek or a library and you're good to go.
+
+04:02.440 --> 04:07.110
+So if you guys are looking to learn more about gotten Accor makes you guys check out of this the.
+
+04:07.120 --> 04:11.920
+So I have the link in the description tab below and it's $100 but it's actually going to be on sale
+
+04:11.920 --> 04:17.140
+for everybody that's looking at this video and that's going to click on the link in the description
+
+04:17.140 --> 04:18.320
+tab.
+
+04:18.430 --> 04:22.140
+This course actually covers everything you need to know getting started with C-sharp.
+
+04:22.140 --> 04:23.270
+It's going to be cross-platform.
+
+04:23.270 --> 04:27.760
+So now that I've showed you how to actually get it installed on Mac you can do the same thing with Linux.
+
+04:27.760 --> 04:33.640
+The course itself is using Visual Studio and the Integrated Development Environment which only works
+
+04:33.640 --> 04:34.210
+on Windows.
+
+04:34.210 --> 04:40.510
+But again you could use Visual Studio code with the C-sharp extension and it's basically the same experience
+
+04:41.740 --> 04:48.210
+but all cover and version control razor templates single page Obstat site generators things like that.
+
+04:48.270 --> 04:53.680
+There is even going to be some you know a lot of a lot of stuff on the razor validation forum posting
+
+04:53.680 --> 04:56.990
+Ajax posting web API.
+
+04:57.220 --> 04:58.990
+So just make sure you guys check that out.
+
+04:58.990 --> 05:02.670
+It covers a lot and that I have other courses available as well.
+
+05:02.710 --> 05:07.330
+So if you guys are interested in Python or other types of development let me know.
+
+05:07.330 --> 05:08.060
+Thanks guys.
+
+05:08.060 --> 05:08.300
+Bye.

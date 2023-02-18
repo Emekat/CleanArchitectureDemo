@@ -1,0 +1,193 @@
+WEBVTT
+
+00:00.530 --> 00:05.900
+All right now let's go ahead and look at how we can add a unit testing project to our application.
+
+00:05.980 --> 00:10.440
+I'm going to go ahead and add a completely separate application from our first application.
+
+00:10.450 --> 00:12.230
+Right click on the solution.
+
+00:12.400 --> 00:16.460
+And from here I'm going to go and say add a new project.
+
+00:16.720 --> 00:20.100
+This is going to pull up my little Explorer here and I can go and shoot a bunch of different things
+
+00:20.110 --> 00:25.250
+I'm going to get on the test and you can see unit tests project for the Dot Net Framework and we're
+
+00:25.250 --> 00:28.300
+going to call this unit test project 1 I don't really care about that.
+
+00:28.420 --> 00:32.410
+You're going to see here that it's using the framework here and you can choose the different frameworks
+
+00:32.430 --> 00:36.490
+and unfortunately with this particular thing it only works with the dot in that frame.
+
+00:37.090 --> 00:41.650
+So to confuse things you have to actually click on dot net core and then from here you can go ahead
+
+00:41.650 --> 00:47.170
+and select your unit test project so we're going to use the M-S test project forgotten that core and
+
+00:47.170 --> 00:48.350
+select OK.
+
+00:48.730 --> 00:54.780
+And then from here what we need to do is we actually need to add a reference so to have our you know
+
+00:54.780 --> 00:58.890
+testing project be able to reference our actual projects so that we can test the code in our project
+
+00:58.900 --> 01:02.220
+we need to go out and add a reference to our unit test project.
+
+01:02.220 --> 01:08.670
+So with our unit test project here and on the dependencies or you can just right click and say Add Reference
+
+01:08.670 --> 01:13.170
+down here and then from here under the projects you might have another browse but you want to select
+
+01:13.170 --> 01:16.140
+projects and you can just click your first application.
+
+01:16.320 --> 01:20.160
+So that way the unit test can now reference the first application and why do we want to do that.
+
+01:20.190 --> 01:25.530
+Well that's because we want to go ahead and write a test math here so this going to be our test method.
+
+01:25.560 --> 01:29.730
+For now let's just instead of having to change the name in fact let's go and change the name because
+
+01:29.730 --> 01:33.900
+I want to give you guys proper naming convention but you want to say what it is that you're testing
+
+01:33.900 --> 01:35.910
+and what you expect the outcome to be.
+
+01:35.910 --> 01:40.650
+So we're just going to say we just want you know controller
+
+01:43.170 --> 01:46.880
+does not return NULL or something like that.
+
+01:46.880 --> 01:47.670
+So like this.
+
+01:47.680 --> 01:49.690
+Now we will go ahead and honor our test.
+
+01:49.680 --> 01:51.260
+We will go and instantiate our controller.
+
+01:51.260 --> 01:53.060
+So I will say control equals new.
+
+01:53.280 --> 01:58.320
+And then from here we can go and instantiate the actual controller that we're trying to call which if
+
+01:58.320 --> 02:00.990
+you remember correctly we have a music controller.
+
+02:01.710 --> 02:06.300
+And now because I've done this you're going to see that we want to add a reference because we have the
+
+02:06.300 --> 02:07.640
+reference to our unit test project.
+
+02:07.640 --> 02:09.710
+We can now reference the project.
+
+02:10.140 --> 02:13.860
+And we brought that and you can see that we haven't satisfied the requirement from the controller so
+
+02:13.870 --> 02:18.300
+if you guys are following along from the story all the way up till now you know that you have to inject
+
+02:18.330 --> 02:24.540
+a an object here a ban repository object that the controller is going to use to test.
+
+02:24.540 --> 02:29.310
+And from here this is where it becomes very beneficial because then you can end up mocking your repository
+
+02:29.310 --> 02:31.280
+object to satisfy the requirement.
+
+02:31.350 --> 02:37.870
+So I could say repository equals new band repository.
+
+02:38.900 --> 02:45.000
+And after I've instantiated that object I need to go ahead and bring that reference and as well
+
+02:48.370 --> 02:53.290
+and then from the music controller I'm going to go ahead and pass and my repository.
+
+02:53.590 --> 02:58.310
+And now that we brought that in and we want to go ahead and just say a cert which is a built in key
+
+02:58.310 --> 03:00.920
+word ARISA is not no.
+
+03:01.090 --> 03:03.280
+And then we'll pass in the controller.
+
+03:03.280 --> 03:04.730
+So this will return true or false.
+
+03:04.740 --> 03:08.620
+If it's not KNOW it will return TRUE and our tests will pass and if it's no then it's going to return
+
+03:08.650 --> 03:14.080
+false and the test will fail and we can go out and rename our unit test as well it's called unit test
+
+03:14.100 --> 03:18.820
+was actually a terrible name but you know I'm not here right now if you want to run the test method
+
+03:18.820 --> 03:23.090
+just right click on the actual test method portion and say run test.
+
+03:23.530 --> 03:28.390
+And this is going to go through the test and hopefully you'll get a green checkmark if it passes or
+
+03:28.390 --> 03:34.950
+a red X if it fails.
+
+03:34.960 --> 03:39.010
+All right so it does take a second to compile because everything I to compile from the test project
+
+03:39.010 --> 03:47.050
+to the actual UI project.
+
+03:47.070 --> 03:50.910
+So if you're like me and you see this message here that they can't find view features what you want
+
+03:50.910 --> 03:57.000
+to do is go to your new package manager and from here you can install the view features here.
+
+03:57.000 --> 04:05.250
+So by selecting this on Growden added for your unit test project and select install.
+
+04:05.290 --> 04:09.310
+So now if we go back to our method and we run it it's going to be all to run and it's going to pass.
+
+04:09.330 --> 04:11.780
+And like I say you should be able to see a green checkmark here.
+
+04:11.800 --> 04:14.760
+But I guess maybe that's why resharpened does that.
+
+04:14.780 --> 04:19.580
+Anyway you can see that they test method here is that you get the green check So this is your test Explorer
+
+04:19.600 --> 04:24.010
+if you guys don't see that you can go up to your tools are next to your tools and go to test them under
+
+04:24.010 --> 04:25.960
+Windows to test explore.
+
+04:25.960 --> 04:28.150
+But that's how you set of unit testing and Natcore.

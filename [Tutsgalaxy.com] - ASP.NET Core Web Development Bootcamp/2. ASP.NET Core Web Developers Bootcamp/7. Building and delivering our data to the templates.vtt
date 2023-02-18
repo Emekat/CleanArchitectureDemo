@@ -1,0 +1,220 @@
+WEBVTT
+
+00:00.510 --> 00:02.010
+Hey guys what about going back on this video.
+
+00:02.020 --> 00:06.720
+Let's go and touch the models and let's go and create our first model and find out how to actually send
+
+00:06.720 --> 00:09.330
+them back to our view.
+
+00:09.330 --> 00:14.490
+So in our controllers here you can see that it actually just returns the standard view for our home
+
+00:14.490 --> 00:14.970
+controller.
+
+00:14.970 --> 00:18.200
+We want to add a model and the model.
+
+00:18.210 --> 00:22.860
+We're just going to have it'll be a new class and we'll just call this
+
+00:25.840 --> 00:27.040
+what does say it's like a book.
+
+00:27.090 --> 00:29.250
+So we're just call it a book a book.
+
+00:29.250 --> 00:33.900
+So what does books have they have a couple of properties on and this is where we actually define what
+
+00:33.900 --> 00:38.920
+are the modeled properties that we're going to have around the public string title.
+
+00:38.970 --> 00:40.710
+Because every book has a title.
+
+00:41.160 --> 00:47.570
+And then for now we're going have a public string of author.
+
+00:47.760 --> 00:48.430
+All right.
+
+00:48.440 --> 00:51.140
+There we go.
+
+00:51.140 --> 00:58.110
+So now that we have this model define what we can do is we can now create a separate controller.
+
+00:59.930 --> 01:01.780
+And before we even do that well you know what
+
+01:04.760 --> 01:09.380
+I want to show you guys you know I'm going to show you because I don't want to show you guys the scaffolding
+
+01:09.380 --> 01:12.140
+because the scaffolding doesn't actually show you what's going on behind the scenes.
+
+01:12.140 --> 01:12.830
+Let's go at it.
+
+01:12.830 --> 01:15.710
+The actual home.
+
+01:16.220 --> 01:19.410
+Let's go ahead and pass down the model here to our viewers of what we're going to do is we're going
+
+01:19.420 --> 01:20.610
+to say you know what.
+
+01:20.700 --> 01:28.220
+Instead of our method here we're going to go and we're going to do a we're just call this new model
+
+01:28.850 --> 01:30.970
+to be the scripted equals the new.
+
+01:30.980 --> 01:32.630
+And then it's the name of our model.
+
+01:32.630 --> 01:34.340
+So it's a new book.
+
+01:34.340 --> 01:34.600
+All right.
+
+01:34.610 --> 01:38.060
+So by saying that you're gonna get these squiggly lines and we double click on that you're going to
+
+01:38.060 --> 01:43.020
+see that it's actually going to say you need to use your first application models.
+
+01:43.130 --> 01:44.780
+So that way we know what the book is.
+
+01:44.780 --> 01:50.510
+Now they know what the book is in fact we can even do shorthand stanch the actual values here so we're
+
+01:50.510 --> 01:55.960
+going to say the title equals Chris is great.
+
+01:56.540 --> 01:57.950
+And I actually don't think that.
+
+01:57.950 --> 01:58.630
+But anyway.
+
+01:58.640 --> 02:04.160
+And then the author is Chris Hall.
+
+02:05.300 --> 02:06.250
+There we go.
+
+02:06.260 --> 02:08.340
+So it's grown to do a semicolon there.
+
+02:08.340 --> 02:09.620
+It's not going to hurt anything.
+
+02:09.650 --> 02:14.470
+And then in order to pass the model to our view we just have to say a new model.
+
+02:14.780 --> 02:19.780
+All right so now if we go and we run the application then we go to the actual page.
+
+02:19.940 --> 02:22.990
+We're going to see that there's really no no no difference here.
+
+02:23.000 --> 02:24.510
+But I just want to show you why.
+
+02:24.860 --> 02:30.490
+So if we go to Home Index you're going to see that it's just delivering up the standard.
+
+02:30.500 --> 02:35.000
+You know there's really no change in the reason why is because we're not actually using our model so
+
+02:35.000 --> 02:37.660
+in order to actually really use our model inside of here.
+
+02:38.000 --> 02:41.840
+So in order to do that all we need to do is just reference our model and we're going to use this keyword
+
+02:41.920 --> 02:46.400
+the model keyword and then we just have to go in and spell out to where it can be found.
+
+02:46.400 --> 02:52.880
+The first application that models dot books and other we have that in here we can now use this model
+
+02:52.880 --> 02:58.400
+inside of our templates instead of this hello from NBC we're going to actually reference the model so
+
+02:58.770 --> 03:05.960
+it razor Shoreham by convention as you're going to want to you could just actually say model dot but
+
+03:05.960 --> 03:06.470
+it should need.
+
+03:06.530 --> 03:08.330
+There needs to be an at symbol for anything.
+
+03:08.340 --> 03:12.830
+There to a model dot and you can see clearly that we have an author and a title on here so we're going
+
+03:12.830 --> 03:19.720
+to say author that title and then instead of a paragraph tag we'll just say model dots author.
+
+03:19.730 --> 03:25.730
+All right so you can see once you reference your model you can now reference the actual data.
+
+03:25.730 --> 03:31.910
+Now this actual template engine that comes with dot net and it's come with a b c dot it for a long time.
+
+03:31.940 --> 03:35.980
+It's called the razor template engine and it's server side code that is generated.
+
+03:36.030 --> 03:40.990
+And essentially it is building up a bunch HTL and passing it back from the server.
+
+03:41.060 --> 03:48.950
+All this razor stuff is processed on the server and it's just it's a very convenient way for most web
+
+03:48.950 --> 03:55.320
+applications that need basic template and so now that we reference was going run the application see
+
+03:55.320 --> 03:58.650
+if we can actually get those values that we're passing and if you remember correctly I think it was
+
+03:58.650 --> 04:03.390
+Chris's grade or something like that and then Chris Hawkes is the author so let's go out and check out
+
+04:03.390 --> 04:04.590
+the home index method.
+
+04:04.650 --> 04:05.790
+And there it is Chris is great.
+
+04:05.790 --> 04:08.650
+Chris Hawkster that's dynamic data and that's good.
+
+04:08.670 --> 04:14.880
+It's coming from the controller So obviously this template right here can be re-used over and over and
+
+04:14.880 --> 04:16.000
+over again.
+
+04:16.200 --> 04:22.890
+And because it's just referencing these you know variable placeholders it's dynamic meaning that it
+
+04:22.890 --> 04:25.800
+responds differently based on the values that you pass into it.
+
+04:25.800 --> 04:30.720
+So this value itself is obviously hard coded into the controller but most likely you're going to be
+
+04:30.720 --> 04:35.520
+reaching out to some sort of database or something like that and getting whatever sort of data was requested
+
+04:35.520 --> 04:37.290
+and returned to the template.

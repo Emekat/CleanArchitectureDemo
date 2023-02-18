@@ -1,0 +1,73 @@
+WEBVTT
+
+00:00.470 --> 00:06.120
+All right so materialize is a modern affronting framework that is actually based on Google's material
+
+00:06.120 --> 00:12.390
+design which is very popular with things like react and it's very mobile friendly responsive everything
+
+00:12.930 --> 00:14.650
+from the components very flat look.
+
+00:14.830 --> 00:15.960
+But there's always different components.
+
+00:15.960 --> 00:23.160
+You have that just work and this is not a bootstrap based framework or anything it doesn't use bootstrap
+
+00:23.160 --> 00:23.420
+at all.
+
+00:23.420 --> 00:28.200
+So a lot of people kind of think that like all of these CSSA frameworks are somehow built off of bootstrap
+
+00:28.200 --> 00:31.350
+and that's that's not the case is a completely separate project.
+
+00:31.340 --> 00:32.390
+It's very very popular.
+
+00:32.390 --> 00:39.940
+It's built to use like SAS So if you guys you see us as preprocessors then this works very well with.
+
+00:40.170 --> 00:41.490
+So you get start using it.
+
+00:41.520 --> 00:46.920
+It's it's really just a simple as going to your layout page and you're just going to go ahead and for
+
+00:46.920 --> 00:53.800
+us to make this as easy as possible I'm going to use the CD and replace the J Querrey right here.
+
+00:53.910 --> 00:58.770
+And these are just to see ends on this content distribution network which is really just a server serving
+
+00:58.770 --> 01:03.470
+up this VSS and Javascript you need and it's you know it's free to connect.
+
+01:03.480 --> 01:05.930
+So it's just easier to set up that way.
+
+01:05.970 --> 01:10.200
+Now you also have the option of downloading the actual files and including them in your project so you
+
+01:10.200 --> 01:12.680
+don't want to reach across the web to another server.
+
+01:12.990 --> 01:18.960
+And then there's also the option of having SAS compilation to serve you of a SAS compiler then you can
+
+01:18.960 --> 01:23.260
+download the actual SAS source files and start extending it.
+
+01:23.280 --> 01:27.960
+So after you've included materialize there are templates you can use like if you go to this Web site
+
+01:27.960 --> 01:32.580
+here and you want to demo this template you can take a look at this and if you download it and just
+
+01:32.580 --> 01:38.670
+extract it to our W.W. root folder or wherever your static folder is then you can see that just as easily
+
+01:39.300 --> 01:43.590
+We have a materialized working UI here and just just quickly.

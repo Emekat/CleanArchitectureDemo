@@ -1,0 +1,7 @@
+GET http://localhost:5066/
+
+GET https://localhost:7045/
+Accept: application/json
+
+GET https://localhost:7045/CurrentDateTime
+Accept: application/json

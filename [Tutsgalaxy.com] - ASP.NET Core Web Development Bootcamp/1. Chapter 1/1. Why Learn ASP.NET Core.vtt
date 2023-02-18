@@ -1,0 +1,265 @@
+WEBVTT
+
+00:00.210 --> 00:03.760
+Guys when you're building a Web site whether it's for yourself or your business or brand.
+
+00:03.780 --> 00:08.040
+One of the hardest things to do is actually find a domain name that is short and relevant and available
+
+00:08.130 --> 00:12.170
+thanks to tech domains finding the perfect domain is actually much easier.
+
+00:12.180 --> 00:16.110
+Programmers tech startups and brands finally have a domain of their own.
+
+00:16.110 --> 00:22.170
+This is why Intel Viacom and even the Consumer Electronics Show are now using that tax for their domain.
+
+00:22.320 --> 00:26.290
+So don't wait there's a black friday sale coming up it's the perfect time to secure your domain.
+
+00:26.310 --> 00:31.410
+Ninety five percent off you can pre-register before the 23rd of November to give you an additional 10
+
+00:31.410 --> 00:32.890
+percent off on top of that.
+
+00:33.000 --> 00:40.500
+You just have to go to the BW go tech forward slash Chris Hawkes that's go tech forward slash my name
+
+00:40.500 --> 00:43.150
+Chris Hong's and you can pre-register now.
+
+00:44.080 --> 00:44.700
+Hey guys what's up.
+
+00:44.710 --> 00:50.500
+So in this video I'm talking about the reasons why you want to learn dot net dot net specifically so
+
+00:51.370 --> 00:56.920
+it can be confusing especially to people that are non-Microsoft people dot net core is the newest framework
+
+00:56.920 --> 00:57.860
+from Microsoft.
+
+00:57.860 --> 01:02.410
+It's been around for about you know I guess five years or so now but it's Microsoft's newest attempt
+
+01:02.410 --> 01:07.360
+to go cross-platform so that is a new type of Microsoft Microsoft is always like you know make their
+
+01:07.360 --> 01:13.180
+bread and butter on selling Windows licenses and Microsoft licenses for different software and things
+
+01:13.180 --> 01:13.570
+like that.
+
+01:13.570 --> 01:20.380
+So in the past few years though they've actually transitioned to be more like you know Google where
+
+01:20.380 --> 01:25.900
+they're involved in it like open source projects and they've open sourced a lot of their content and
+
+01:25.930 --> 01:30.350
+their visual studio code editor that everybody is using and it's really awesome.
+
+01:30.400 --> 01:35.790
+You know what you see in front of me right here is the visual studio editor here.
+
+01:35.840 --> 01:43.040
+This is not a visual studio code but this is one of the industry leading software development environments
+
+01:43.240 --> 01:44.430
+that corporations.
+
+01:44.430 --> 01:50.960
+So if you're able to run off of a Windows machine because you know unfortunately Visual Studio itself
+
+01:50.960 --> 01:56.480
+is not fully cross-platform yet I don't believe you I'm correct I'm just trying to make sure nothing
+
+01:56.480 --> 02:04.260
+new groundbreaking has come out but Visual Studio itself only runs on Windows and Visual Studio code.
+
+02:04.430 --> 02:11.270
+You can still have a completely similar environment not it not as good but a very similar environment
+
+02:11.390 --> 02:14.840
+that can still run on Mac and Linux.
+
+02:15.150 --> 02:20.960
+So another reason why you want to learn dotnet core is Microsoft invest heavily in it and in the previous
+
+02:20.960 --> 02:24.770
+version of dot net you can see it was actually released 16 years ago.
+
+02:24.770 --> 02:26.110
+That's a long time.
+
+02:26.510 --> 02:31.210
+So there have been dotnet developers in this industry for 16 years so you can pretty much bet that dot
+
+02:31.280 --> 02:33.670
+core is going to be around for the next 16 years as well.
+
+02:33.670 --> 02:38.180
+So if you're a new developer jumping into something new like that you know four or five years from now
+
+02:38.210 --> 02:42.920
+even if you couldn't land a job for four or five years if you're writing dotnet core every single day
+
+02:42.920 --> 02:49.040
+like I just think it's impossible that you wouldn't be able to find your foot in the industry like if
+
+02:49.040 --> 02:52.330
+you just simply focused on something emerging.
+
+02:52.370 --> 02:53.710
+That's my opinion anyway.
+
+02:53.720 --> 02:55.550
+I could be wrong.
+
+02:55.740 --> 02:59.670
+So there's nothing stopping anybody from actually getting started with Dot Net or whether you're on
+
+02:59.670 --> 03:03.300
+Mac Windows or Linux Sheezus you have to download the documentation's online.
+
+03:03.300 --> 03:05.050
+It's pretty pretty good.
+
+03:05.070 --> 03:10.590
+There's also a course that I have available and then this horse here is going to start from just like.
+
+03:10.690 --> 03:16.250
+Basically I'll show you how to set up static web servers with cash for a web server which is a cross-platform
+
+03:16.250 --> 03:21.260
+dotnet core web server so if you're just interested in doing it like a static web site I'll get you
+
+03:21.260 --> 03:25.190
+up or running quickly with something like that on this tutorial series.
+
+03:25.190 --> 03:32.450
+Beyond that there's going to be more concepts of you know populating views and MVC and and you know
+
+03:32.450 --> 03:34.230
+the web API and things like that.
+
+03:34.550 --> 03:39.350
+In addition to that I'll teach you some of the more modern concepts although I don't like delve too
+
+03:39.350 --> 03:44.210
+deeply into that I'm going to build Branch I'm going to branch off courses for a different deep conversations
+
+03:44.210 --> 03:51.020
+like inversion of control but I do actually focus on explaining that he can have good unit testing and
+
+03:51.020 --> 03:53.200
+things like that is really important.
+
+03:53.210 --> 03:57.200
+Dotnet core reason another reason why you want to learn is that an X or three is coming out in early
+
+03:57.200 --> 04:01.560
+20:19 and it's going to be really big is there going to be a lot of changes.
+
+04:01.580 --> 04:06.370
+There's a lot of performance improvements and already gotten that core one which is the latest version
+
+04:06.740 --> 04:15.410
+and the one that I base this course off of is is extremely performant over the previous Dot Net Framework.
+
+04:15.410 --> 04:20.530
+The awesome thing about dotnet court 3 though is it's actually going to bring back S'pore so you could
+
+04:20.530 --> 04:25.630
+actually build these and when forms out applications like using like WPA and things like that and XML
+
+04:26.030 --> 04:30.570
+and you can build software applications that are cross-platform.
+
+04:30.830 --> 04:34.340
+Where are you going to do stuff like that that worked only on Windows.
+
+04:34.340 --> 04:38.660
+This is actually going to work and and Mac and Linux as well.
+
+04:39.660 --> 04:46.560
+So yes my tutorial uses visual studio community 20:17 which is a great product and it only works on
+
+04:46.560 --> 04:49.560
+Windows you if you're on Mac or Linux if you like why I'm not able to do that.
+
+04:49.560 --> 04:54.630
+Well you can number one set up your C-Sharp environments to work with Visual Studio code.
+
+04:54.780 --> 05:02.190
+If you wanted to do that through extension methods here by looking for C Sharp and you can set up your
+
+05:02.190 --> 05:07.320
+environment here to use dot net core and stuff like that and even debug Similarly I don't actually do
+
+05:07.320 --> 05:08.090
+that myself.
+
+05:08.100 --> 05:09.600
+I'm using Visual Studio.
+
+05:09.600 --> 05:15.830
+Another option though if you're on Mac or Linux is to just download a virtual machine so you can use
+
+05:15.830 --> 05:20.630
+something like Virtual Box which is free and you can fire up virtual machines that you could have windows
+
+05:20.960 --> 05:26.240
+simulated environments enough to just at least install the idea and started developing with C-Sharp
+
+05:26.240 --> 05:31.150
+and dynamic or on Windows if you wanted to him.
+
+05:31.250 --> 05:35.570
+Here you can see I have virtual box installed and I have it like in a buntu system that is currently
+
+05:35.570 --> 05:36.110
+powered off.
+
+05:36.120 --> 05:41.240
+But if I want to simulate in a bunch environment I just go out and fire that up and I work out of my
+
+05:41.510 --> 05:50.830
+console here and then if I need to actually like S-sh into my my Windows Server which is also a Linux
+
+05:50.830 --> 05:56.320
+system where all my web sites are hosted in everything I just use Poddy and just like I said S-sh tunnelled
+
+05:56.320 --> 05:58.870
+right into the server.
+
+05:58.960 --> 06:04.510
+So whether your Mac Windows or Linux I guess my point is that like you can there's tools out there to
+
+06:04.510 --> 06:10.150
+basically be able to work with all the environments or at least simulate replicate it you know it's
+
+06:10.150 --> 06:15.380
+you it's easier just to work with a native machine like you know for Windows or Apple development.
+
+06:15.400 --> 06:22.150
+I've been so close to just buying a Mac book so you know I can at least just get that real feel of Apple
+
+06:22.150 --> 06:25.660
+development because I've never actually program with an Apple computer.
+
+06:25.720 --> 06:30.660
+But I'm not sure like I've never been an Apple guy I've always been a PC guy ever since I was a kid
+
+06:30.670 --> 06:35.210
+so you know I will you know play with it I consider it more of a toy.
+
+06:35.260 --> 06:42.310
+But you know my point is I guess is like they're expensive and if you have a machine you just go and
+
+06:42.310 --> 06:45.070
+use these virtual machines Darger things like that you know.

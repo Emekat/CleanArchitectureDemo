@@ -1,0 +1,26 @@
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=utf-8
+ 
+{
+    "userId": 42,
+    "items": [
+        {
+            "productcatalogId": 1,
+            "productName": "Basic t-shirt",
+            "description": "a quiet t-shirt",
+            "price": {
+                "currency": "eur",
+                "amount": 40
+            }
+        },
+        {
+            "productcatalogId": 2,
+            "productName": "Fancy shirt",
+            "description": "a loud t-shirt",
+            "price": {
+                "currency": "eur",
+                "amount": 50
+            }
+        }
+    ]
+}

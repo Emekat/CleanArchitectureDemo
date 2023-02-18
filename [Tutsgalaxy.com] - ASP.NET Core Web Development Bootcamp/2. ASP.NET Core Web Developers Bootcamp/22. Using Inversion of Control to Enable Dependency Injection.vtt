@@ -1,0 +1,232 @@
+WEBVTT
+
+00:00.630 --> 00:05.500
+So doesn't that corps has built in support for dependency injection and we created a repository in our
+
+00:05.500 --> 00:10.840
+last video and the repository is using an interface and all that is great it's coding to abstractions.
+
+00:10.990 --> 00:16.870
+However it's actually implementing a concrete object from a repository is actually instantiating it
+
+00:16.870 --> 00:17.790
+right here.
+
+00:18.220 --> 00:20.020
+That's usually not what you want.
+
+00:20.140 --> 00:21.590
+This is actually a bad idea.
+
+00:21.600 --> 00:27.250
+So what we actually mean is we want to be able to inject the repository into the controller.
+
+00:27.250 --> 00:33.490
+That way when we're unit testing it later we can actually inject a marked repository that is returning
+
+00:33.490 --> 00:37.290
+Mach data for our unit tests without having to rely on any sort of external service.
+
+00:37.290 --> 00:38.490
+So how do we do that.
+
+00:38.530 --> 00:39.960
+We add a constructor method.
+
+00:39.970 --> 00:45.720
+But before we do that we actually were going to go and create a private variable.
+
+00:45.850 --> 00:49.690
+Now typically with repositories or any sort of private variables a lot of people will say that it's
+
+00:49.690 --> 00:54.130
+a convention to have it start with a lower case but it can be whatever you want but we're going to want
+
+00:54.130 --> 00:55.870
+this to be a read only object.
+
+00:56.080 --> 01:05.950
+And we're going to say that it's a I ban repository object and then we'll just call it a band repository.
+
+01:06.100 --> 01:07.660
+So we're declaring it up here at the top.
+
+01:07.660 --> 01:11.380
+So that means our class is going to be using it and we can use it throughout all the methods on our
+
+01:11.380 --> 01:12.580
+class object.
+
+01:12.580 --> 01:17.320
+So how do we go out and instantiate the value we want to instantiated from the value that's passed.
+
+01:17.350 --> 01:23.440
+So we're going to go ahead and create a public constructor method which is really just a public method
+
+01:23.440 --> 01:26.500
+that has the same name as the controller.
+
+01:26.500 --> 01:31.420
+So it's called Music controller and this is automatically going to be a constructor method is going
+
+01:31.420 --> 01:34.900
+to know how to handle it that way and we're going to take in a band repository object so we're going
+
+01:34.900 --> 01:42.430
+to say repository and then from inside of here this is where we're going to go and instantiate our private
+
+01:42.430 --> 01:47.820
+band repository equals a repository that got passed in.
+
+01:48.460 --> 01:53.170
+So now what we can do any time this constructor or this controller is instantiated.
+
+01:53.170 --> 02:01.360
+We can now inject a dynamic repository into that controller and our code is now using inversion of control
+
+02:01.510 --> 02:08.550
+which allows us to use dependency injection that we're injecting our dependencies into the code.
+
+02:08.890 --> 02:13.510
+By the way that we wrote this we're able to do that as opposed to if you didn't write it this way you
+
+02:13.510 --> 02:14.280
+wouldn't be able to do it.
+
+02:14.290 --> 02:17.010
+And unit testing and everything else becomes much more difficult.
+
+02:18.360 --> 02:23.400
+Another good thing about this is because we're using a bad repository any sort of class and implements
+
+02:23.400 --> 02:28.740
+the repository would actually satisfy the requirement for this controller so you can literally plug
+
+02:28.740 --> 02:33.510
+in and plug out all kinds of different repositories for different environments different test code things
+
+02:33.510 --> 02:33.870
+like that.
+
+02:33.870 --> 02:35.920
+So it's just a very clean way of writing your code.
+
+02:36.970 --> 02:41.880
+So now what I want to do is I want to go out and get rid of the repository I'm using here and I'm gonna
+
+02:41.890 --> 02:47.110
+go and reference my local band repository and say get bands and it's going to work the exact same way.
+
+02:47.110 --> 02:51.490
+Now the thing is is that this isn't going to work by default because what we need to do is we actually
+
+02:51.490 --> 02:57.460
+need to and we have to register this new service so that we know how.
+
+02:57.580 --> 03:02.620
+So that the embassy on that application knows how to inject this appropriately.
+
+03:02.740 --> 03:07.810
+So in order to register this service we just have to go over to our startup class and inside of here
+
+03:07.810 --> 03:12.930
+we're going to go ahead and add the services and we can say services.
+
+03:13.030 --> 03:18.040
+And then there's a few options here you could say add transience which means that it's going to be created
+
+03:18.280 --> 03:21.450
+once for every request and that's for lightweight services.
+
+03:21.450 --> 03:24.200
+There's ads Singleton and that's what we're going to use here.
+
+03:24.550 --> 03:29.720
+And the ad Singleton takes in arguments here so you're going to pass in the types that it's expected.
+
+03:29.710 --> 03:32.910
+So if you remember we have a band repository right.
+
+03:33.320 --> 03:37.810
+You go install that right and we're going to bring that and then we're also going to say what you're
+
+03:37.810 --> 03:42.170
+going to be returning to me as a band repository says we're going to be injecting.
+
+03:42.170 --> 03:48.850
+So let's go out and make sure we're including the correct models here and then we also need to instantiate
+
+03:48.850 --> 03:50.030
+this object.
+
+03:50.470 --> 03:56.410
+So if everything goes correctly this should use the repositories to stamp out a band repository class
+
+03:56.410 --> 03:56.970
+object.
+
+03:56.970 --> 04:04.750
+It should then pass it into the controller that it finds that matches up to this band I've been repository
+
+04:05.020 --> 04:10.840
+and by doing so the only controller that does so is the music controller here that has the constructor
+
+04:11.320 --> 04:17.860
+method that takes an IBM repositories or by default MVC dot net is going to know to inject that object
+
+04:17.860 --> 04:24.820
+into this and then it's going to be assigned to the local repository of value which is safely cordoned
+
+04:24.820 --> 04:29.080
+off from everything else because it's a private variable on this class object.
+
+04:29.080 --> 04:37.690
+And then we can start then referencing that private value then to request the public methods on a repository.
+
+04:37.690 --> 04:41.920
+So hopefully it's not all too confusing for you but it's just ultimately calling this and it's a very
+
+04:41.920 --> 04:47.260
+roundabout way of doing so but it allows us to unit tests much easier and we'll see in the future it
+
+04:47.260 --> 04:50.040
+also allows us once again to stamp out different service.
+
+04:50.350 --> 04:54.910
+And just to show you guys that it does work if I'm on a high I'm going to highlight the entire line
+
+04:55.000 --> 04:58.170
+up here at the top I'm going to comment out those that line.
+
+04:58.180 --> 05:02.050
+I just want to show you that if we try to request the page and the way we did before for all the bands
+
+05:02.050 --> 05:07.310
+we're going to get an error message and we're getting a 500 server error and it's saying that we are
+
+05:07.340 --> 05:12.020
+unable to service type and repository and so we don't know what you're talking about.
+
+05:12.020 --> 05:13.610
+So you're trying to register some sort of service.
+
+05:13.610 --> 05:19.580
+We're expecting some sort of value to be declared in services configuration section of the startup file
+
+05:19.580 --> 05:22.090
+and it's not there so it's complaining about that.
+
+05:22.100 --> 05:27.020
+And that's ultimately kind of a cryptic way of saying you need to register the service so that we know
+
+05:27.020 --> 05:28.220
+how to resolve it.
+
+05:28.730 --> 05:34.770
+And once again you add this back and I refreshed the page we now have the same exact results over using
+
+05:34.770 --> 05:39.970
+dependency injection through inversion of control and a very clean design pattern.
+
+05:39.970 --> 05:40.880
+All right guys thanks for watching.
